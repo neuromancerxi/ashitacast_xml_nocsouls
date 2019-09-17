@@ -1,0 +1,137 @@
+<ashitacast>
+	<settings>
+		<buffupdate>true</buffupdate>
+		<statusupdate>true</statusupdate>
+		<hpupdate>false</hpupdate>
+		<autoupdate>false</autoupdate>
+	</settings>
+	<sets>
+            <set name="Idle">
+                <main>Kannagi</main>
+                <sub>Nagi</sub>
+                <range augment="S182109392119204240">Bamboo Fish. Rod</range>
+                <ammo augment="S182109392119204240">Lufaise Fly</ammo>
+                <head>Hachiya Hatsu. +3</head>
+                <body>Hachiya Chain. +3</body>
+                <hands>Hachiya Tekko +2</hands>
+                <legs>Hachiya Hakama +2</legs>
+                <feet>Danzo Sune-Ate</feet>
+                <neck>Loricate Torque +1</neck>
+                <waist augment="S14964323890395218574">Chaac Belt</waist>
+                <ear1 augment="S4444499968423610349">Trq. Earring +1</ear1>
+                <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
+                <ring1>Defending Ring</ring1>
+                <ring2>Gelatinous Ring +1</ring2>
+                <back>Agema Cape</back>
+            </set>
+            <set name="TP" baseset="Idle">
+                <feet>Hachiya Kyahan +3</feet>
+                <neck>Asperity Necklace</neck>
+                <waist augment="S1496432389182864240">Windbuffet Belt +1</waist>
+                <ear1 augment="S1496432389345534240">Mache Earring +1</ear1>
+                <ear2 augment="S182109392119204240">Mache Earring +1</ear2>
+                <ring1 augment="S1821294470965718574">Regal Ring</ring1>
+                <ring2 augment="S1821187863554334839">Petrov Ring</ring2>
+                <back augment="S1496432389345534240">Laic Mantle</back>
+            </set>
+            <set name="FastCast">
+                <body augment="S6217489529050814476">Pilgrim Tunica</body>
+                <ear1 augment="S182152343102764236">Stm. Earring +1</ear1>
+                <ear2 augment="S4444499968423610349">Trq. Earring +1</ear2>
+                <ring1 augment="S6217489529050814476">Prolix Ring</ring1>
+                <ring2 augment="S6217489529050814476">Deft Ring +1</ring2>
+            </set>
+            <set name="MACC" baseset="Idle">
+                <ammo augment="S14968618926288334851">Sinking Minnow</ammo>
+                <neck augment="S14968618926288334851">Voltsurge Torque</neck>
+                <waist augment="S14968618926288334851">Virtuoso Belt</waist>
+                <ear1 augment="S14968618926288334851">Andoaa Earring</ear1>
+                <ear2 augment="S14968618926288334851">Moldavite Earring</ear2>
+                <ring1 augment="S14968618926288334851">Stikini Ring</ring1>
+                <ring2 augment="S14968618926288334851">Stikini Ring</ring2>
+                <back augment="S14968618926288334851">Immortal's Cape</back>
+            </set>
+            <set name="MATK">
+                <ammo augment="S7973728454464518565">Sabiki Rig</ammo>
+                <neck augment="S7973728454464518565">Baetyl Pendant</neck>
+                <waist augment="S7973728454464518565">Hachirin-no-Obi</waist>
+                <ear1 augment="S7973728454464518565">Choleric Earring</ear1>
+                <ear2 augment="S7973728454464518565">Tranquility Earring</ear2>
+                <ring1 augment="S7973728454464518565">Stikini Ring +1</ring1>
+                <ring2 augment="S7973728454464518565">Stikini Ring +1</ring2>
+                <back augment="S7973728454464518565">Izdubar Mantle</back>
+            </set>
+            <include>
+            </include>
+	</sets>
+        <init>
+            <command>/macro book 13</command>
+            <command delay="1000">/macro set 2</command>
+            <command>/echo [Switching to NIN Macros]</command>
+            <command>/bind F10 /status</command>
+            <doidlegear />
+            <command delay="2000">/lockstyle on</command>
+        </init>
+	<variables>
+	</variables>
+	<inputcommands>
+            <cmd input="/status">
+                <equip>
+                    <back>Agema Cape</back>
+                </equip>
+                <doidlegear />
+            </cmd>
+	</inputcommands>
+	<idlegear>
+            <if eq_back="Nexus Cape">
+                <equip lock="true">
+                    <back>Nexus Cape</back>
+                </equip>
+            </if>
+            <if p_status="engaged">
+                <equip set="TP" />
+            </if>
+            <else>
+                <equip set="Idle" />
+            </else>
+	</idlegear>
+	<preranged>
+	</preranged>
+	<midranged>
+	</midranged>
+	<premagic>
+            <equip set="FastCast" />
+	</premagic>
+	<midmagic>
+            <if ad_type="Ninjutsu">
+                <if ad_name="Utsusemi*">
+                    <equip set="Idle">
+                        <feet>Iga Kyahan +2</feet>
+                    </equip>
+                </if>
+                <elseif ad_name="Suiton*|Raiton*|Hyoton*|Katon*|Huton*|Doton*">
+                    <equip set="MATK" />
+                </elseif>
+                <else>
+                    <equip set="MACC" />
+                </else>
+            </if>
+            <else>
+                <equip set="MACC" />
+            </else>
+	</midmagic>
+	<jobability>
+	</jobability>
+	<weaponskill>
+            <if ad_name="*Teki|*To|*Chi|*Ei|*Yu">
+                <equip set="MATK" />
+            </if>
+            <else>
+                <equip set="TP">
+                    <ear1>Telos Earring</ear1>
+                    <neck>Fotia Gorget</neck>
+                    <waist>Fotia Belt</waist>
+                </equip>
+            </else>
+	</weaponskill>
+</ashitacast>

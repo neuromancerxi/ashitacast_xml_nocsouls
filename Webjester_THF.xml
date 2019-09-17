@@ -1,0 +1,160 @@
+<ashitacast>
+	<settings>
+		<buffupdate>true</buffupdate>
+		<statusupdate>true</statusupdate>
+		<hpupdate>false</hpupdate>
+		<autoupdate>false</autoupdate>
+	</settings>
+	<sets>
+            <set name="Idle">
+                <main augment="S797770059305214240">Twashtar</main>
+                <sub>$Offhand</sub>
+                <range augment="S182109392119204240">Bamboo Fish. Rod</range>
+                <ammo augment="S182109392119204240">Lufaise Fly</ammo>
+                <head augment="S1496432389182864240">Pill. Bonnet +3</head>
+                <body augment="S1496432389182864240">Pillager's Vest +3</body>
+                <hands>$Hands</hands>
+                <legs augment="S1821294470965718574">Pill. Culottes +3</legs>
+                <feet augment="S1496432389182864240">Pill. Poulaines +3</feet>
+                <neck>Loricate Torque +1</neck>                    
+                <waist>$Waist</waist>
+                <ear1 augment="S4444499968423610349">Trq. Earring +1</ear1>
+                <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
+                <ring1>Defending Ring</ring1>
+                <ring2>Gelatinous Ring +1</ring2>
+                <back>Agema Cape</back>
+            </set>
+            <set name="TP" baseset="Idle">
+                <neck>Asperity Necklace</neck>
+                <waist>$Waist</waist>
+                <ear1 augment="S1496432389345534240">Mache Earring +1</ear1>
+                <ear2 augment="S182109392119204240">Mache Earring +1</ear2>
+                <ring1 augment="S1821294470965718574">Regal Ring</ring1>
+                <ring2 augment="S1821187863554334839">Petrov Ring</ring2>
+                <back augment="S1496432389345534240">Laic Mantle</back>
+                <feet>$Feet</feet>
+            </set>
+            <set name="FastCast">
+                <body augment="S6217489529050814476">Pilgrim Tunica</body>
+                <ear1 augment="S182152343102764236">Stm. Earring +1</ear1>
+                <ear2 augment="S4444499968423610349">Trq. Earring +1</ear2>
+                <ring1 augment="S6217489529050814476">Prolix Ring</ring1>
+                <ring2 augment="S6217489529050814476">Deft Ring +1</ring2>
+            </set>
+            <set name="MACC" baseset="TP">
+                <ammo augment="S14968618926288334851">Sinking Minnow</ammo>
+                <hands augment="S1496432389182864240">Pill. Armlets +3</hands>
+                <neck augment="S14968618926288334851">Voltsurge Torque</neck>
+                <waist augment="S14968618926288334851">Virtuoso Belt</waist>
+                <ear1 augment="S14968618926288334851">Andoaa Earring</ear1>
+                <ear2 augment="S14968618926288334851">Moldavite Earring</ear2>
+                <ring1 augment="S14968618926288334851">Stikini Ring</ring1>
+                <ring2 augment="S14968618926288334851">Stikini Ring</ring2>
+                <back augment="S14968618926288334851">Immortal's Cape</back>
+            </set>
+            <set name="WS" baseset="TP">
+                <hands augment="S1496432389182864240">Pill. Armlets +3</hands>
+                <feet augment="S1496432389182864240">Pill. Poulaines +3</feet>
+                <neck>Fotia Gorget</neck>
+                <waist>Fotia Belt</waist>
+                <ear1>Telos Earring</ear1>
+                <ring2 augment="S1821294457858518574">Rajas Ring</ring2>
+            </set>
+            <include>
+            </include>
+	</sets>
+        <init>
+            <command>/macro book 11</command>
+            <command delay="1000">/macro set 2</command>
+            <command>/echo [Switching to THF Macros]</command>
+            <command>/bind F9 /th</command>
+            <command>/bind F10 /status</command>
+            <command delay="2000">/lockstyleset 10</command>
+        </init>
+	<variables>
+            <var name="th">1</var>
+            <var name="Offhand">Sandung</var>
+            <var name="Waist">Chaac Belt</var>
+            <var name="Hands">Plun. armlets +1</var>
+            <var name="Feet">Skulk. Poulaines +1</var>
+	</variables>
+	<inputcommands>
+            <cmd input="/th">
+                <if advanced="$th=0">
+                    <setvar name="Offhand" value="Sandung" />
+                    <setvar name="Waist" value="Chaac Belt" />
+                    <setvar name="Hands" value="Plun. armlets +1" />
+                    <setvar name="Feet" value="Skulk. Poulaines +1" />
+                    <setvar name="th" value="1" />
+                    <doidlegear />
+                    <command>/echo [TH: On]</command>
+                </if>
+                <else>
+                    <setvar name="Offhand" value="Mandau" />
+                    <setvar name="Waist" value="Windbuffet Belt +1" />
+                    <setvar name="Hands" value="Pill. armlets +3" />
+                    <setvar name="Feet" value="Pill. Poulaines +3" />
+                    <setvar name="th" value="0" />
+                    <doidlegear />
+                    <command>/echo [TH: Off]</command>
+                </else>
+            </cmd>
+            <cmd input="/status">
+                <if advanced="$th=0">
+                    <equip>
+                        <back>Agema Cape</back>
+                    </equip>
+                    <command>/echo [TH Mode is Off]</command>
+                    <doidlegear />
+                </if>
+                <else>
+                    <equip>
+                        <back>Agema Cape</back>
+                    </equip>
+                    <command>/echo [TH Mode is On]</command>
+                    <doidlegear />
+                </else>
+            </cmd>
+	</inputcommands>
+	<idlegear>
+            <if eq_back="Nexus Cape">
+                <equip lock="true">
+                    <back>Nexus Cape</back>
+                </equip>
+            </if>
+            <if p_status="engaged">
+                <equip set="TP">
+                    <feet>$Feet</feet>
+                </equip>
+            </if>
+            <else>
+                <equip set="Idle" />
+            </else>
+	</idlegear>
+	<preranged>
+	</preranged>
+	<midranged>
+	</midranged>
+	<premagic>
+            <equip set="FastCast" />
+	</premagic>
+	<midmagic>
+            <if ad_skill="bluemagic|enfeeblingmagic|elementalmagic|darkmagic">
+                <equip set="MACC" />
+            </if>
+	</midmagic>
+	<jobability>
+            <if ad_name="Flee|Steal">
+                <equip feet="Pill. Poulaines +3" />
+            </if>
+            <if ad_name="Hide">
+                <equip body="Pillager's Vest +2" />
+            </if>
+            <if ad_name="Despoil">
+                <equip body="Skulk. Poulaines" />
+            </if>
+	</jobability>
+	<weaponskill>
+            <equip set="WS" />
+	</weaponskill>
+</ashitacast>
