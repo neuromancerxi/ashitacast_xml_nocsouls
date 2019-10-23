@@ -12,29 +12,30 @@
                 <range augment="S7973728454464518565">Tarutaru F. Rod</range>
                 <ammo augment="S7973728454464518565">Sabiki Rig</ammo>
                 <head>Viti. Chapeau +1</head>
-                <body>Atrophy Tabard +3</body>
-                <hands>Atrophy Gloves +3</hands>
-                <legs>Blood Cuisses</legs>
+                <body>Atrophy Tabard +2</body>
+                <hands>Atrophy Gloves +2</hands>
+                <legs>Crimson Cuisses</legs>
                 <feet>Iaso Boots</feet>
                 <neck>Loricate Torque +1</neck>
-                <waist augment="S14964323890395218574">Chaac Belt</waist>
+                <waist>Chaac Belt</waist>
                 <ear1>Etiolation Earring</ear1>
                 <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
                 <ring1>Defending Ring</ring1>
-                <ring2>Gelatinous Ring +1</ring2>
+                <ring2>Patricius Ring</ring2>
                 <back>Agema Cape</back>
             </set>
             <set name="TP" baseset="idle">
-                <ammo augment="S182109392119204240">Lufaise Fly</ammo>
-                <head>Atrophy Chapeau +3</head>
-                <legs>Atrophy Tights +3</legs>
-                <feet>Atro. Boots +3</feet>
-                <neck>Asperity Necklace</neck>
-                <waist augment="S1496432389182864240">Windbuffet Belt +1</waist>
-                <ear1 augment="S1496432389345534240">Mache Earring +1</ear1>
-                <ear2 augment="S182109392119204240">Mache Earring +1</ear2>
-                <ring2 augment="S1821187863554334839">Petrov Ring</ring2>
-                <back augment="S1496432389345534240">Laic Mantle</back>
+                <ammo>Lufaise Fly</ammo>
+                <head>Atro. Chapeau +2</head>
+                <legs>Atrophy Tights +2</legs>
+                <feet>Atro. Boots +2</feet>
+                <neck>Tlamiztli Collar</neck>
+                <waist>Chaac Belt</waist>
+                <ear1>Mache Earring +1</ear1>
+                <ear2>Mache Earring +1</ear2>
+                <ring1>Rajas Ring</ring1>
+                <ring2>Supershear Ring</ring2>
+                <back>Bleating Mantle</back>
             </set>
             <set name="FastCast">
                 <body augment="S6217489529050814476">Pilgrim Tunica</body>
@@ -44,26 +45,33 @@
                 <ring2 augment="S6217489529050814476">Ascetic's Ring</ring2>
             </set>
             <set name="Nuke" baseset="TP">
+                <range augment="S7973728454464518565">Tarutaru F. Rod</range>
                 <ammo augment="S7973728454464518565">Sabiki Rig</ammo>
-                <neck augment="S7973728454464518565">Baetyl Pendant</neck>
-                <waist augment="S7973728454464518565">Hachirin-no-Obi</waist>
-                <ear1 augment="S7973728454464518565">Choleric Earring</ear1>
-                <ear2 augment="S7973728454464518565">Regal Earring</ear2>
+                <body>Gyve Doublet</body>
+                <neck>Eddy Necklace</neck>
                 <ring1 augment="S7973728454464518565">Stikini Ring +1</ring1>
                 <ring2 augment="S7973728454464518565">Stikini Ring +1</ring2>
-                <legs>Gyve Trousers</legs>
-                <back augment="S7973728454464518565">Izdubar Mantle</back>
+                <ear1 augment="S7973728454464518565">Choleric Earring</ear1>
+                <ear2 augment="S7973728454464518565">Tranquility Earring</ear2>
+                <waist augment="S7973728454464518565">Yamabuki-no-Obi</waist>
+                <back augment="S7973728454464518565">Shaper's Shawl</back>
             </set>
             <set name="Nuke71" baseset="Nuke" >
-                <main augment="S7973728454464518565">Chatoyant Staff</main>
-                <sub augment="S7973728454464518565">Vivid Strap +1</sub>
+                <main>Ark Scythe</main>
+                <sub augment="S7973728454464518565">Tenax Strap</sub>
+                <range augment="S7973728454464518565">Tarutaru F. Rod</range>
+                <ammo augment="S7973728454464518565">Sabiki Rig</ammo>
+                <head>Pumpkin head</head>
+                <body>Field tunica</body>
+                <hands>Field gloves</hands>
+                <legs>Field hose</legs>
+                <feet>Field boots</feet>
                 <neck augment="S7973728454464518565">Justice Badge</neck>
-                <waist augment="S7973728454464518565">Hachirin-no-Obi</waist>
                 <ear1 augment="S7973728454464518565">Tranquility Earring</ear1>
                 <ear2 augment="S7973728454464518565">Tranquility Earring</ear2>
+                <waist augment="S7973728454464518565">Blood Stone +1</waist>
                 <ring1 augment="S7973728454464518565">Hermit's Ring</ring1>
                 <ring2 augment="S7973728454464518565">Hermit's Ring</ring2>
-                <back augment="S7973728454464518565">Hecate's Cape</back>
             </set>
             <set name="Nuke51" baseset="Nuke71" />
             <set name="Nuke50" baseset="Nuke51" />
@@ -75,25 +83,26 @@
                 <ear2 augment="S14968618926288334851">Gifted Earring</ear2>
                 <ring1 augment="S14968618926288334851">Stikini Ring</ring1>
                 <ring2 augment="S14968618926288334851">Stikini Ring</ring2>
+                <back augment="S14968618926288334851">Warlock's Mantle</back>
                 <legs>Atrophy Tights +2</legs>
-                <back augment="S14968618926288334851">Immortal's Cape</back>
+                <body>Atrophy Tabard +2</body>
             </set>
             <set name="Enh">
                 <body>Viti. Tabard +1</body>
-                <hands>Atrophy Gloves +3</hands>
-                <feet>Leth. Houseaux +1</feet>
-                <legs>Atrophy Tights +3</legs>
-                <ring1 augment="S7973728454464518565">Stikini Ring +1</ring1>
-                <ring2 augment="S7973728454464518565">Stikini Ring +1</ring2>
-                <ear1 augment="S14968618926288334851">Andoaa Earring</ear1>
-                <ear2 augment="S14968618926288334851">Gifted Earring</ear2>
+                <hands>Atrophy Gloves +2</hands>
+                <feet>Leth. Houseaux</feet>
+                <legs>Atrophy Tights +2</legs>
+                <ring1>Stikini Ring +1</ring1>
+                <ring2>Stikini Ring +1</ring2>
+                <!--ear1 augment="S14968618926288334851">Andoaa Earring</ear1>
+                <ear2 augment="S14968618926288334851">Gifted Earring</ear2-->
             </set>
             <set name="EnhPot" baseset="Enh">
                 <hands>Viti. Gloves +1</hands>
             </set>
             <set name="Ref" baseset="Enh">
-                <body>Atrophy Tabard +3</body>
-                <legs>Leth. Fuseau +1</legs>
+                <body>Atrophy Tabard +2</body>
+                <legs>Leth. Fuseau</legs>
             </set>
             <include>
             </include>
@@ -104,7 +113,7 @@
             <command>/echo [Switching to RDM Macros]</command>
             <command>/bind F9 /switch</command>
             <command>/bind F10 /status</command>
-            <command delay="2000">/lockstyle on</command>
+            <command delay="2000">/lockstyleset 9</command>
         </init>
 	<variables>
             <var name="switch">0</var>
@@ -121,8 +130,8 @@
                     <command>/echo [Murgleis Equipped]</command>
                 </if>
                 <elseif advanced="$switch=1">
-                    <setvar name="main" value="Almace" />
-                    <setvar name="sub" value="Murgleis" />
+                    <setvar name="main" value="Murgleis" />
+                    <setvar name="sub" value="Acclimator" />
                     <setvar name="switch" value="2" />
                     <doidlegear />
                     <command>/echo [Dual Wield]</command>
@@ -230,15 +239,14 @@
             <elseif ad_name="Requiescat">
                 <equip set="TP">
                     <ammo augment="S6176686717137314381">Minnow</ammo>
-                    <ear1>Telos Earring</ear1>
-                    <ear2 augment="S6176686717137314381">Mache Earring +1</ear2>
+                    <ear2>Cessance earring</ear2>
                     <neck>Fotia Gorget</neck>
                     <waist>Fotia Belt</waist>
                 </equip>
             </elseif>
             <else>
                 <equip set="TP">
-                    <ear1>Telos Earring</ear1>
+                    <ear2>Cessance earring</ear2>
                     <neck>Fotia Gorget</neck>
                     <waist>Fotia Belt</waist>
                 </equip>

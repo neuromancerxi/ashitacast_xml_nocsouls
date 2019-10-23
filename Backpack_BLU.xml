@@ -7,32 +7,32 @@
 	</settings>
 	<sets>
             <set name="Idle">
-                <main augment="S353610053140898233">Almace</main>
+                <main>Tizona</main>
                 <sub>$Offhand</sub>
                 <range augment="S182109392119204240">Bamboo Fish. Rod</range>
                 <ammo augment="S182109392119204240">Lufaise Fly</ammo>
-                <head augment="S1821294470965718574">Assim. Keffiyeh +3</head>
-                <body augment="S1821294470965718574">Assim. Jubbah +3</body>
-                <hands augment="S1496432389182864240">Assim. Bazu. +3</hands>
-                <legs>Blood Cuisses</legs>
-                <feet augment="S1821294470965718574">Assim. Charuqs +3</feet>
+                <head>Assim. Keffiyeh +2</head>
+                <body>Assim. Jubbah +3</body>
+                <hands>Assim. Bazu. +2</hands>
+                <legs>Crimson Cuisses</legs>
+                <feet>Assim. Charuqs +2</feet>
                 <neck>Loricate Torque +1</neck>
-                <waist augment="S14964323890395218574">Chaac Belt</waist>
+                <waist>Chaac Belt</waist>
                 <ear1>Etiolation Earring</ear1>
                 <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
                 <ring1>Defending Ring</ring1>
-                <ring2>Gelatinous Ring +1</ring2>
+                <ring2>Patricius Ring</ring2>
                 <back>Agema Cape</back>
             </set>
             <set name="TP" baseset="Idle">
-                <legs>Assim. Shalwar +3</legs>
-                <neck>Asperity Necklace</neck>
-                <waist augment="S1496432389182864240">Windbuffet Belt +1</waist>
-                <ear1 augment="S1496432389345534240">Mache Earring +1</ear1>
-                <ear2 augment="S182109392119204240">Mache Earring +1</ear2>
-                <ring1 augment="S1821294457858518574">Rajas Ring</ring1>
-                <ring2 augment="S1821187863554334839">Petrov Ring</ring2>
-                <back augment="S1496432389345534240">Laic Mantle</back>
+                <legs>Assim. Shalwar +2</legs>
+                <neck>Tlamiztli Collar</neck>
+                <waist>Hurch'lan Sash</waist>
+                <ear1>Mache Earring +1</ear1>
+                <ear2>Mache Earring +1</ear2>
+                <ring1>Rajas Ring</ring1>
+                <ring2>Supershear Ring</ring2>
+                <back>Bleating Mantle</back>
             </set>
             <set name="FastCast">
                 <body augment="S6217489529050814476">Pilgrim Tunica</body>
@@ -49,17 +49,17 @@
                 <ear2 augment="S14968618926288334851">Moldavite Earring</ear2>
                 <ring1 augment="S14968618926288334851">Stikini Ring</ring1>
                 <ring2 augment="S14968618926288334851">Stikini Ring</ring2>
-                <back augment="S14968618926288334851">Immortal's Cape</back>
+                <back augment="S14968618926288334851">Warlock's Mantle</back>
             </set>
             <set name="MagWS" baseset="TP">
                 <ammo augment="S7973728454464518565">Sabiki Rig</ammo>
-                <neck augment="S7973728454464518565">Baetyl Pendant</neck>
-                <waist augment="S7973728454464518565">Hachirin-no-Obi</waist>
+                <neck>Eddy Necklace</neck>
+                <waist augment="S7973728454464518565">Yamabuki-no-Obi</waist>
                 <ear1 augment="S7973728454464518565">Choleric Earring</ear1>
-                <ear2 augment="S7973728454464518565">Regal Earring</ear2>
+                <ear2 augment="S7973728454464518565">Tranquility Earring</ear2>
                 <ring1 augment="S7973728454464518565">Stikini Ring +1</ring1>
                 <ring2 augment="S7973728454464518565">Stikini Ring +1</ring2>
-                <back augment="S7973728454464518565">Izdubar Mantle</back>
+                <back augment="S7973728454464518565">Shaper's Shawl</back>
                 <body>Gyve Doublet</body>
             </set>
             <include>
@@ -75,7 +75,7 @@
         </init>
 	<variables>
             <var name="empy">0</var>
-            <var name="Offhand">Tizona</var>
+            <var name="Offhand">Acclimator</var>
 	</variables>
 	<inputcommands>
             <cmd input="/empy">
@@ -86,7 +86,7 @@
                     <command>/echo [Empy Farm: On]</command>
                 </if>
                 <else>
-                    <setvar name="Offhand" value="Tizona" />
+                    <setvar name="Offhand" value="Acclimator" />
                     <setvar name="empy" value="0" />
                     <doidlegear />
                     <command>/echo [Empy Farm: Off]</command>
@@ -140,18 +140,9 @@
             <if ad_name="Uriel*|Seraph*|Shining*|Burning*|Red Lotus*|Sanguine*">
                 <equip set="MagWS" />
             </if>
-            <elseif ad_name="Requiescat">
-                <equip set="TP">
-                    <ammo augment="S6176686717137314381">Minnow</ammo>
-                    <ear1>Telos Earring</ear1>
-                    <ear2 augment="S6176686717137314381">Mache Earring +1</ear2>
-                    <neck>Fotia Gorget</neck>
-                    <waist>Fotia Belt</waist>
-                </equip>
-            </elseif>
             <else>
                 <equip set="TP">
-                    <ear1>Telos Earring</ear1>
+                    <ear2>Cessance earring</ear2>
                     <neck>Fotia Gorget</neck>
                     <waist>Fotia Belt</waist>
                 </equip>

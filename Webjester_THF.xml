@@ -1,160 +1,237 @@
 <ashitacast>
-	<settings>
-		<buffupdate>true</buffupdate>
-		<statusupdate>true</statusupdate>
-		<hpupdate>false</hpupdate>
-		<autoupdate>false</autoupdate>
-	</settings>
-	<sets>
-            <set name="Idle">
-                <main augment="S797770059305214240">Twashtar</main>
-                <sub>$Offhand</sub>
-                <range augment="S182109392119204240">Bamboo Fish. Rod</range>
-                <ammo augment="S182109392119204240">Lufaise Fly</ammo>
-                <head augment="S1496432389182864240">Pill. Bonnet +3</head>
-                <body augment="S1496432389182864240">Pillager's Vest +3</body>
-                <hands>$Hands</hands>
-                <legs augment="S1821294470965718574">Pill. Culottes +3</legs>
-                <feet augment="S1496432389182864240">Pill. Poulaines +3</feet>
-                <neck>Loricate Torque +1</neck>                    
-                <waist>$Waist</waist>
-                <ear1 augment="S4444499968423610349">Trq. Earring +1</ear1>
-                <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
-                <ring1>Defending Ring</ring1>
-                <ring2>Gelatinous Ring +1</ring2>
-                <back>Agema Cape</back>
-            </set>
-            <set name="TP" baseset="Idle">
-                <neck>Asperity Necklace</neck>
-                <waist>$Waist</waist>
-                <ear1 augment="S1496432389345534240">Mache Earring +1</ear1>
-                <ear2 augment="S182109392119204240">Mache Earring +1</ear2>
-                <ring1 augment="S1821294470965718574">Regal Ring</ring1>
-                <ring2 augment="S1821187863554334839">Petrov Ring</ring2>
-                <back augment="S1496432389345534240">Laic Mantle</back>
-                <feet>$Feet</feet>
-            </set>
-            <set name="FastCast">
-                <body augment="S6217489529050814476">Pilgrim Tunica</body>
-                <ear1 augment="S182152343102764236">Stm. Earring +1</ear1>
-                <ear2 augment="S4444499968423610349">Trq. Earring +1</ear2>
-                <ring1 augment="S6217489529050814476">Prolix Ring</ring1>
-                <ring2 augment="S6217489529050814476">Deft Ring +1</ring2>
-            </set>
-            <set name="MACC" baseset="TP">
-                <ammo augment="S14968618926288334851">Sinking Minnow</ammo>
-                <hands augment="S1496432389182864240">Pill. Armlets +3</hands>
-                <neck augment="S14968618926288334851">Voltsurge Torque</neck>
-                <waist augment="S14968618926288334851">Virtuoso Belt</waist>
-                <ear1 augment="S14968618926288334851">Andoaa Earring</ear1>
-                <ear2 augment="S14968618926288334851">Moldavite Earring</ear2>
-                <ring1 augment="S14968618926288334851">Stikini Ring</ring1>
-                <ring2 augment="S14968618926288334851">Stikini Ring</ring2>
-                <back augment="S14968618926288334851">Immortal's Cape</back>
-            </set>
-            <set name="WS" baseset="TP">
-                <hands augment="S1496432389182864240">Pill. Armlets +3</hands>
-                <feet augment="S1496432389182864240">Pill. Poulaines +3</feet>
-                <neck>Fotia Gorget</neck>
-                <waist>Fotia Belt</waist>
-                <ear1>Telos Earring</ear1>
-                <ring2 augment="S1821294457858518574">Rajas Ring</ring2>
-            </set>
-            <include>
-            </include>
-	</sets>
-        <init>
-            <command>/macro book 11</command>
-            <command delay="1000">/macro set 2</command>
-            <command>/echo [Switching to THF Macros]</command>
-            <command>/bind F9 /th</command>
-            <command>/bind F10 /status</command>
-            <command delay="2000">/lockstyleset 10</command>
-        </init>
-	<variables>
-            <var name="th">1</var>
-            <var name="Offhand">Sandung</var>
-            <var name="Waist">Chaac Belt</var>
-            <var name="Hands">Plun. armlets +1</var>
-            <var name="Feet">Skulk. Poulaines +1</var>
-	</variables>
-	<inputcommands>
-            <cmd input="/th">
-                <if advanced="$th=0">
-                    <setvar name="Offhand" value="Sandung" />
-                    <setvar name="Waist" value="Chaac Belt" />
-                    <setvar name="Hands" value="Plun. armlets +1" />
-                    <setvar name="Feet" value="Skulk. Poulaines +1" />
-                    <setvar name="th" value="1" />
-                    <doidlegear />
-                    <command>/echo [TH: On]</command>
-                </if>
-                <else>
-                    <setvar name="Offhand" value="Mandau" />
-                    <setvar name="Waist" value="Windbuffet Belt +1" />
-                    <setvar name="Hands" value="Pill. armlets +3" />
-                    <setvar name="Feet" value="Pill. Poulaines +3" />
-                    <setvar name="th" value="0" />
-                    <doidlegear />
-                    <command>/echo [TH: Off]</command>
-                </else>
-            </cmd>
-            <cmd input="/status">
-                <if advanced="$th=0">
-                    <equip>
-                        <back>Agema Cape</back>
-                    </equip>
-                    <command>/echo [TH Mode is Off]</command>
-                    <doidlegear />
-                </if>
-                <else>
-                    <equip>
-                        <back>Agema Cape</back>
-                    </equip>
-                    <command>/echo [TH Mode is On]</command>
-                    <doidlegear />
-                </else>
-            </cmd>
-	</inputcommands>
-	<idlegear>
-            <if eq_back="Nexus Cape">
-                <equip lock="true">
-                    <back>Nexus Cape</back>
-                </equip>
+    <settings>
+        <buffupdate>true</buffupdate> <!-- Process Gear changes after gain/lose a buff -->
+        <statusupdate>true</statusupdate> <!-- Process Gear changes on status change, weakness, etc -->
+        <hpupdate>false</hpupdate> <!-- Process Gear changes when your HP changes -->
+        <autoupdate>false</autoupdate> <!-- Process Gear changes automatically, at a fixed interval -->
+    </settings>
+    <sets>
+        <set name="Idle">
+            <!--    
+                Your default gearset, this will equip when your status changes to idle, change jobs, etc. 
+                Put things like Movement Speed+, PDT/DT/MDT- gear, Your default weapons, etc. in this set.
+            -->
+            <main>Twashtar</main>
+            <sub>$sub</sub>
+            <range augment="S182109392119204240">Bamboo Fish. Rod</range> <!-- Augmented with TA +12% -->
+            <ammo augment="S182109392119204240">Lufaise Fly</ammo> <!-- Augmented with TA +12% -->
+            <head>Pill. Bonnet +3</head>
+            <body>Pillager's Vest +3</body>
+            <hands>Plun. armlets +1</hands> <!-- TH -->
+            <legs>Pill. Culottes +3</legs>
+            <feet>Pill. Poulaines +3</feet>
+            <neck>Loricate Torque +1</neck> <!-- Augmented with Counter +40 -->
+            <waist>Chaac Belt</waist> <!-- TH -->
+            <ear1>Etiolation Earring</ear1> <!-- Augmented with Counter +40 -->
+            <ear2 augment="S182152343102764236">Stm. Earring +1</ear2> <!-- NocSouls Starter Earring -->
+            <ring1>Defending Ring</ring1>
+            <ring2>Gelatinous Ring +1</ring2>
+            <back>Agema Cape</back>
+        </set>
+        <set name="TP" baseset="Idle">
+            <!--
+                This is your Default TP Set. It will start with your Idle set (baseset="Idle"), and 
+                replace any of the items in the Idle set with what you list below.
+            -->
+            <neck>Asperity Necklace</neck>
+            <waist>Windbuffet Belt +1</waist>
+            <hands>Pill. armlets +3</hands>
+            <ear1 augment="S182109392119204240">Mache Earring +1</ear1> <!-- Augmented with TA +12% -->
+            <ear2 augment="S1496432389345534240">Mache Earring +1</ear2> <!-- Augmented with ATK+54, TA +3% -->
+            <ring1>Regal Ring</ring1>
+            <ring2>Petrov Ring</ring2>
+            <back>Laic Mantle</back>
+        </set>
+        <set name="TH" baseset="TP">
+            <!--
+                This is your TH Set. It will start with your Idle set, do the substitutions that are in 
+                TP, and then do any further substitutions that you specify here.
+            -->
+            <waist>Chaac Belt</waist>
+            <hands>Plun. armlets +1</hands>
+            <feet>Skulk. Poulaines +1</feet>
+        </set>
+        <set name="DEFTP" baseset="TP">
+            <!--
+                Defensive TP Set. Swaps in DT/PDT/MDT items on top of TP set.
+            -->
+            <neck>Loricate Torque +1</neck> <!-- Augmented with Counter +40 -->
+            <ear1>Etiolation Earring</ear1> <!-- Augmented with Counter +40 -->
+            <ear2 augment="S182152343102764236">Stm. Earring +1</ear2> <!-- NocSouls Starter Earring -->
+            <ring1>Defending Ring</ring1>
+            <ring2>Gelatinous Ring +1</ring2>
+            <back>Agema Cape</back>
+        </set>        
+        <set name="WS" baseset="TP">
+            <!--
+                Swap your WS Specific Gear into place. Note that regardless of TP or TH mode it will use
+                "best in slot" for the WS (your TP set).
+            -->
+            <ammo augment="S6176686717137314381">Minnow</ammo> <!-- Main Hand Damage +32 -->
+            <neck>Fotia Gorget</neck> <!-- TA +12 -->
+            <waist>Fotia Belt</waist> <!-- TA +12 -->
+            <ear2 augment="S6176686717137314381">Mache Earring +1</ear2> <!-- Main Hand Damage +32 -->
+            <ring2>Rajas Ring</ring2>
+        </set>
+        <set name="MagWS" baseset="TP">
+            <!--
+                Aeolean Edge, etc, swap in augmented MAB Gear.
+            -->
+            <ammo augment="S7973728454464518565">Sabiki Rig</ammo> <!-- MAB +40 -->
+            <neck augment="S7973728454464518565">Baetyl Pendant</neck> <!-- MAB +40 -->
+            <ear1 augment="S7973728454464518565">Choleric Earring</ear1> <!-- MAB +40 -->
+            <ear2 augment="S7973728454464518565">Tranquility Earring</ear2> <!-- MAB +40 -->
+            <ring1 augment="S7973728454464518565">Stikini Ring +1</ring1> <!-- MAB +40 -->
+            <ring2 augment="S7973728454464518565">Stikini Ring +1</ring2> <!-- MAB +40 -->
+            <waist augment="S7973728454464518565">Hachirin-no-Obi</waist> <!-- MAB +40 -->
+            <back augment="S7973728454464518565">Izdubar Mantle</back> <!-- MAB +40 -->
+        </set>
+        <set name="FastCast">
+            <!--
+                This is your default pre-cast set. Drop all your Fastcast augmented gear here. FC caps 
+                at 80%. You can cap FC with 10 augment slots, 2.5 items.
+            -->
+            <body augment="S6217489529050814476">Pilgrim Tunica</body> <!-- Fastcast +32 -->
+            <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
+            <ear1>Etiolation Earring</ear1>
+            <ring2 augment="S6217489529050814476">Ascetic's Ring</ring2> <!-- Fastcast +32 -->
+        </set>
+        <set name="MACC" baseset="TP">
+            <!--
+                A MACC Set, for THF?! Yep. This assumes you'll be subbing RDM at somepoint. Having a 
+                MACC set will let you land debuffs more handily. The set builds on your TP set using 
+                the assumption that your TP Set will be 5/5 AF1 119 +3, so it will benefit from MACC +60 
+                from the set bonus.
+            -->
+            <ammo augment="S14968618926288334851">Sinking Minnow</ammo> <!-- MACC +72 -->
+            <neck augment="S14968618926288334851">Voltsurge Torque</neck> <!-- MACC +72 -->
+            <waist augment="S14968618926288334851">Virtuoso Belt</waist> <!-- MACC +72 -->
+            <ear1 augment="S14968618926288334851">Andoaa Earring</ear1> <!-- MACC +72 -->
+            <ear2 augment="S14968618926288334851">Moldavite Earring</ear2> <!-- MACC +72 -->
+            <ring1 augment="S14968618926288334851">Stikini Ring</ring1> <!-- MACC +72 -->
+            <ring2 augment="S14968618926288334851">Stikini Ring</ring2> <!-- MACC +72 -->
+            <back augment="S14968618926288334851">Immortal's Cape</back> <!-- MACC +72 -->
+        </set>
+        <include>
+        </include>
+    </sets>
+    <init>
+        <command>/macro book 11</command>
+        <command delay="1000">/macro set 2</command>
+        <command>/echo [Switching to THF Macros]</command>
+        <command>/bind F9 /switch</command>
+        <command>/bind F10 /status</command>
+        <command delay="2000">/lockstyleset 10</command>
+    </init>
+    <variables>
+        <var name="switch">0</var>
+        <var name="sub">Sandung</var>
+    </variables>
+    <inputcommands>
+        <cmd input="/switch">
+            <if advanced="$switch=2">
+                <setvar name="switch" value="0" />
+                <setvar name="sub" value="Sandung" />
+                <doidlegear />
+                <command>/echo [TP Mode: TH]</command>
             </if>
-            <if p_status="engaged">
-                <equip set="TP">
-                    <feet>$Feet</feet>
-                </equip>
-            </if>
+            <elseif advanced="$switch=1">
+                <setvar name="switch" value="2" />
+                <setvar name="sub" value="Mandau" />
+                <doidlegear />
+                <command>/echo [TP Mode: Defensive]</command>
+            </elseif>
             <else>
-                <equip set="Idle" />
+                <setvar name="switch" value="1" />
+                <setvar name="sub" value="Mandau" />
+                <doidlegear />
+                <command>/echo [TP Mode: Standard]</command>
             </else>
-	</idlegear>
-	<preranged>
-	</preranged>
-	<midranged>
-	</midranged>
-	<premagic>
-            <equip set="FastCast" />
-	</premagic>
-	<midmagic>
-            <if ad_skill="bluemagic|enfeeblingmagic|elementalmagic|darkmagic">
-                <equip set="MACC" />
+        </cmd>
+        <cmd input="/status">
+            <if advanced="$switch=0">
+                <equip>
+                    <back>Agema Cape</back> <!-- swaps into Agema manually to get out of Nexus Cape -->
+                </equip>
+                <command>/echo [TP Mode: TH]</command>
+                <doidlegear />
             </if>
-	</midmagic>
-	<jobability>
-            <if ad_name="Flee|Steal">
-                <equip feet="Pill. Poulaines +3" />
+            <elseif advanced="$switch=1">
+                <equip>
+                    <back>Agema Cape</back> <!-- swaps into Agema manually to get out of Nexus Cape -->
+                </equip>
+                <command>/echo [TP Mode: Standard]</command>
+                <doidlegear />
+            </elseif>
+            <else>
+                <equip>
+                    <back>Agema Cape</back> <!-- swaps into Agema manually to get out of Nexus Cape -->
+                </equip>
+                <command>/echo [TP Mode: Defensive]</command>
+                <doidlegear />
+            </else>
+        </cmd>
+    </inputcommands>
+    <idlegear>
+        <if eq_back="Nexus Cape"> <!-- locks your back slot while Nexus Cape is equipped -->
+            <equip lock="true">
+                <back>Nexus Cape</back>
+            </equip>
+        </if>
+        <if p_status="engaged"> <!-- swaps your TP gear depending on what "mode" you're in -->
+            <if advanced="$switch=0">
+                <equip set="TH" />
             </if>
-            <if ad_name="Hide">
-                <equip body="Pillager's Vest +2" />
-            </if>
-            <if ad_name="Despoil">
-                <equip body="Skulk. Poulaines" />
-            </if>
-	</jobability>
-	<weaponskill>
-            <equip set="WS" />
-	</weaponskill>
+            <elseif advanced="$switch=2">
+                <equip set="DEFTP" />
+            </elseif>
+            <else>
+                <equip set="TP" />
+            </else>
+        </if>
+        <else> <!-- otherwise if you aren't fighting, put on your idle set -->
+            <equip set="Idle" />
+        </else>
+    </idlegear>
+    <preranged>
+    </preranged>
+    <midranged>
+    </midranged>
+    <premagic>
+        <equip set="FastCast" /> <!-- swap in your Fastcast set before casting -->
+    </premagic>
+    <midmagic>
+        <if ad_skill="bluemagic|enfeeblingmagic|elementalmagic|darkmagic">
+            <equip set="MACC" />
+        </if>
+    </midmagic>
+    <jobability>
+        <if eq_back="Nexus Cape"> <!-- locks your back slot while Nexus Cape is equipped -->
+            <equip lock="true">
+                <back>Nexus Cape</back>
+            </equip>
+        </if>
+        <if ad_name="Flee|Steal">
+            <equip feet="Pill. Poulaines +3" />
+        </if>
+        <if ad_name="Hide">
+            <equip body="Pillager's Vest +3" />
+        </if>
+        <if ad_name="Despoil">
+            <equip body="Skulk. Poulaines +1" />
+        </if>
+    </jobability>
+    <weaponskill>
+        <if ad_name="Aeolian*|Cyclone|Gust*"> <!-- Magic Weaponskills -->
+                <equip set="MagWS" />
+        </if>
+        <elseif ad_name="Evisceration"> <!-- Swap in Crit+ Gear for Evis -->
+            <equip set="WS">
+                <ear1>Telos Earring</ear1> <!-- Augmented Crit +20% -->
+            </equip>
+        </elseif>
+        <else>
+            <equip set="WS" /> <!-- Standard WS Gear -->
+        </else>
+    </weaponskill>
 </ashitacast>

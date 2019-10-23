@@ -1,0 +1,216 @@
+<ashitacast>
+	<settings>
+		<buffupdate>true</buffupdate>
+		<statusupdate>true</statusupdate>
+		<hpupdate>false</hpupdate>
+		<autoupdate>false</autoupdate>
+	</settings>
+	<sets>
+                <set name="Idle">
+                    <main>$Weapon</main>
+                    <sub augment="S7973728454464518565">Tenax Strap</sub>
+                    <range augment="S7973728454464518565">Tarutaru F. Rod</range>
+                    <ammo augment="S7973728454464518565">Sabiki Rig</ammo>
+                    <head>Spae. Petasos +2</head>
+                    <body>Spaekona's Coat +2</body>
+                    <!--body>Wicce Coat</body-->
+                    <hands>Spae. Gloves +2</hands>
+                    <legs>Spae. Tonban +2</legs>
+                    <feet>Herald's Gaiters</feet>
+                    <neck>Loricate Torque +1</neck>
+                    <waist>Chaac Belt</waist>
+                    <ear1>Etiolation Earring</ear1>
+                    <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
+                    <ring1>Defending Ring</ring1>
+                    <ring2>Patricius Ring</ring2>
+                    <back augment="S7973728454464518565">Bane Cape</back>
+                </set>
+                <set name="FastCast" baseset="Nuke">
+                    <body augment="S6217489529050814476">Pilgrim Tunica</body>
+                    <waist>Witful Belt</waist>
+                    <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
+                    <ring1 augment="S6217489529050814476">Prolix Ring</ring1>
+                    <ring2 augment="S6217489529050814476">Ascetic's Ring</ring2>
+                </set>
+                <set name="Nuke">
+                    <main>$Weapon</main>
+                    <sub augment="S7973728454464518565">Tenax Strap</sub>
+                    <range augment="S7973728454464518565">Tarutaru F. Rod</range>
+                    <ammo augment="S7973728454464518565">Sabiki Rig</ammo>
+                    <head>Spae. Petasos +2</head>
+                    <body>Gyve Doublet</body>
+                    <hands>Spae. Gloves +2</hands>
+                    <legs>Spae. Tonban +2</legs>
+                    <feet>Spae. Sabots +2</feet>
+                    <neck>Eddy Necklace</neck>
+                    <ring1 augment="S7973728454464518565">Stikini Ring +1</ring1>
+                    <ring2 augment="S7973728454464518565">Stikini Ring +1</ring2>
+                    <ear1 augment="S7973728454464518565">Choleric Earring</ear1>
+                    <ear2 augment="S7973728454464518565">Tranquility Earring</ear2>
+                    <waist augment="S7973728454464518565">Yamabuki-no-Obi</waist>
+                    <back augment="S7973728454464518565">Shaper's Shawl</back>
+                    <!--neck augment="S7973728454464518565">Baetyl Pendant</neck>
+                    <waist augment="S7973728454464518565">Maniacus Sash</waist>
+                    <ear2 augment="S7973728454464518565">Regal Earring</ear2>
+                    <back augment="S7973728454464518565">Izdubar Mantle</back-->
+                </set>
+                <set name="Nuke71" baseset="Nuke">
+                    <main>Iridal Staff</main>
+                    <range augment="S7973728454464518565">Tarutaru F. Rod</range>
+                    <ammo augment="S7973728454464518565">Sabiki Rig</ammo>
+                    <head>Pumpkin head</head>
+                    <body>Field tunica</body>
+                    <hands>Field gloves</hands>
+                    <legs>Field hose</legs>
+                    <feet>Field boots</feet>
+                    <neck augment="S7973728454464518565">Justice Badge</neck>
+                    <ear1 augment="S7973728454464518565">Tranquility Earring</ear1>
+                    <ear2 augment="S7973728454464518565">Tranquility Earring</ear2>
+                    <waist augment="S7973728454464518565">Blood Stone +1</waist>
+                    <ring1 augment="S7973728454464518565">Hermit's Ring</ring1>
+                    <ring2 augment="S7973728454464518565">Hermit's Ring</ring2>
+                </set>
+                <set name="Nuke51" baseset="Nuke71" />
+                <set name="Nuke50" baseset="Nuke51">
+                    <main>Ark Scythe</main>
+                </set>
+		<set name="Enfeeble" baseset="Nuke">
+                    <range augment="S7973728454464518565">Tarutaru F. Rod</range>
+                    <ammo augment="S14968618926288334851">Sinking Minnow</ammo>
+                    <body>Spaekona's Coat +2</body>
+                    <neck augment="S14968618926288334851">Voltsurge Torque</neck>
+                    <waist augment="S14968618926288334851">Virtuoso Belt</waist>
+                    <ear1 augment="S14968618926288334851">Andoaa Earring</ear1>
+                    <ear2 augment="S14968618926288334851">Gifted Earring</ear2>
+                    <ring1 augment="S14968618926288334851">Stikini Ring</ring1>
+                    <ring2 augment="S14968618926288334851">Stikini Ring</ring2>
+                    <back augment="S14968618926288334851">Warlock's Mantle</back>
+		</set>
+		<include>
+		</include>
+	</sets>
+        <init>
+            <command>/macro book 5</command>
+            <command delay="1000">/macro set 5</command>
+            <command delay="1100">/echo [Switching to BLM Macros]</command>
+            <command>/bind F9 /toggle</command>
+            <command>/bind F10 /status</command>
+            <command delay="2000">/lockstyleset 14</command>
+        </init>
+	<variables>
+            <var name="toggle">0</var>     
+            <var name="Weapon">Laevateinn</var>
+	</variables>
+	<inputcommands>
+            <cmd input="/toggle">
+                <if advanced="$toggle=1">
+                    <setvar name="Weapon" value="Laevateinn" />
+                    <setvar name="toggle" value="0" />
+                    <doidlegear />
+                    <command>/echo [Laevateinn]</command>
+                </if>
+                <else>
+                    <setvar name="Weapon" value="Blurred Staff" />
+                    <setvar name="toggle" value="1" />
+                    <doidlegear />
+                    <command>/echo [Blurred Staff]</command>
+                </else>
+            </cmd>
+            <cmd input="/status">
+                <if advanced="$toggle=0">
+                    <equip>
+                        <back augment="S14968618926288334851">Immortal's Cape</back>
+                    </equip>
+                    <command>/echo [Laevateinn]</command>
+                    <doidlegear />
+                </if>
+                <else>
+                    <equip>
+                        <back augment="S14968618926288334851">Immortal's Cape</back>
+                    </equip>
+                    <command>/echo [Hvergelmir]</command>
+                    <doidlegear />
+                </else>
+            </cmd>
+	</inputcommands>
+	<idlegear>
+            <if eq_back="Nexus Cape">
+                <equip lock="true">
+                    <back>Nexus Cape</back>
+                </equip>
+            </if>
+            <if p_status="idle">    
+                <if p_joblevel="<99">
+                    <equip set="Idle">
+                        <main>Ark Scythe</main>
+                    </equip>
+                </if>
+                <else>
+                    <if advanced="$empy=1">
+                        <equip set="Idle">
+                            <main>Hvergelmir</main>
+                        </equip>
+                    </if>
+                    <else>
+                        <equip set="Idle" />
+                    </else>
+                </else>
+            </if>
+	</idlegear>
+	<preranged>
+	</preranged>
+	<midranged>
+	</midranged>
+	<premagic>
+            <if ad_skill="elementalmagic|enfeeblingmagic">
+                <equip set="FastCast" >
+                    <waist />
+                </equip>
+            </if>
+            <else>
+                <equip set="FastCast" />
+            </else>
+	</premagic>
+	<midmagic>
+            <if ad_skill="elementalmagic">
+                <if p_joblevel="99">
+                    <if advanced="(%ad_element=%e_dayelement)|(%ad_element=%e_weatherelement)">
+                        <equip set="Nuke">
+                            <waist augment="S7973728454464518565">Hachirin-no-Obi</waist>
+                        </equip>
+                    </if>
+                    <else>
+                        <equip set="Nuke" />
+                    </else>
+                </if>
+                <elseif p_joblevel=">70&<99">
+                    <if advanced="(%ad_element=%e_dayelement)|(%ad_element=%e_weatherelement)">
+                        <equip set="Nuke71">
+                            <waist augment="S7973728454464518565">Hachirin-no-Obi</waist>
+                        </equip>
+                    </if>
+                    <else>
+                        <equip set="Nuke71" />
+                    </else>
+                </elseif>
+                <elseif p_joblevel=">50&<71">
+                    <equip set="Nuke51" />
+                </elseif>
+                <else>
+                    <equip set="Nuke50" />
+                </else>
+            </if>
+            <if ad_skill="enfeeblingmagic|bluemagic">
+                <equip set="Enfeeble" />
+            </if>
+            <if ad_skill="darkmagic">
+                <equip set="Nuke">
+                    <head>Appetence Crown</head>
+                </equip>
+            </if>
+	</midmagic>
+	<jobability>
+	</jobability>
+	<weaponskill>
+	</weaponskill>
+</ashitacast>

@@ -15,7 +15,7 @@
                 <legs>Blood Cuisses</legs>
                 <back>Agema Cape</back>
             </set>
-            <set name="TP" Baseset="PhysWS">
+            <set name="TP" baseset="PhysWS">
                 <head augment="S14963464885262234839">Whirlpool Mask</head>
                 <body augment="S14963464885262234839">Agony Jerkin +1</body>
                 <hands augment="S14963464885262234839">Buremte Gloves</hands>
@@ -67,10 +67,10 @@
             </set>
             <set name="FastCast">
                 <body augment="S6217489529050814476">Pilgrim Tunica</body>
-                <ear1 augment="S182152343102764236">Stm. Earring +1</ear1>
-                <ear2 augment="S4444499968423610349">Trq. Earring +1</ear2>
+                <ear1>Etiolation Earring</ear1>
+                <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
                 <ring1 augment="S6217489529050814476">Prolix Ring</ring1>
-                <ring2 augment="S6217489529050814476">Deft Ring +1</ring2>
+                <ring2 augment="S6217489529050814476">Ascetic's Ring</ring2>
             </set>
             <set name="MACC" baseset="Idle">
                 <neck augment="S14968618926288334851">Voltsurge Torque</neck>

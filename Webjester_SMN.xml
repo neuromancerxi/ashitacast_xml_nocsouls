@@ -17,7 +17,7 @@
                 <feet>Crier's Gaiters</feet>
                 <neck>Caller's Pendant</neck>
                 <waist>Regal Belt</waist>
-                <ear1>Esper Earring</ear1>
+                <ear1 augment="S4444499968423610349">Trq. Earring +1</ear1>
                 <ear2>Andoaa Earring</ear2>
                 <ring1>Stikini Ring +1</ring1>
                 <ring2 augment="S7973728454464518565">Stikini Ring +1</ring2>
@@ -25,22 +25,18 @@
             </set>
             <set name="FastCast">
                 <body augment="S6217489529050814476">Pilgrim Tunica</body>
-                <neck>Stoicheion Medal</neck>
                 <waist>Witful Belt</waist>
-                <ear1 augment="S182152343102764236">Stm. Earring +1</ear1>
-                <ear2 augment="S4444499968423610349">Trq. Earring +1</ear2>
-                <ring1 augment="S6217489529050814476">Prolix Ring</ring1>
-                <ring2 augment="S6217489529050814476">Deft Ring +1</ring2>
+                <ring2 augment="S6217489529050814476">Ascetic's Ring</ring2>
             </set>
             <set name="Nuke">
                 <main>$Weapon</main>
-                <neck augment="S7973728454464518565">Mizu. Kubikazari</neck>
+                <neck augment="S7973728454464518565">Baetyl Pendant</neck>
                 <waist augment="S7973728454464518565">Hachirin-no-Obi</waist>
                 <ear1 augment="S7973728454464518565">Choleric Earring</ear1>
                 <ear2 augment="S7973728454464518565">Tranquility Earring</ear2>
                 <ring1 augment="S7973728454464518565">Stikini Ring +1</ring1>
-                <ring2 augment="S7973728454464518565">Hermit's Ring</ring2>
-                <back augment="S7973728454464518565">Hecate's cape</back>
+                <ring2 augment="S7973728454464518565">Stikini Ring +1</ring2>
+                <back augment="S7973728454464518565">Izdubar Mantle</back>
             </set>
             <set name="Enfeeble">
                 <range augment="S7973728454464518565">Tarutaru F. Rod</range>

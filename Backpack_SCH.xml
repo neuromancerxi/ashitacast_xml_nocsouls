@@ -8,65 +8,65 @@
 	<sets>
             <set name="Idle">
                 <main>$Weapon</main>
-                <sub augment="S7973728454464518565">Clerisy Strap +1</sub>
+                <sub augment="S7973728454464518565">Tenax Strap</sub>
                 <range augment="S7973728454464518565">Tarutaru F. Rod</range>
                 <ammo augment="S7973728454464518565">Sabiki Rig</ammo>
-                <head>Acad. Mortar. +3</head>
-                <body>Acad. Gown +3</body>
+                <head>Acad. Mortar. +2</head>
+                <body>Acad. Gown +2</body>
                 <hands>Acad. Bracers +2</hands>
                 <legs>Acad. Pants +2</legs>
-                <feet>Crier's Gaiters</feet>
+                <feet>Herald's Gaiters</feet>
                 <neck>Loricate Torque +1</neck>
                 <waist>Chaac Belt</waist>
-                <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
                 <ear1>Etiolation Earring</ear1>
-                <ring1>Gelatinous Ring +1</ring1>
-                <ring2>Defending Ring</ring2>
+                <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
+                <ring1>Defending Ring</ring1>
+                <ring2>Patricius Ring</ring2>
                 <back>Kumbira Cape</back>
             </set>
             <set name="FastCast">
-                <head>Acad. Mortar. +3</head>
+                <head>Acad. Mortar. +2</head>
                 <body augment="S6217489529050814476">Pilgrim Tunica</body>
                 <hands>Arbatel Bracers</hands>
                 <legs>Acad. Pants +2</legs>
-                <feet>Acad. Loafers +3</feet>
-                <neck>Stoicheion Medal</neck>
+                <feet>Acad. Loafers +2</feet>
                 <waist>Witful Belt</waist>
                 <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
                 <ear1>Etiolation Earring</ear1>
-                <ring1 augment="S6217489529050814476">Prolix Ring</ring1>
                 <ring2 augment="S6217489529050814476">Ascetic's Ring</ring2>
             </set>
             <set name="Nuke">
                 <main>$Weapon</main>
-                <sub augment="S7973728454464518565">Clerisy Strap +1</sub>
+                <sub augment="S7973728454464518565">Tenax Strap</sub>
                 <range augment="S7973728454464518565">Tarutaru F. Rod</range>
                 <ammo augment="S7973728454464518565">Sabiki Rig</ammo>
-                <head>Acad. Mortar. +3</head>
-                <body>Acad. Gown +3</body>
+                <head>Acad. Mortar. +2</head>
+                <body>Gyve Doublet</body>
                 <hands>Acad. Bracers +2</hands>
                 <legs>Acad. Pants +2</legs>
-                <feet>Acad. Loafers +3</feet>
-                <neck augment="S7973728454464518565">Baetyl Pendant</neck>
-                <waist augment="S7973728454464518565">Maniacus Sash</waist>
-                <ear1 augment="S7973728454464518565">Choleric Earring</ear1>
-                <ear2 augment="S7973728454464518565">Regal Earring</ear2>
+                <feet>Acad. Loafers +2</feet>
                 <ring1 augment="S7973728454464518565">Stikini Ring +1</ring1>
                 <ring2 augment="S7973728454464518565">Stikini Ring +1</ring2>
-                <back augment="S7973728454464518565">Izdubar Mantle</back>
+                <ear1 augment="S7973728454464518565">Choleric Earring</ear1>
+                <ear2 augment="S7973728454464518565">Tranquility Earring</ear2>
+                <waist augment="S7973728454464518565">Yamabuki-no-Obi</waist>
+                <back augment="S7973728454464518565">Shaper's Shawl</back>
             </set>
             <set name="Nuke71" baseset="Nuke" >
-                <main augment="S7973728454464518565">Chatoyant Staff</main>
-                <sub augment="S7973728454464518565">Vivid Strap +1</sub>
+                <main>Ark Scythe</main>
                 <range augment="S7973728454464518565">Tarutaru F. Rod</range>
                 <ammo augment="S7973728454464518565">Sabiki Rig</ammo>
+                <head>Pumpkin head</head>
+                <body>Field tunica</body>
+                <hands>Field gloves</hands>
+                <legs>Field hose</legs>
+                <feet>Field boots</feet>
                 <neck augment="S7973728454464518565">Justice Badge</neck>
-                <waist augment="S7973728454464518565">Hachirin-no-Obi</waist>
                 <ear1 augment="S7973728454464518565">Tranquility Earring</ear1>
                 <ear2 augment="S7973728454464518565">Tranquility Earring</ear2>
+                <waist augment="S7973728454464518565">Blood Stone +1</waist>
                 <ring1 augment="S7973728454464518565">Hermit's Ring</ring1>
                 <ring2 augment="S7973728454464518565">Hermit's Ring</ring2>
-                <back augment="S7973728454464518565">Hecate's Cape</back>
             </set>
             <set name="Nuke51" baseset="Nuke71" />
             <set name="Nuke50" baseset="Nuke51" />
@@ -78,7 +78,7 @@
                 <ear2 augment="S14968618926288334851">Gifted Earring</ear2>
                 <ring1 augment="S14968618926288334851">Stikini Ring</ring1>
                 <ring2 augment="S14968618926288334851">Stikini Ring</ring2>
-                <back augment="S14968618926288334851">Immortal's Cape</back>
+                <back augment="S14968618926288334851">Warlock's Mantle</back>
             </set>
             <include>
             </include>
@@ -134,9 +134,9 @@
                 </equip>
             </if>
             <if p_status="idle">    
-                <if p_joblevel=">50&<99">
+                <if p_joblevel="<99">
                     <equip set="Idle">
-                        <main>Chatoyant Staff</main>
+                        <main>Ark Scythe</main>
                     </equip>
                 </if>
                 <else>

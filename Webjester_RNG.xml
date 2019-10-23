@@ -14,7 +14,7 @@
                 <back>Agema Cape</back>
                 <legs>Blood Cuisses</legs>
             </set>
-            <set name="TP" Baseset="PhysWS">
+            <set name="TP" baseset="PhysWS">
                 <head augment="S14963464885262234839">Whirlpool Mask</head>
                 <body augment="S14963464885262234839">Agony Jerkin +1</body>
                 <hands augment="S14963464885262234839">Buremte Gloves</hands>
@@ -67,10 +67,10 @@
             </set>
             <set name="FastCast">
                 <body augment="S6217489529050814476">Pilgrim Tunica</body>
-                <ear1 augment="S182152343102764236">Stm. Earring +1</ear1>
-                <ear2 augment="S4444499968423610349">Trq. Earring +1</ear2>
+                <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
+                <ear1>Etiolation Earring</ear1>
                 <ring1 augment="S6217489529050814476">Prolix Ring</ring1>
-                <ring2 augment="S6217489529050814476">Deft Ring +1</ring2>
+                <ring2 augment="S6217489529050814476">Ascetic's Ring</ring2>
             </set>
             <set name="MACC" baseset="Idle">
                 <neck augment="S14968618926288334851">Voltsurge Torque</neck>
@@ -95,7 +95,7 @@
 	<variables>
             <var name="toggle">0</var>
             <var name="Mainhand">Perun +1</var>
-            <var name="Offhand">Legion Scutum</var>
+            <var name="Offhand">Nusku Shield</var>
             <var name="Range">Gandiva</ranged>
             <var name="Ammo">Artemis's Arrow</var>
 	</variables>
@@ -103,7 +103,7 @@
             <cmd input="/toggle">
                 <if advanced="$toggle=1">
                     <setvar name="Mainhand" value="Perun +1" />
-                    <setvar name="Offhand" value="Legion Scutum" />
+                    <setvar name="Offhand" value="Nusku Shield" />
                     <setvar name="Range" value="Gandiva" />
                     <setvar name="Ammo" value="Artemis's Arrow" />
                     <setvar name="toggle" value="0" />
