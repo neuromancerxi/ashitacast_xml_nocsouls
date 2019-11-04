@@ -12,7 +12,7 @@
                 <range augment="S7973728454464518565">Tarutaru F. Rod</range>
                 <ammo augment="S7973728454464518565">Sabiki Rig</ammo>
                 <head>Viti. Chapeau +1</head>
-                <body>Atrophy Tabard +2</body>
+                <body>Atrophy Tabard +3</body>
                 <hands>Atrophy Gloves +2</hands>
                 <legs>Crimson Cuisses</legs>
                 <feet>Iaso Boots</feet>
@@ -26,7 +26,7 @@
             </set>
             <set name="TP" baseset="idle">
                 <ammo>Lufaise Fly</ammo>
-                <head>Atro. Chapeau +2</head>
+                <head>Atro. Chapeau +3</head>
                 <legs>Atrophy Tights +2</legs>
                 <feet>Atro. Boots +2</feet>
                 <neck>Tlamiztli Collar</neck>
@@ -45,16 +45,15 @@
                 <ring2 augment="S6217489529050814476">Ascetic's Ring</ring2>
             </set>
             <set name="Nuke" baseset="TP">
-                <range augment="S7973728454464518565">Tarutaru F. Rod</range>
                 <ammo augment="S7973728454464518565">Sabiki Rig</ammo>
-                <body>Gyve Doublet</body>
-                <neck>Eddy Necklace</neck>
+                <neck augment="S7973728454464518565">Baetyl Pendant</neck>
+                <ear1 augment="S7973728454464518565">Choleric Earring</ear1>
+                <ear2 augment="S7973728454464518565">Regal Earring</ear2>
                 <ring1 augment="S7973728454464518565">Stikini Ring +1</ring1>
                 <ring2 augment="S7973728454464518565">Stikini Ring +1</ring2>
-                <ear1 augment="S7973728454464518565">Choleric Earring</ear1>
-                <ear2 augment="S7973728454464518565">Tranquility Earring</ear2>
+                <back augment="S7973728454464518565">Izdubar Mantle</back>
                 <waist augment="S7973728454464518565">Yamabuki-no-Obi</waist>
-                <back augment="S7973728454464518565">Shaper's Shawl</back>
+                <legs>Gyve Trousers</legs>
             </set>
             <set name="Nuke71" baseset="Nuke" >
                 <main>Ark Scythe</main>
@@ -72,6 +71,7 @@
                 <waist augment="S7973728454464518565">Blood Stone +1</waist>
                 <ring1 augment="S7973728454464518565">Hermit's Ring</ring1>
                 <ring2 augment="S7973728454464518565">Hermit's Ring</ring2>
+                <back>Shaper's Shawl</back>
             </set>
             <set name="Nuke51" baseset="Nuke71" />
             <set name="Nuke50" baseset="Nuke51" />
@@ -85,12 +85,11 @@
                 <ring2 augment="S14968618926288334851">Stikini Ring</ring2>
                 <back augment="S14968618926288334851">Warlock's Mantle</back>
                 <legs>Atrophy Tights +2</legs>
-                <body>Atrophy Tabard +2</body>
             </set>
             <set name="Enh">
                 <body>Viti. Tabard +1</body>
                 <hands>Atrophy Gloves +2</hands>
-                <feet>Leth. Houseaux</feet>
+                <feet>Leth. Houseaux +1</feet>
                 <legs>Atrophy Tights +2</legs>
                 <ring1>Stikini Ring +1</ring1>
                 <ring2>Stikini Ring +1</ring2>
@@ -101,8 +100,8 @@
                 <hands>Viti. Gloves +1</hands>
             </set>
             <set name="Ref" baseset="Enh">
-                <body>Atrophy Tabard +2</body>
-                <legs>Leth. Fuseau</legs>
+                <body>Atrophy Tabard +3</body>
+                <legs>Leth. Fuseau +1</legs>
             </set>
             <include>
             </include>

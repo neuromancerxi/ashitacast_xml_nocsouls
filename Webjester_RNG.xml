@@ -42,7 +42,7 @@
                 <waist augment="S14965182900021934843">Ponente Sash</waist>
                 <ear1 augment="S353610053140898233">Telos Earring</ear1>
                 <ear2 augment="S14965182900021934843">Enervating Earring</ear2>
-                <ring1 augment="S1821294470965718574">Regal Ring</ring1>
+                <ring1>Regal Ring</ring1>
                 <ring2 augment="S14966041906588534845">Longshot Ring</ring2>
                 <back augment="S14965182900021934843">Terebellum Mantle</back>
             </set>

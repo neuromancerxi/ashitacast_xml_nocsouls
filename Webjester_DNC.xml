@@ -9,8 +9,8 @@
             <set name="idle">
                 <main>Twashtar</main>
                 <sub>Terpsichore</sub>
-                <range augment="S6176686717137314381">Fastwater F. Rod</range>
-                <ammo augment="S6176686717137314381">Minnow</ammo>
+                <range augment="S182109392119204240">Bamboo Fish. Rod</range>
+                <ammo augment="S182109392119204240">Lufaise Fly</ammo>
                 <head>Maxixi Tiara +3</head>
                 <body>Maxixi Casaque +3</body>
                 <hands>Maxixi Bangles +2</hands>
@@ -27,12 +27,12 @@
             <set name="TP" baseset="idle">
                 <feet>Maxixi Toeshoes +3</feet>
                 <neck>Asperity Necklace</neck>
-                <waist augment="S1496432389182864240">Windbuffet Belt +1</waist>
-                <ear1 augment="S1496432389345534240">Mache Earring +1</ear1>
+                <waist>Windbuffet Belt +1</waist>
+                <ear1 augment="S182109392119204240">Mache Earring +1</ear1>
                 <ear2 augment="S6176686717137314381">Mache Earring +1</ear2>
-                <ring1 augment="S1821294470965718574">Regal Ring</ring1>
-                <ring2 augment="S1821187863554334839">Petrov Ring</ring2>
-                <back augment="S1496432389345534240">Laic Mantle</back>
+                <ring1>Regal Ring</ring1>
+                <ring2>Petrov Ring</ring2>
+                <back>Laic Mantle</back>
             </set>
             <set name="FastCast">
                 <body augment="S6217489529050814476">Pilgrim Tunica</body>
@@ -60,6 +60,17 @@
                 <ring1 augment="S7973728454464518565">Stikini Ring +1</ring1>
                 <ring2 augment="S7973728454464518565">Stikini Ring +1</ring2>
                 <back augment="S7973728454464518565">Izdubar Mantle</back>
+            </set>
+            <set name="WS" baseset="TP">
+                <neck>Fotia Gorget</neck>
+                <waist>Fotia Belt</waist>
+            </set>
+            <set name="TH" baseset="Idle">
+                <body>Volte Jupon</body>
+                <hands>Volte Bracers</hands>
+                <legs>Volte Hose</legs>
+                <feet>Volte Boots</feet>
+                <waist>Chaac Belt</waist>
             </set>
             <include>
             </include>
@@ -120,15 +131,16 @@
 	<jobability>
 	</jobability>
 	<weaponskill>
-            <if ad_name="Gust*|Cyclone|Aeolian*">
+            <if ad_name="Aeolian*|Cyclone|Gust*"> <!-- Magic Weaponskills -->
                 <equip set="MagWS" />
             </if>
-            <else>
-                <equip set="TP">
-                    <ear1>Telos Earring</ear1>
-                    <neck>Fotia Gorget</neck>
-                    <waist>Fotia Belt</waist>
+            <elseif ad_name="Evisceration"> <!-- Swap in Crit+ Gear for Evis -->
+                <equip set="WS">
+                    <ear2>Telos Earring</ear2> <!-- Augmented Crit +20% -->
                 </equip>
+            </elseif>
+            <else>
+                <equip set="WS" /> <!-- Standard WS Gear -->
             </else>
 	</weaponskill>
 </ashitacast>

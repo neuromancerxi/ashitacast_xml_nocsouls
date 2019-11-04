@@ -8,7 +8,7 @@
 	<sets>
             <set name="idle">
                 <main>$Mainhand</main>
-                <sub augment="S1821294470965718574">Utu Grip</sub>
+                <sub>Utu Grip</sub>
                 <range augment="S6176686717137314381">Fastwater F. Rod</range>
                 <ammo augment="S6176686717137314381">Minnow</ammo>
                 <head augment="S1496432389182864240">Wakido Kabuto +3</head>
@@ -27,12 +27,12 @@
             <set name="TP" baseset="Idle">
                 <feet augment="S1821294470965718574">Wakido Sune. +3</feet>
                 <neck>Asperity Necklace</neck>
-                <waist augment="S1496432389182864240">Windbuffet Belt +1</waist>
-                <ear1 augment="S1496432389345534240">Mache Earring +1</ear1>
-                <ear2 augment="S182109392119204240">Mache Earring +1</ear2>
-                <ring1 augment="S1821294470965718574">Regal Ring</ring1>
-                <ring2 augment="S1821187863554334839">Petrov Ring</ring2>
-                <back augment="S1496432389345534240">Laic Mantle</back>
+                <waist>Windbuffet Belt +1</waist>
+                <ear1 augment="S182109392119204240">Mache Earring +1</ear1> <!-- Augmented with TA +12% -->
+                <ear2 augment="S6176686717137314381">Mache Earring +1</ear2> <!-- Augmented with DMG +32 -->
+                <ring1>Regal Ring</ring1>
+                <ring2>Petrov Ring</ring2>
+                <back>Laic Mantle</back>
             </set>
             <set name="FastCast">
                 <body augment="S6217489529050814476">Pilgrim Tunica</body>
@@ -55,6 +55,17 @@
                 <head augment="S1496432389182864240">Wakido Kabuto +3</head>
                 <hands>Sakonji Kote +1</hands>
                 <back>Smertrios's Mantle</back>
+            </set>
+            <set name="WS" baseset="TP">
+                <neck>Fotia Gorget</neck>
+                <waist>Fotia Belt</waist>
+            </set>
+            <set name="TH" baseset="Idle">
+                <body>Volte Jupon</body>
+                <hands>Volte Bracers</hands>
+                <legs>Volte Hose</legs>
+                <feet>Volte Boots</feet>
+                <waist>Chaac Belt</waist>
             </set>
             <include>
             </include>
@@ -134,9 +145,6 @@
             </if>
 	</jobability>
 	<weaponskill>
-            <equip set="TP">
-                <neck>Fotia Gorget</neck>
-                <waist>Fotia Belt</waist>
-            </equip>
+            <equip set="WS" />
 	</weaponskill>
 </ashitacast>

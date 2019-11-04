@@ -30,9 +30,9 @@
                 <waist augment="S1496432389182864240">Windbuffet Belt +1</waist>
                 <ear1 augment="S1496432389345534240">Mache Earring +1</ear1>
                 <ear2 augment="S182109392119204240">Mache Earring +1</ear2>
-                <ring1 augment="S1821294470965718574">Regal Ring</ring1>
-                <ring2 augment="S1821187863554334839">Petrov Ring</ring2>
-                <back augment="S1496432389345534240">Laic Mantle</back>
+                <ring1>Regal Ring</ring1>
+                <ring2>Petrov Ring</ring2>
+                <back>Laic Mantle</back>
             </set>
             <set name="FastCast">
                 <body augment="S6217489529050814476">Pilgrim Tunica</body>

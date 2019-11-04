@@ -92,6 +92,13 @@
             <ring2 augment="S14968618926288334851">Stikini Ring</ring2>
             <back augment="S14968618926288334851">Immortal's Cape</back>
         </set>
+        <set name="TH" baseset="Idle">
+            <body>Volte Jupon</body>
+            <hands>Volte Bracers</hands>
+            <legs>Volte Hose</legs>
+            <feet>Volte Boots</feet>
+            <waist>Chaac Belt</waist>
+        </set>
         <include>
         </include>
     </sets>
@@ -162,6 +169,12 @@
                 </else>
             </else>
         </if>
+        <elseif p_status="engaged"> <!-- swaps your TP gear -->
+            <equip set="TH" />
+        </elseif>
+        <else> <!-- otherwise if you aren't fighting, put on your idle set -->
+            <equip set="Idle" />
+        </else>
     </idlegear>
     <preranged>
     </preranged>

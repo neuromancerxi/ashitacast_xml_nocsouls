@@ -9,20 +9,22 @@
         <set name="idle">
             <main>Kenkonken</main>
             <range>$ranged</range>
-            <head>Foire Taj +2</head>
-            <body>Foire Tobe +2</body>
+            <ammo>Automaton Oil</ammo>
+            <head>Foire Taj +3</head>
+            <body>Foire Tobe +3</body>
             <hands>Foire Dastanas +2</hands>
             <legs>Foire Churidars +2</legs>
             <feet>Hermes' Sandals</feet>
             <neck>Loricate Torque +1</neck>
             <waist>Chaac Belt</waist>
+            <ear1>Etiolation Earring</ear1>
             <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
             <ring1>Defending Ring</ring1>
             <ring2>Patricius Ring</ring2>
             <back>Dispersal Mantle</back>
         </set>
         <set name="TP" baseset="idle">
-            <feet>Foire Babouches +2</feet>
+            <feet>Foire Babouches +3</feet>
             <neck>Tlamiztli Collar</neck>
             <waist>Hurch'lan Sash</waist>
             <ear1>Mache Earring +1</ear1>
@@ -46,13 +48,13 @@
             <back augment="S14968618926288334851">Immortal's Cape</back>
         </set>
         <set name="MagWS" baseset="TP">
-            <neck>Eddy Necklace</neck>
             <waist augment="S7973728454464518565">Yamabuki-no-Obi</waist>
             <ear1 augment="S7973728454464518565">Choleric Earring</ear1>
             <ear2 augment="S7973728454464518565">Tranquility Earring</ear2>
             <ring1 augment="S7973728454464518565">Stikini Ring +1</ring1>
             <ring2 augment="S7973728454464518565">Stikini Ring +1</ring2>
-            <back augment="S7973728454464518565">Shaper's Shawl</back>
+            <neck augment="S7973728454464518565">Baetyl Pendant</neck>
+            <back augment="S7973728454464518565">Izdubar Mantle</back>
             <body>Gyve Doublet</body>
         </set>
         <include>
@@ -67,8 +69,8 @@
         <command delay="2000">/lockstyle on</command>
     </init>
     <variables>
-        <var name="switch">0</var>
-        <var name="ranged">Divinator</var>
+        <var name="switch">1</var>
+        <var name="ranged">Divinator II</var>
     </variables>
     <inputcommands>
         <cmd input="/switch">

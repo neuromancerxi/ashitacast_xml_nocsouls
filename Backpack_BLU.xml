@@ -11,11 +11,11 @@
                 <sub>$Offhand</sub>
                 <range augment="S182109392119204240">Bamboo Fish. Rod</range>
                 <ammo augment="S182109392119204240">Lufaise Fly</ammo>
-                <head>Assim. Keffiyeh +2</head>
+                <head>Assim. Keffiyeh +3</head>
                 <body>Assim. Jubbah +3</body>
-                <hands>Assim. Bazu. +2</hands>
+                <hands>Assim. Bazu. +3</hands>
                 <legs>Crimson Cuisses</legs>
-                <feet>Assim. Charuqs +2</feet>
+                <feet>Assim. Charuqs +3</feet>
                 <neck>Loricate Torque +1</neck>
                 <waist>Chaac Belt</waist>
                 <ear1>Etiolation Earring</ear1>
@@ -25,14 +25,14 @@
                 <back>Agema Cape</back>
             </set>
             <set name="TP" baseset="Idle">
-                <legs>Assim. Shalwar +2</legs>
+                <legs>Assim. Shalwar +3</legs>
                 <neck>Tlamiztli Collar</neck>
                 <waist>Hurch'lan Sash</waist>
                 <ear1>Mache Earring +1</ear1>
                 <ear2>Mache Earring +1</ear2>
                 <ring1>Rajas Ring</ring1>
                 <ring2>Supershear Ring</ring2>
-                <back>Bleating Mantle</back>
+                <back>Laic Mantle</back>
             </set>
             <set name="FastCast">
                 <body augment="S6217489529050814476">Pilgrim Tunica</body>
@@ -53,14 +53,18 @@
             </set>
             <set name="MagWS" baseset="TP">
                 <ammo augment="S7973728454464518565">Sabiki Rig</ammo>
-                <neck>Eddy Necklace</neck>
                 <waist augment="S7973728454464518565">Yamabuki-no-Obi</waist>
                 <ear1 augment="S7973728454464518565">Choleric Earring</ear1>
-                <ear2 augment="S7973728454464518565">Tranquility Earring</ear2>
+                <ear2 augment="S7973728454464518565">Regal Earring</ear2>
                 <ring1 augment="S7973728454464518565">Stikini Ring +1</ring1>
                 <ring2 augment="S7973728454464518565">Stikini Ring +1</ring2>
-                <back augment="S7973728454464518565">Shaper's Shawl</back>
+                <neck augment="S7973728454464518565">Baetyl Pendant</neck>
+                <back augment="S7973728454464518565">Izdubar Mantle</back>
                 <body>Gyve Doublet</body>
+                <legs>Gyve Trousers</legs>
+            </set>
+            <set name="TH" baseset="Idle">
+                <waist>Chaac Belt</waist>
             </set>
             <include>
             </include>
@@ -130,9 +134,23 @@
             <equip set="FastCast" />
 	</premagic>
 	<midmagic>
-            <if ad_skill="bluemagic|enfeeblingmagic|elementalmagic|darkmagic">
+            <if ad_skill="bluemagic">
+                <if ad_name="Uproot|Crashing Thunder|Thunderbolt|Tearing Gust|Droning Whirlwind|Cesspool|Polar Roar|Gates of Hades|Evryone. Grudge|Water Bomb|Charged Whisker">
+                    <equip set="MagWS" />
+                </if>
+                <else>
+                    <equip set="MACC">
+                        <ring1 augment="S7973728454464518565">Stikini Ring +1</ring1>
+                        <ring2 augment="S7973728454464518565">Stikini Ring +1</ring2>
+                    </equip>
+                </else>
+            </if>
+            <elseif ad_skill="enfeeblingmagic|darkmagic">
                 <equip set="MACC" />
             </if>
+            <elseif ad_skill="elementalmagic">
+                <equip set="MagWS" />
+            </elseif>
 	</midmagic>
 	<jobability>
 	</jobability>

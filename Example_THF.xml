@@ -14,7 +14,7 @@
             <main>Twashtar</main>
             <sub>$sub</sub>
             <range augment="S182109392119204240">Bamboo Fish. Rod</range> <!-- Augmented with TA +12% -->
-            <ammo augment="S6176686717137314381">Minnow</ammo> <!-- Augmented with DMG +-->
+            <ammo augment="S182109392119204240">Lufaise Fly</ammo> <!-- Augmented with TA +12% -->
             <head>Pill. Bonnet +3</head>
             <body>Pillager's Vest +3</body>
             <hands>Plun. armlets +1</hands> <!-- TH -->
@@ -37,7 +37,7 @@
             <waist>Windbuffet Belt +1</waist>
             <hands>Pill. armlets +3</hands>
             <ear1 augment="S182109392119204240">Mache Earring +1</ear1> <!-- Augmented with TA +12% -->
-            <ear2 augment="S6176686717137314381">Mache Earring +1</ear2> <!-- Augmented with DMG +32 -->
+            <ear2 augment="S1496432389345534240">Mache Earring +1</ear2> <!-- Augmented with ATK+54, TA +3% -->
             <ring1>Regal Ring</ring1>
             <ring2>Petrov Ring</ring2>
             <back>Laic Mantle</back>
@@ -50,10 +50,6 @@
             <waist>Chaac Belt</waist>
             <hands>Plun. armlets +1</hands>
             <feet>Skulk. Poulaines +1</feet>
-        </set>
-        <set name="THMAX" baseset="TH">
-            <body>Volte Jupon</body>
-            <legs>Volte Hose</legs>
         </set>
         <set name="DEFTP" baseset="TP">
             <!--
@@ -74,7 +70,7 @@
             <ammo augment="S6176686717137314381">Minnow</ammo> <!-- Main Hand Damage +32 -->
             <neck>Fotia Gorget</neck> <!-- TA +12 -->
             <waist>Fotia Belt</waist> <!-- TA +12 -->
-            <ear1>Telos Earring</ear1> <!-- Augmented Crit +20% -->
+            <ear2 augment="S6176686717137314381">Mache Earring +1</ear2> <!-- Main Hand Damage +32 -->
             <ring2>Rajas Ring</ring2>
         </set>
         <set name="MagWS" baseset="TP">

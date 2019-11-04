@@ -13,39 +13,34 @@
                 <ammo augment="S7973728454464518565">Sabiki Rig</ammo>
                 <head>Acad. Mortar. +3</head>
                 <body>Acad. Gown +3</body>
-                <hands>Acad. Bracers +2</hands>
-                <legs>Acad. Pants +2</legs>
+                <hands>Acad. Bracers +3</hands>
+                <legs>Acad. Pants +3</legs>
                 <feet>Crier's Gaiters</feet>
                 <neck>Loricate Torque +1</neck>
                 <waist>Chaac Belt</waist>
                 <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
                 <ear1>Etiolation Earring</ear1>
-                <ring1>Gelatinous Ring +1</ring1>
-                <ring2>Defending Ring</ring2>
+                <ring1>Defending Ring</ring1>
+                <ring2>Gelatinous Ring +1</ring2>
                 <back>Kumbira Cape</back>
             </set>
             <set name="FastCast">
                 <head>Acad. Mortar. +3</head>
                 <body augment="S6217489529050814476">Pilgrim Tunica</body>
-                <hands>Arbatel Bracers</hands>
-                <legs>Acad. Pants +2</legs>
+                <hands>Arbatel Bracers +1</hands>
+                <legs>Acad. Pants +3</legs>
                 <feet>Acad. Loafers +3</feet>
-                <neck>Stoicheion Medal</neck>
                 <waist>Witful Belt</waist>
                 <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
                 <ear1>Etiolation Earring</ear1>
                 <ring1 augment="S6217489529050814476">Prolix Ring</ring1>
                 <ring2 augment="S6217489529050814476">Ascetic's Ring</ring2>
             </set>
-            <set name="Nuke">
-                <main>$Weapon</main>
-                <sub augment="S7973728454464518565">Clerisy Strap +1</sub>
-                <range augment="S7973728454464518565">Tarutaru F. Rod</range>
-                <ammo augment="S7973728454464518565">Sabiki Rig</ammo>
-                <head>Acad. Mortar. +3</head>
-                <body>Acad. Gown +3</body>
-                <hands>Acad. Bracers +2</hands>
-                <legs>Acad. Pants +2</legs>
+            <set name="Nuke" baseset="Idle">
+                <ammo augment="S14968618926288334851">Sinking Minnow</ammo>
+                <!--body>Acad. Gown +3</body-->
+                <body>Gyve Doublet</body>
+                <hands>Acad. Bracers +3</hands>
                 <feet>Acad. Loafers +3</feet>
                 <neck augment="S7973728454464518565">Baetyl Pendant</neck>
                 <waist augment="S7973728454464518565">Maniacus Sash</waist>

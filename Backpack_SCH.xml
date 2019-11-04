@@ -8,13 +8,13 @@
 	<sets>
             <set name="Idle">
                 <main>$Weapon</main>
-                <sub augment="S7973728454464518565">Tenax Strap</sub>
+                <sub augment="S7973728454464518565">Clerisy Strap</sub>
                 <range augment="S7973728454464518565">Tarutaru F. Rod</range>
                 <ammo augment="S7973728454464518565">Sabiki Rig</ammo>
-                <head>Acad. Mortar. +2</head>
-                <body>Acad. Gown +2</body>
-                <hands>Acad. Bracers +2</hands>
-                <legs>Acad. Pants +2</legs>
+                <head>Acad. Mortar. +3</head>
+                <body>Acad. Gown +3</body>
+                <hands>Acad. Bracers +3</hands>
+                <legs>Acad. Pants +3</legs>
                 <feet>Herald's Gaiters</feet>
                 <neck>Loricate Torque +1</neck>
                 <waist>Chaac Belt</waist>
@@ -24,36 +24,33 @@
                 <ring2>Patricius Ring</ring2>
                 <back>Kumbira Cape</back>
             </set>
-            <set name="FastCast">
-                <head>Acad. Mortar. +2</head>
+            <set name="FastCast" basetset="Idle">
                 <body augment="S6217489529050814476">Pilgrim Tunica</body>
-                <hands>Arbatel Bracers</hands>
-                <legs>Acad. Pants +2</legs>
-                <feet>Acad. Loafers +2</feet>
+                <hands>Arbatel Bracers +1</hands>
+                <feet>Acad. Loafers +3</feet>
                 <waist>Witful Belt</waist>
                 <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
                 <ear1>Etiolation Earring</ear1>
                 <ring2 augment="S6217489529050814476">Ascetic's Ring</ring2>
             </set>
-            <set name="Nuke">
-                <main>$Weapon</main>
-                <sub augment="S7973728454464518565">Tenax Strap</sub>
-                <range augment="S7973728454464518565">Tarutaru F. Rod</range>
-                <ammo augment="S7973728454464518565">Sabiki Rig</ammo>
-                <head>Acad. Mortar. +2</head>
-                <body>Gyve Doublet</body>
-                <hands>Acad. Bracers +2</hands>
-                <legs>Acad. Pants +2</legs>
-                <feet>Acad. Loafers +2</feet>
+            <set name="Nuke" baseset="Idle">
+                <ammo augment="S14968618926288334851">Sinking Minnow</ammo>
+                <head>Acad. Mortar. +3</head>
+                <body>Acad. Gown +3</body>
+                <hands>Acad. Bracers +3</hands>
+                <legs>Gyve Trousers</legs>
+                <feet>Acad. Loafers +3</feet>
                 <ring1 augment="S7973728454464518565">Stikini Ring +1</ring1>
                 <ring2 augment="S7973728454464518565">Stikini Ring +1</ring2>
                 <ear1 augment="S7973728454464518565">Choleric Earring</ear1>
-                <ear2 augment="S7973728454464518565">Tranquility Earring</ear2>
+                <ear2 augment="S7973728454464518565">Regal Earring</ear2>
                 <waist augment="S7973728454464518565">Yamabuki-no-Obi</waist>
-                <back augment="S7973728454464518565">Shaper's Shawl</back>
+                <neck augment="S7973728454464518565">Baetyl Pendant</neck>
+                <back augment="S7973728454464518565">Izdubar Mantle</back>
             </set>
             <set name="Nuke71" baseset="Nuke" >
                 <main>Ark Scythe</main>
+                <sub augment="S7973728454464518565">Tenax Strap</sub>
                 <range augment="S7973728454464518565">Tarutaru F. Rod</range>
                 <ammo augment="S7973728454464518565">Sabiki Rig</ammo>
                 <head>Pumpkin head</head>
@@ -67,6 +64,7 @@
                 <waist augment="S7973728454464518565">Blood Stone +1</waist>
                 <ring1 augment="S7973728454464518565">Hermit's Ring</ring1>
                 <ring2 augment="S7973728454464518565">Hermit's Ring</ring2>
+                <back>Shaper's Shawl</back>
             </set>
             <set name="Nuke51" baseset="Nuke71" />
             <set name="Nuke50" baseset="Nuke51" />
@@ -79,6 +77,7 @@
                 <ring1 augment="S14968618926288334851">Stikini Ring</ring1>
                 <ring2 augment="S14968618926288334851">Stikini Ring</ring2>
                 <back augment="S14968618926288334851">Warlock's Mantle</back>
+                <legs>Acad. Pants +2</legs>
             </set>
             <include>
             </include>

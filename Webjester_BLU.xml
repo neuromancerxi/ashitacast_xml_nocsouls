@@ -25,14 +25,15 @@
                 <back>Agema Cape</back>
             </set>
             <set name="TP" baseset="Idle">
+                <ammo augment="S182109392119204240">Lufaise Fly</ammo>
                 <legs>Assim. Shalwar +3</legs>
                 <neck>Asperity Necklace</neck>
-                <waist augment="S1496432389182864240">Windbuffet Belt +1</waist>
-                <ear1 augment="S1496432389345534240">Mache Earring +1</ear1>
-                <ear2 augment="S182109392119204240">Mache Earring +1</ear2>
-                <ring1 augment="S1821294457858518574">Rajas Ring</ring1>
-                <ring2 augment="S1821187863554334839">Petrov Ring</ring2>
-                <back augment="S1496432389345534240">Laic Mantle</back>
+                <waist>Windbuffet Belt +1</waist>
+                <ear1>Telos Earring</ear1> <!-- Crit +20% -->
+                <ear2 augment="S6176686717137314381">Mache Earring +1</ear2> <!-- Augmented with DMG +32 -->
+                <ring1>Rajas Ring</ring1>
+                <ring2>Petrov Ring</ring2>
+                <back>Laic Mantle</back>
             </set>
             <set name="FastCast">
                 <body augment="S6217489529050814476">Pilgrim Tunica</body>
@@ -61,6 +62,19 @@
                 <ring2 augment="S7973728454464518565">Stikini Ring +1</ring2>
                 <back augment="S7973728454464518565">Izdubar Mantle</back>
                 <body>Gyve Doublet</body>
+            </set>
+            <set name="WS" baseset="TP">
+                <ammo augment="S6176686717137314381">Minnow</ammo>
+                <ear1 augment="S182109392119204240">Mache Earring +1</ear1> <!-- Augmented with TA +12% -->
+                <neck>Fotia Gorget</neck>
+                <waist>Fotia Belt</waist>
+            </set>
+            <set name="TH" baseset="Idle">
+                <body>Volte Jupon</body>
+                <hands>Volte Bracers</hands>
+                <legs>Volte Hose</legs>
+                <feet>Volte Boots</feet>
+                <waist>Chaac Belt</waist>
             </set>
             <include>
             </include>
@@ -130,9 +144,23 @@
             <equip set="FastCast" />
 	</premagic>
 	<midmagic>
-            <if ad_skill="bluemagic|enfeeblingmagic|elementalmagic|darkmagic">
+            <if ad_skill="bluemagic">
+                <if ad_name="Uproot|Crashing Thunder|Thunderbolt|Tearing Gust|Droning Whirlwind|Cesspool|Polar Roar|Gates of Hades|Evryone. Grudge|Water Bomb|Charged Whisker">
+                    <equip set="MagWS" />
+                </if>
+                <else>
+                    <equip set="MACC">
+                        <ring1 augment="S7973728454464518565">Stikini Ring +1</ring1>
+                        <ring2 augment="S7973728454464518565">Stikini Ring +1</ring2>
+                    </equip>
+                </else>
+            </if>
+            <elseif ad_skill="enfeeblingmagic|darkmagic">
                 <equip set="MACC" />
             </if>
+            <elseif ad_skill="elementalmagic">
+                <equip set="MagWS" />
+            </elseif>
 	</midmagic>
 	<jobability>
 	</jobability>
@@ -140,21 +168,13 @@
             <if ad_name="Uriel*|Seraph*|Shining*|Burning*|Red Lotus*|Sanguine*">
                 <equip set="MagWS" />
             </if>
-            <elseif ad_name="Requiescat">
-                <equip set="TP">
-                    <ammo augment="S6176686717137314381">Minnow</ammo>
-                    <ear1>Telos Earring</ear1>
-                    <ear2 augment="S6176686717137314381">Mache Earring +1</ear2>
-                    <neck>Fotia Gorget</neck>
-                    <waist>Fotia Belt</waist>
+            <elseif ad_name="Chant*|Vorpal*">
+                <equip set="WS">
+                    <ear2>Telos Earring</ear2>
                 </equip>
             </elseif>
             <else>
-                <equip set="TP">
-                    <ear1>Telos Earring</ear1>
-                    <neck>Fotia Gorget</neck>
-                    <waist>Fotia Belt</waist>
-                </equip>
+                <equip set="WS" />
             </else>
 	</weaponskill>
 </ashitacast>

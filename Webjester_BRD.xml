@@ -35,7 +35,7 @@
                 <ear2 augment="S6176686717137314381">Mache Earring +1</ear2>
                 <ring1 augment="S1821187863554334839">Petrov Ring</ring1>
                 <ring2 augment="S1821294457858518574">Rajas Ring</ring2>
-                <back augment="S1496432389345534240">Laic Mantle</back>
+                <back>Laic Mantle</back>
             </set>
             <set name="FastCast">
                 <body augment="S6217489529050814476">Pilgrim Tunica</body>
