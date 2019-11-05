@@ -8,7 +8,7 @@
 	<sets>
             <set name="idle">
                 <main>$Mainhand</main>
-                <sub augment="S1821294470965718574">Utu Grip</sub>
+                <sub>Utu Grip</sub>
                 <range augment="S182109392119204240">Bamboo Fish. Rod</range>
                 <ammo augment="S182109392119204240">Lufaise Fly</ammo>
                 <head>Ig. Burgonet +2</head>
@@ -73,17 +73,17 @@
             <command delay="2000">/lockstyle on</command>
         </init>
 	<variables>
-            <var name="switch">1</var>
-            <var name="Mainhand">Liberator</var>
+            <var name="switch">0</var>
+            <var name="Mainhand">Caladbolg</var>
 	</variables>
 	<inputcommands>
             <cmd input="/switch">
                 <if advanced="$switch=1">
-                    <setvar name="Mainhand" value="Blurred Claymore" />
+                    <setvar name="Mainhand" value="Caladbolg" />
                     <setvar name="switch" value="0" />
                     <command delay="1000">/macro set 4</command>
                     <doidlegear />
-                    <command>/echo [Blurred Claymore Equipped]</command>
+                    <command>/echo [Caladbolg Equipped]</command>
                 </if>
                 <else>
                     <setvar name="Mainhand" value="Liberator" />
@@ -105,7 +105,7 @@
                     <equip>
                         <back>Agema Cape</back>
                     </equip>
-                    <command>/echo [Blurred Claymore]</command>
+                    <command>/echo [Caladbolg]</command>
                     <doidlegear />
                 </else>
             </cmd>

@@ -1,9 +1,9 @@
 <ashitacast>
     <settings>
-            <buffupdate>true</buffupdate>
-            <statusupdate>true</statusupdate>
-            <hpupdate>false</hpupdate>
-            <autoupdate>false</autoupdate>
+        <buffupdate>true</buffupdate>
+        <statusupdate>true</statusupdate>
+        <hpupdate>false</hpupdate>
+        <autoupdate>false</autoupdate>
     </settings>
     <sets>
         <set name="idle">
@@ -12,12 +12,12 @@
             <range augment="S6176686717137314381">Fastwater F. Rod</range> <!-- DMG +32 -->
             <ammo augment="S6176686717137314381">Minnow</ammo> <!-- DMG +32 -->
             <head>Pummeler's Mask +3</head> <!-- ATK 36, STP 10, TA +3 -->
-            <body>Pumm. Lorica +3</body> <!-- ATK 36, STP 10, TA +3 -->
+            <body>Kubira Meikogai</body> <!-- ATK 36, STP 10, TA +3 -->
             <hands>Pumm. Mufflers +3</hands> <!-- ATK 36, STP 10, TA +3 -->
             <legs>Pumm. Cuisses +3</legs> <!-- ATK 36, STP 10, TA +3 -->
             <feet>Hermes' Sandals +1</feet>
             <neck>Loricate Torque +1</neck> <!-- Counter +40 -->
-            <waist augment="S14964323890395218574">Chaac Belt</waist> <!-- ATK 36, STP 10, TA +3 -->
+            <waist>Nierenschutz</waist> <!-- STP 10, TA +9 -->
             <ear1>Etiolation Earring</ear1> <!-- Counter +40 -->
             <ear2 augment="S182152343102764236">Stm. Earring +1</ear2> <!-- DA 3, Crit 3, FC 3, Counter 3, DW 3 -->
             <ring1>Defending Ring</ring1> <!-- STP 10, TA +9 -->
@@ -25,30 +25,26 @@
             <back>Agema Cape</back> <!-- TA +12 -->
         </set>
         <set name="TP" baseset="idle">
+            <body>Pumm. Lorica +3</body> <!-- ATK 36, STP 10, TA +3 -->
             <feet>Pumm. Calligae +3</feet> <!-- ATK 36, STP 10, TA +3 -->
             <neck>Asperity Necklace</neck> <!-- TA +12 -->
             <waist>Windbuffet Belt +1</waist> <!-- STP 10, TA +9 -->
             <ear1 augment="S182109392119204240">Mache Earring +1</ear1> <!-- TA +12 -->
-            <ear2 augment="S6176686717137314381">Mache Earring +1</ear2> <!-- DMG +32 -->
+            <ear2>Telos Earring</ear2> <!-- Crit +20% -->
             <ring1>Regal Ring</ring1> <!-- STP 10, TA +9 -->
             <ring2>Petrov Ring</ring2> <!-- STP 10, TA +9 -->
             <back>Laic Mantle</back> <!-- STP 10, TA +9 -->
+        </set>
+        <set name="DEFTP" baseset="idle">
+            <ammo augment="S182109392119204240">Lufaise Fly</ammo> <!-- TA +12 -->
+            <ear2 augment="S182109392119204240">Mache Earring +1</ear2> <!-- TA +12 -->
+            <feet>Pumm. Calligae +3</feet> <!-- ATK 36, STP 10, TA +3 -->
         </set>
         <set name="FastCast">
             <body augment="S6217489529050814476">Pilgrim Tunica</body> <!-- FC +32 -->
             <ear2 augment="S182152343102764236">Stm. Earring +1</ear2> <!-- DA 3, Crit 3, FC 3, Counter 3, DW 3 -->
             <ear1>Etiolation Earring</ear1> 
             <ring2 augment="S6217489529050814476">Ascetic's Ring</ring2> <!-- FC +32 -->
-        </set>
-        <set name="MACC" baseset="Idle">
-            <ammo augment="S14968618926288334851">Sinking Minnow</ammo> <!-- MACC +72 -->
-            <neck augment="S14968618926288334851">Voltsurge Torque</neck> <!-- MACC +72 -->
-            <waist augment="S14968618926288334851">Virtuoso Belt</waist> <!-- MACC +72 -->
-            <ear1 augment="S14968618926288334851">Andoaa Earring</ear1> <!-- MACC +72 -->
-            <ear2 augment="S14968618926288334851">Moldavite Earring</ear2> <!-- MACC +72 -->
-            <ring1 augment="S14968618926288334851">Stikini Ring</ring1> <!-- MACC +72 -->
-            <ring2 augment="S14968618926288334851">Stikini Ring</ring2> <!-- MACC +72 -->
-            <back augment="S14968618926288334851">Immortal's Cape</back> <!-- MACC +72 -->
         </set>
         <set name="MagWS" baseset="TP">
             <ammo augment="S7973728454464518565">Sabiki Rig</ammo> <!-- MAB +40 -->
@@ -59,8 +55,23 @@
             <ring1 augment="S7973728454464518565">Stikini Ring +1</ring1> <!-- MAB +40 -->
             <ring2 augment="S7973728454464518565">Stikini Ring +1</ring2> <!-- MAB +40 -->
             <back augment="S7973728454464518565">Izdubar Mantle</back> <!-- MAB +40 -->
+            <body>Volte Jupon</body> <!-- MAB +40 -->
+            <hands>Volte Bracers</hands> <!-- MAB +40 -->
+            <legs>Volte Hose</legs> <!-- MAB +40 -->
+            <feet>Volte Boots</feet> <!-- MAB +40 -->
+        </set>
+        <set name="MACC" baseset="MagWS">
+            <ammo augment="S14968618926288334851">Sinking Minnow</ammo> <!-- MACC +72 -->
+            <neck augment="S14968618926288334851">Voltsurge Torque</neck> <!-- MACC +72 -->
+            <waist augment="S14968618926288334851">Virtuoso Belt</waist> <!-- MACC +72 -->
+            <ear1 augment="S14968618926288334851">Andoaa Earring</ear1> <!-- MACC +72 -->
+            <ear2 augment="S14968618926288334851">Moldavite Earring</ear2> <!-- MACC +72 -->
+            <ring1 augment="S14968618926288334851">Stikini Ring</ring1> <!-- MACC +72 -->
+            <ring2 augment="S14968618926288334851">Stikini Ring</ring2> <!-- MACC +72 -->
+            <back augment="S14968618926288334851">Immortal's Cape</back> <!-- MACC +72 -->
         </set>
         <set name="WS" baseset="TP">
+            <ear2 augment="S6176686717137314381">Mache Earring +1</ear2> <!-- DMG +32 -->
             <neck>Fotia Gorget</neck> <!-- TA +12 -->
             <waist>Fotia Belt</waist> <!-- TA +12 -->
         </set>
@@ -78,14 +89,17 @@
         <command>/macro book 12</command>
         <command delay="1000">/macro set 2</command>
         <command>/echo [Switching to WAR Macros]</command>
-        <command>/bind F9 /switch</command>
+        <command>/bind F9 /tpmode</command>
         <command>/bind F10 /status</command>
+        <command>/bind F12 /main</command>
         <command delay="2000">/lockstyleset 13</command>
     </init>
     <variables>
-        <var name="switch">0</var>
-        <var name="main">Ukonvasara</var>
-        <var name="sub">Utu Grip</var>
+        <var name="weapon">0</var> <!-- Start in mode 0 (Great Axe) -->
+        <var name="tpmode">0</var> <!-- Start in Standard TP Mode -->
+        <var name="tppype">Standard</var>
+        <var name="main">Ukonvasara</var> <!-- Default to Ukon before any mode switch -->
+        <var name="sub">Utu Grip</var><!-- Default to Utu Grip before any mode switch -->
     </variables>
     <inputcommands>
         <!--
@@ -94,69 +108,60 @@
         2 sword
         3 gsword
         -->
-        <cmd input="/switch">
-            <if advanced="$switch=2">
+        <cmd input="/main">
+            <if advanced="$weapon=2">
                 <setvar name="main" value="Blurred Claymore" />
                 <setvar name="sub" value="Utu Grip" />
-                <setvar name="switch" value="3" />
+                <setvar name="weapon" value="3" />
                 <command delay="1000">/macro set 4</command>
                 <doidlegear />
-                <command>/echo [Blurred Claymore Equipped]</command>
             </if>
-            <elseif advanced="$switch=1">
+            <elseif advanced="$weapon=1">
                 <setvar name="main" value="Fettering Blade" />
                 <setvar name="sub" value="Blurred Shield +1" />
-                <setvar name="switch" value="2" />
+                <setvar name="weapon" value="2" />
                 <command delay="1000">/macro set 3</command>
                 <doidlegear />
-                <command>/echo [Fettering Blade Equipped]</command>
             </elseif>
-            <elseif advanced="$switch=0">
+            <elseif advanced="$weapon=0">
                 <setvar name="main" value="Blurred Axe" />
                 <setvar name="sub" value="Blurred Shield +1" />
-                <setvar name="switch" value="1" />
+                <setvar name="weapon" value="1" />
                 <command delay="1000">/macro set 1</command>
                 <doidlegear />
-                <command>/echo [Blurred Axe Equipped]</command>
             </elseif>
             <else>
                 <setvar name="main" value="Ukonvasara" />
                 <setvar name="sub" value="Utu Grip" />
-                <setvar name="switch" value="0" />
+                <setvar name="weapon" value="0" />
                 <command delay="1000">/macro set 2</command>
                 <doidlegear />
-                <command>/echo [Ukonvasara Equipped]</command>
             </else>
+            <command>/echo [$main] [$tptype]</command>
         </cmd>
-        <cmd input="/status">
-            <if advanced="$switch=3">
-                <equip>
-                    <back>Agema Cape</back>
-                </equip>
-                <command>/echo [Blurred Claymore]</command>
+        <!--
+        0 Standard TP
+        1 Defensive TP
+        -->
+        <cmd input="/tpmode">
+            <if advanced="$tpmode=1">
+                <setvar name="tpmode" value="0" />
+                <setvar name="tptype" value="Standard" />
                 <doidlegear />
             </if>
-            <elseif advanced="$switch=2">
-                <equip>
-                    <back>Agema Cape</back>
-                </equip>
-                <command>/echo [Fettering Blade]</command>
-                <doidlegear />
-            </elseif>
-            <elseif advanced="$switch=1">
-                <equip>
-                    <back>Agema Cape</back>
-                </equip>
-                <command>/echo [Blurred Axe]</command>
-                <doidlegear />
-            </elseif>
             <else>
-                <equip>
-                    <back>Agema Cape</back>
-                </equip>
-                <command>/echo [Ukonvasara]</command>
+                <setvar name="tpmode" value="1" />
+                <setvar name="tptype" value="Defensive" />
                 <doidlegear />
             </else>
+            <command>/echo [$main] [$tptype]</command>
+        </cmd>
+        <cmd input="/status">
+            <equip>
+                <back>Agema Cape</back>
+            </equip>
+            <doidlegear />
+            <command>/echo [$main] [$tptype]</command>
         </cmd>
     </inputcommands>
     <idlegear>
@@ -166,7 +171,12 @@
             </equip>
         </if>
         <if p_status="engaged">
-            <equip set="TP" />
+            <if advanced="$tpmode=1">
+                <equip set="DEFTP" />
+            </if>
+            <else>
+                <equip set="TP" />
+            </else>
         </if>
         <else>
             <equip set="Idle" />
