@@ -10,16 +10,16 @@
             <main>$Weapon</main>
             <sub augment="S7973728454464518565">Clerisy Strap +1</sub> <!-- MAB 40 -->
             <range augment="S7973728454464518565">Tarutaru F. Rod</range> <!-- MAB 40 -->
-            <ammo augment="S7973728454464518565">Sabiki Rig</ammo> <!-- MAB 40 -->
+            <ammo augment="S7932496139267718469">Minnow</ammo> <!-- mEVA +40 -->
             <head>Spae. Petasos +3</head> <!-- MAB 40 -->
             <body>Wicce Coat</body>
             <hands>Volte Gloves</hands> <!-- MAB 40 -->
             <legs>Volte Brais</legs> <!-- MAB 40 -->
             <feet>Crier's Gaiters</feet>
             <neck>Loricate Torque +1</neck> <!-- Counter +40 -->
-            <waist>Chaac Belt</waist>
+            <waist>Goading Belt</waist> <!-- mEVA +40 -->
             <ear1>Etiolation Earring</ear1> <!-- Counter +40 -->
-            <ear2 augment="S182152343102764236">Stm. Earring +1</ear2> <!-- DA 3, Crit 3, FC 3, Counter 3, DW 3 -->
+            <ear2>Cryptic Earring</ear2> <!-- mEVA +40 -->
             <ring1>Gelatinous Ring +1</ring1> <!-- STP 10, TA +9 -->
             <ring2>Defending Ring</ring2> <!-- STP 10, TA +9 -->
             <back augment="S7973728454464518565">Bane Cape</back> <!-- MAB 40 -->
@@ -32,6 +32,7 @@
             <ring2 augment="S6217489529050814476">Ascetic's Ring</ring2> <!-- FC +32 -->
         </set>
         <set name="Nuke" baseset="Idle">
+            <ammo augment="S7973728454464518565">Sabiki Rig</ammo> <!-- MAB 40 -->
             <head>Spae. Petasos +3</head> <!-- MAB 40 -->
             <body>Spaekona's Coat +3</body> <!-- MAB 40 -->
             <hands>Spae. Gloves +3</hands> <!-- MAB 40 -->
@@ -54,10 +55,20 @@
             <ear2 augment="S7973728454464518565">Tranquility Earring</ear2> <!-- MAB 40 -->
             <ring1 augment="S7973728454464518565">Hermit's Ring</ring1> <!-- MAB 40 -->
             <ring2 augment="S7973728454464518565">Hermit's Ring</ring2> <!-- MAB 40 -->
-            <back augment="S7973728454464518565">Hecate's Cape</back> <!-- MAB 40 -->
+            <back augment="S7973728454464518565">Shaper's Shawl</back> <!-- MAB 40 -->
+            <sub augment="S7973728454464518565">Tenax Strap</sub> <!-- MAB 40 -->
+            <head>Charity Cap</head> <!-- MAB 40 -->
+            <body>Field tunica</body> <!-- MAB 40 -->
+            <hands>Field gloves</hands> <!-- MAB 40 -->
+            <legs>Field hose</legs> <!-- MAB 40 -->
+            <feet>Field boots</feet> <!-- MAB 40 -->
         </set>
-        <set name="Nuke51" baseset="Nuke71" />
-        <set name="Nuke50" baseset="Nuke51" />
+        <set name="Nuke51" baseset="Nuke71">
+            <waist augment="S7973728454464518565">Bronze Mog. Belt</waist>
+        </set>
+        <set name="Nuke50" baseset="Nuke51">
+            <main augment="S7973728454464518565">Malice Masher +1</main>
+        </set>
         <set name="Enfeeble" baseset="Nuke" >
             <ammo augment="S14968618926288334851">Sinking Minnow</ammo> <!-- MACC +72 -->
             <neck augment="S14968618926288334851">Voltsurge Torque</neck> <!-- MACC +72 -->
@@ -69,6 +80,9 @@
             <back augment="S14968618926288334851">Immortal's Cape</back> <!-- MACC +72 -->
         </set>
         <set name="TH" baseset="Nuke">
+            <ear1 augment="S14968618926288334851">Moldavite Earring</ear1> <!-- MACC +72 -->
+            <ammo augment="S14968618926288334851">Sinking Minnow</ammo> <!-- MACC +72 -->
+            <head>Volte Cap</head>
             <body>Volte Jupon</body>
             <hands>Volte Bracers</hands>
             <legs>Volte Hose</legs>
@@ -76,12 +90,15 @@
             <waist>Chaac Belt</waist>
         </set>
         <set name="TP" baseset="Idle">
+            <head>Volte Cap</head>
             <body>Volte Jupon</body>
             <hands>Volte Bracers</hands>
             <legs>Volte Hose</legs>
             <feet>Volte Boots</feet>
             <waist>Chaac Belt</waist>
         </set>
+		<set name="tmp">
+		</set>
         <include>
         </include>
     </sets>
@@ -139,6 +156,21 @@
             </equip>
             <doidlegear />
             <command>/echo [$Weapon] [$status Nuke]</command>
+            <if buffactive="4|566">
+                <command>/item "Panacea" me</command>
+            </if>
+            <elseif buffactive="6">
+                <command>/item "Echo Drops" me</command>
+            </elseif>
+            <elseif buffactive="9|15">
+                <equip lock="true">
+                    <ring2>Purity Ring</ring2>
+                </equip>
+                <command>/item "Hallowed Water" me</command>
+            </elseif>
+            <elseif buffactive="11|12|21|128|129|130|131|132|133|134|135|136|137|138|139|140|141|142|144|145|146|147|148|149|174|175|404|557|558|559|560|561|562|563|564|567">
+                <command>/item "Panacea" me</command>
+            </elseif>
         </cmd>
     </inputcommands>
     <idlegear>
@@ -153,6 +185,11 @@
                     <main>Chatoyant Staff</main>
                 </equip>
             </if>
+            <elseif p_joblevel="<51">
+                <equip set="Idle">
+                    <main augment="S7973728454464518565">Malice Masher +1</main>
+                </equip>
+            </elseif>
             <else>
                 <equip set="Idle" />
             </else>
@@ -185,6 +222,7 @@
                     <if advanced="(%ad_element=%e_dayelement)|(%ad_element=%e_weatherelement)">
                         <equip set="Nuke">
                             <waist augment="S7973728454464518565">Hachirin-no-Obi</waist>
+                            <back>Twilight Cape</back>
                         </equip>
                     </if>
                     <else>
@@ -219,6 +257,16 @@
             <equip set="Nuke">
                 <head>Appetence Crown</head>
             </equip>
+        </if>
+        <if ad_name="Stoneskin|Metallic*|Diamondhide">
+            <if buffactive="37">
+                <command>/cancel 37</command>
+            </if>
+        </if>
+        <if ad_name="Shock Spikes">
+            <if buffactive="38">
+                <command>/cancel 38</command>
+            </if>
         </if>
     </midmagic>
     <jobability>

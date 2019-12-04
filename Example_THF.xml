@@ -204,6 +204,16 @@
         <if ad_skill="bluemagic|enfeeblingmagic|elementalmagic|darkmagic">
             <equip set="MACC" />
         </if>
+        <if ad_name="Stoneskin|Metallic*|Diamondhide">
+            <if buffactive="37">
+                <command>/cancel 37</command>
+            </if>
+        </if>
+        <if ad_name="Shock Spikes">
+            <if buffactive="38">
+                <command>/cancel 38</command>
+            </if>
+        </if>
     </midmagic>
     <jobability>
         <if eq_back="Nexus Cape"> <!-- locks your back slot while Nexus Cape is equipped -->

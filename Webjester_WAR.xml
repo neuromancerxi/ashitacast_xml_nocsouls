@@ -8,37 +8,54 @@
     <sets>
         <set name="idle">
             <main>$main</main> <!-- TA +12 -->
-            <sub>$sub</sub> <!-- STP 10, TA +9 -->
+            <sub>$sub</sub> <!-- TA +12 -->
             <range augment="S6176686717137314381">Fastwater F. Rod</range> <!-- DMG +32 -->
-            <ammo augment="S6176686717137314381">Minnow</ammo> <!-- DMG +32 -->
-            <head>Pummeler's Mask +3</head> <!-- ATK 36, STP 10, TA +3 -->
-            <body>Kubira Meikogai</body> <!-- ATK 36, STP 10, TA +3 -->
-            <hands>Pumm. Mufflers +3</hands> <!-- ATK 36, STP 10, TA +3 -->
-            <legs>Pumm. Cuisses +3</legs> <!-- ATK 36, STP 10, TA +3 -->
+            <ammo augment="S7932496139267718469">Minnow</ammo> <!-- mEVA +40 -->
+            <head>Pummeler's Mask +3</head> <!-- STP 10, TA +9 -->
+            <body>Kubira Meikogai</body> <!-- STP 10, TA +9 -->
+            <hands>Pumm. Mufflers +3</hands> <!-- STP 10, TA +9 -->
+            <legs>Pumm. Cuisses +3</legs> <!-- STP 10, TA +9 -->
             <feet>Hermes' Sandals +1</feet>
             <neck>Loricate Torque +1</neck> <!-- Counter +40 -->
-            <waist>Nierenschutz</waist> <!-- STP 10, TA +9 -->
+            <waist>Goading Belt</waist> <!-- mEVA +40 -->
             <ear1>Etiolation Earring</ear1> <!-- Counter +40 -->
-            <ear2 augment="S182152343102764236">Stm. Earring +1</ear2> <!-- DA 3, Crit 3, FC 3, Counter 3, DW 3 -->
+            <ear2>Cryptic Earring</ear2> <!-- mEVA +40 -->
             <ring1>Defending Ring</ring1> <!-- STP 10, TA +9 -->
             <ring2>Gelatinous Ring +1</ring2> <!-- STP 10, TA +9 -->
             <back>Agema Cape</back> <!-- TA +12 -->
         </set>
         <set name="TP" baseset="idle">
-            <body>Pumm. Lorica +3</body> <!-- ATK 36, STP 10, TA +3 -->
-            <feet>Pumm. Calligae +3</feet> <!-- ATK 36, STP 10, TA +3 -->
-            <neck>Asperity Necklace</neck> <!-- TA +12 -->
+            <ammo augment="S6176686717137314381">Minnow</ammo> <!-- DMG +32 -->
+            <body>Pumm. Lorica +3</body> <!-- STP 10, TA +9 -->
+            <feet>Pumm. Calligae +3</feet> <!-- STP 10, TA +9 -->
+            <neck>Tlamiztli Collar</neck> <!-- TA +12 -->
             <waist>Windbuffet Belt +1</waist> <!-- STP 10, TA +9 -->
-            <ear1 augment="S182109392119204240">Mache Earring +1</ear1> <!-- TA +12 -->
-            <ear2>Telos Earring</ear2> <!-- Crit +20% -->
+            <ear1>Telos Earring</ear1> <!-- Crit +20% -->
+            <ear2 augment="S6176686717137314381">Mache Earring +1</ear2> <!-- DMG +32 -->
             <ring1>Regal Ring</ring1> <!-- STP 10, TA +9 -->
-            <ring2>Petrov Ring</ring2> <!-- STP 10, TA +9 -->
+            <ring2>Rajas Ring</ring2> <!-- STP 10, TA +9 -->
             <back>Laic Mantle</back> <!-- STP 10, TA +9 -->
         </set>
+        <set name="TP50" baseset="TP"> <!-- STP 110 TA 112 ATK 54 DMG 64 -->
+            <range augment="S6176686717137314381">Fastwater F. Rod</range> <!-- DMG +32 -->
+            <ammo augment="S6176686717137314381">Minnow</ammo> <!-- DMG +32 -->
+            <head augment="S182109392262544240">Eyepatch</head> <!-- STP 10 TA 9 -->
+            <body augment="S14964123346741734841">Vgd. Tunica</body> <!-- ATK 54 TA 3 -->
+            <hands augment="S182109392262544240">Vgd. Gloves</hands> <!-- STP 10 TA 9 -->
+            <legs augment="S182109392262544240">Vagabond's Hose</legs> <!-- STP 10 TA 9 -->
+            <feet augment="S182109392262544240">Vagabond's Boots</feet> <!-- STP 10 TA 9 -->
+            <neck augment="S182109392262544240">Pile Chain</neck> <!-- STP 10 TA 9 -->
+            <waist augment="S182109392262544240">Gold Mog. Belt</waist> <!-- STP 10 TA 9 -->
+            <ear1 augment="S182109392262544240">Tranquility Earring</ear1> <!-- STP 10 TA 9 -->
+            <ear2 augment="S182109392262544240">Tranquility Earring</ear2> <!-- STP 10 TA 9 -->
+            <ring1 augment="S182109392262544240">San d'Orian Ring</ring1> <!-- STP 10 TA 9 -->
+            <ring2 augment="S182109392262544240">Ascetic's Ring</ring2> <!-- STP 10 TA 9 -->
+            <back augment="S182109392262544240">Rabbit Mantle +1</back> <!-- STP 10 TA 9 -->
+        </set>
         <set name="DEFTP" baseset="idle">
-            <ammo augment="S182109392119204240">Lufaise Fly</ammo> <!-- TA +12 -->
-            <ear2 augment="S182109392119204240">Mache Earring +1</ear2> <!-- TA +12 -->
-            <feet>Pumm. Calligae +3</feet> <!-- ATK 36, STP 10, TA +3 -->
+            <ammo augment="S182109392119204240">Sabiki Rig</ammo> <!-- TA +12 -->
+            <ear2 augment="S182109392119204240">Tati Earring</ear2> <!-- TA +12 -->
+            <feet>Pumm. Calligae +3</feet> <!-- STP 10, TA +9 -->
         </set>
         <set name="FastCast">
             <body augment="S6217489529050814476">Pilgrim Tunica</body> <!-- FC +32 -->
@@ -49,16 +66,18 @@
         <set name="MagWS" baseset="TP">
             <ammo augment="S7973728454464518565">Sabiki Rig</ammo> <!-- MAB +40 -->
             <neck augment="S7973728454464518565">Baetyl Pendant</neck> <!-- MAB +40 -->
-            <waist augment="S7973728454464518565">Hachirin-no-Obi</waist> <!-- MAB +40 -->
+            <!--waist augment="S7973728454464518565">Eschan Stone</waist> <!-- MAB +40 -->
             <ear1 augment="S7973728454464518565">Choleric Earring</ear1> <!-- MAB +40 -->
             <ear2 augment="S7973728454464518565">Regal Earring</ear2> <!-- MAB +40 -->
             <ring1 augment="S7973728454464518565">Stikini Ring +1</ring1> <!-- MAB +40 -->
             <ring2 augment="S7973728454464518565">Stikini Ring +1</ring2> <!-- MAB +40 -->
             <back augment="S7973728454464518565">Izdubar Mantle</back> <!-- MAB +40 -->
+            <head>Volte Cap</head> <!-- MAB +40 -->
             <body>Volte Jupon</body> <!-- MAB +40 -->
             <hands>Volte Bracers</hands> <!-- MAB +40 -->
             <legs>Volte Hose</legs> <!-- MAB +40 -->
             <feet>Volte Boots</feet> <!-- MAB +40 -->
+            <waist>Chaac Belt</waist> <!-- MAB +40 -->
         </set>
         <set name="MACC" baseset="MagWS">
             <ammo augment="S14968618926288334851">Sinking Minnow</ammo> <!-- MACC +72 -->
@@ -71,11 +90,12 @@
             <back augment="S14968618926288334851">Immortal's Cape</back> <!-- MACC +72 -->
         </set>
         <set name="WS" baseset="TP">
-            <ear2 augment="S6176686717137314381">Mache Earring +1</ear2> <!-- DMG +32 -->
+            <ear1 augment="S6176686717137314381">Tati Earring</ear1> <!-- DMG +32 -->
             <neck>Fotia Gorget</neck> <!-- TA +12 -->
             <waist>Fotia Belt</waist> <!-- TA +12 -->
         </set>
         <set name="TH" baseset="Idle">
+            <head>Volte Cap</head>
             <body>Volte Jupon</body>
             <hands>Volte Bracers</hands>
             <legs>Volte Hose</legs>
@@ -97,7 +117,7 @@
     <variables>
         <var name="weapon">0</var> <!-- Start in mode 0 (Great Axe) -->
         <var name="tpmode">0</var> <!-- Start in Standard TP Mode -->
-        <var name="tppype">Standard</var>
+        <var name="tptype">Standard</var>
         <var name="main">Ukonvasara</var> <!-- Default to Ukon before any mode switch -->
         <var name="sub">Utu Grip</var><!-- Default to Utu Grip before any mode switch -->
     </variables>
@@ -114,29 +134,26 @@
                 <setvar name="sub" value="Utu Grip" />
                 <setvar name="weapon" value="3" />
                 <command delay="1000">/macro set 4</command>
-                <doidlegear />
             </if>
             <elseif advanced="$weapon=1">
                 <setvar name="main" value="Fettering Blade" />
                 <setvar name="sub" value="Blurred Shield +1" />
                 <setvar name="weapon" value="2" />
                 <command delay="1000">/macro set 3</command>
-                <doidlegear />
             </elseif>
             <elseif advanced="$weapon=0">
                 <setvar name="main" value="Blurred Axe" />
                 <setvar name="sub" value="Blurred Shield +1" />
                 <setvar name="weapon" value="1" />
                 <command delay="1000">/macro set 1</command>
-                <doidlegear />
             </elseif>
             <else>
                 <setvar name="main" value="Ukonvasara" />
                 <setvar name="sub" value="Utu Grip" />
                 <setvar name="weapon" value="0" />
                 <command delay="1000">/macro set 2</command>
-                <doidlegear />
             </else>
+            <doidlegear />
             <command>/echo [$main] [$tptype]</command>
         </cmd>
         <!--
@@ -147,13 +164,12 @@
             <if advanced="$tpmode=1">
                 <setvar name="tpmode" value="0" />
                 <setvar name="tptype" value="Standard" />
-                <doidlegear />
             </if>
             <else>
                 <setvar name="tpmode" value="1" />
                 <setvar name="tptype" value="Defensive" />
-                <doidlegear />
             </else>
+            <doidlegear />
             <command>/echo [$main] [$tptype]</command>
         </cmd>
         <cmd input="/status">
@@ -162,6 +178,21 @@
             </equip>
             <doidlegear />
             <command>/echo [$main] [$tptype]</command>
+            <if buffactive="4|566">
+                <command>/item "Panacea" me</command>
+            </if>
+            <elseif buffactive="6">
+                <command>/item "Echo Drops" me</command>
+            </elseif>
+            <elseif buffactive="9|15">
+                <equip lock="true">
+                    <ring2>Purity Ring</ring2>
+                </equip>
+                <command>/item "Hallowed Water" me</command>
+            </elseif>
+            <elseif buffactive="11|12|21|128|129|130|131|132|133|134|135|136|137|138|139|140|141|142|144|145|146|147|148|149|174|175|404|557|558|559|560|561|562|563|564|567">
+                <command>/item "Panacea" me</command>
+            </elseif>
         </cmd>
     </inputcommands>
     <idlegear>
@@ -171,11 +202,16 @@
             </equip>
         </if>
         <if p_status="engaged">
-            <if advanced="$tpmode=1">
-                <equip set="DEFTP" />
+            <if p_joblevel="99">
+                <if advanced="$tpmode=1">
+                    <equip set="DEFTP" />
+                </if>
+                <else>
+                    <equip set="TP" />
+                </else>
             </if>
             <else>
-                <equip set="TP" />
+                <equip set="TP50" />
             </else>
         </if>
         <else>
@@ -201,6 +237,16 @@
                 <equip set="MACC" />
             </else>
         </if>
+        <if ad_name="Stoneskin|Metallic*|Diamondhide">
+            <if buffactive="37">
+                <command>/cancel 37</command>
+            </if>
+        </if>
+        <if ad_name="Shock Spikes">
+            <if buffactive="38">
+                <command>/cancel 38</command>
+            </if>
+        </if>
     </midmagic>
     <jobability>
         <if ad_name="Berserk">
@@ -210,16 +256,21 @@
         </if>
     </jobability>
     <weaponskill>
-        <if ad_name="Uriel*|Seraph*|Shining*|Burning*|Red*|Sanguine*|Cloud*|Hercul*|Freezeb*|Frostb*">
-            <equip set="MagWS" />
+        <if p_joblevel="99">
+            <if ad_name="Uriel*|Seraph*|Shining*|Burning*|Red*|Sanguine*|Cloud*|Hercul*|Freezeb*|Frostb*">
+                <equip set="MagWS" />
+            </if>
+            <elseif ad_name="Ukko*|Raging*|Rampage|Power Slash|Vorpal*">
+                <equip set="WS">
+                    <ear1>Telos Earring</ear1> <!-- Crit +20% -->
+                </equip>
+            </elseif>
+            <else>
+                <equip set="WS" />
+            </else>
         </if>
-        <elseif ad_name="Ukko*|Raging*|Rampage|Power Slash|Vorpal*">
-            <equip set="WS">
-                <ear2>Telos Earring</ear2> <!-- Crit +20% -->
-            </equip>
-        </elseif>
         <else>
-            <equip set="WS" />
+            <equip set="TP50" />
         </else>
     </weaponskill>
 </ashitacast>

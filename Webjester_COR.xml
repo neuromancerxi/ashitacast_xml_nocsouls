@@ -1,166 +1,185 @@
 <ashitacast>
-	<settings>
-		<buffupdate>true</buffupdate>
-		<statusupdate>true</statusupdate>
-		<hpupdate>false</hpupdate>
-		<autoupdate>false</autoupdate>
-	</settings>
-	<sets>
-            <set name="Idle" baseset="PhysWS">
-                <neck>Loricate Torque +1</neck>
-                <ring1>Defending Ring</ring1>
-                <ring2>Gelatinous Ring +1</ring2>
-                <waist>Chaac Belt</waist>
-                <feet>Skd. Jambeaux +1</feet>
-                <legs>Blood Cuisses</legs>
-                <back>Agema Cape</back>
-            </set>
-            <set name="TP" baseset="PhysWS">
-                <head augment="S14963464885262234839">Whirlpool Mask</head>
-                <body augment="S14963464885262234839">Agony Jerkin +1</body>
-                <hands augment="S14963464885262234839">Buremte Gloves</hands>
-                <legs augment="S14963464885262234839">Nahtirah Trousers</legs>
-                <feet augment="S14963464885262234839">Qaaxo Leggings</feet>
-                <neck augment="S14963464885262234839">Ej Necklace</neck>
-                <waist augment="S1496346488688894240">Velocious Belt</waist>
-                <ear1 augment="S14963358292584734839">Mache Earring +1</ear1>
-                <ear2 augment="S14963464885262234839">Mache Earring +1</ear2>
-                <ring1 augment="S14963464886888734839">Supershear Ring</ring1>
-                <ring2 augment="S14963464886888734839">Patricius Ring</ring2>
-                <back augment="S14963464886888734841">Charger Mantle</back>
-            </set>
-            <set name="PhysWS">
-                <main>$Mainhand</main>
-                <sub>$Offhand</sub>
-                <range>$Range</range>
-                <ammo>$Ammo</ammo>
-                <head>Laksa. Tricorne +2</head>
-                <body>Laksa. Frac +2</body>
-                <hands>Laksa. Gants +2</hands>
-                <legs>Laksa. Trews +2</legs>
-                <feet>Laksa. Boots +2</feet>
-                <neck augment="S14966041904961434845">Gaudryi Necklace</neck>
-                <waist augment="S14965182900021934843">Ponente Sash</waist>
-                <ear1 augment="S353610053140898233">Telos Earring</ear1>
-                <ear2 augment="S14965182900021934843">Enervating Earring</ear2>
-                <ring1>Regal Ring</ring1>
-                <ring2 augment="S14966041906588534845">Longshot Ring</ring2>
-                <back augment="S14965182900021934843">Terebellum Mantle</back>
-            </set>
-            <set name="MagicWS">
-                <main>$Mainhand</main>
-                <sub>$Offhand</sub>
-                <range>$Range</range>
-                <ammo>$Ammo</ammo>
-                <head>Laksa. Tricorne +2</head>
-                <body>Laksa. Frac +2</body>
-                <hands>Laksa. Gants +2</hands>
-                <legs>Laksa. Trews +2</legs>
-                <feet>Laksa. Boots +2</feet>
-                <neck augment="S14968618926288334851">Voltsurge Torque</neck>
-                <waist augment="S7973728454464518565">Hachirin-no-Obi</waist>
-                <ear1 augment="S7973728454464518565">Choleric Earring</ear1>
-                <ear2 augment="S7973728454464518565">Tranquility Earring</ear2>
-                <ring1 augment="S7973728454464518565">Stikini Ring +1</ring1>
-                <ring2 augment="S7973728454464518565">Stikini Ring +1</ring2>
-                <back augment="S7973728454464518565">Izdubar Mantle</back>
-            </set>
-            <set name="FastCast">
-                <body augment="S6217489529050814476">Pilgrim Tunica</body>
-                <ear1>Etiolation Earring</ear1>
-                <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
-                <ring1 augment="S6217489529050814476">Prolix Ring</ring1>
-                <ring2 augment="S6217489529050814476">Ascetic's Ring</ring2>
-            </set>
-            <set name="MACC" baseset="Idle">
-                <neck augment="S14968618926288334851">Voltsurge Torque</neck>
-                <waist augment="S14968618926288334851">Virtuoso Belt</waist>
-                <ear1 augment="S14968618926288334851">Andoaa Earring</ear1>
-                <ear2 augment="S14968618926288334851">Moldavite Earring</ear2>
-                <ring1 augment="S14968618926288334851">Stikini Ring</ring1>
-                <ring2 augment="S14968618926288334851">Stikini Ring</ring2>
-                <back augment="S14968618926288334851">Immortal's Cape</back>
-            </set>
-            <include>
-            </include>
-	</sets>
-        <init>
-            <command>/macro book 15</command>
-            <command delay="1000">/macro set 2</command>
-            <command>/echo [Switching to COR Macros]</command>
-            <command>/bind F9 /toggle</command>
-            <command>/bind F10 /status</command>
-            <command delay="2000">/lockstyleset 25</command>
-        </init>
-	<variables>
-            <var name="toggle">0</var>
-            <var name="Mainhand">Fettering Blade</var>
-            <var name="Offhand">Varlet's Targe</var>
-            <var name="Range">Armageddon</ranged>
-            <var name="Ammo">Living Bullet</var>
-	</variables>
-	<inputcommands>
-            <cmd input="/toggle">
-                <if advanced="$toggle=1">
-                    <setvar name="Mainhand" value="Fettering Blade" />
-                    <setvar name="Offhand" value="Varlet's Targe" />
-                    <setvar name="Range" value="Armageddon" />
-                    <setvar name="toggle" value="0" />
-                    <doidlegear />
-                    <command>/echo [Archery Mode]</command>
-                </if>
-            </cmd>
-            <cmd input="/status">
-                <equip>
-                    <back>Agema Cape</back>
-                </equip>
+    <settings>
+        <buffupdate>true</buffupdate>
+        <statusupdate>true</statusupdate>
+        <hpupdate>false</hpupdate>
+        <autoupdate>false</autoupdate>
+    </settings>
+    <sets>
+        <set name="Idle" baseset="PhysWS">
+            <main>$Mainhand</main>
+            <sub>$Offhand</sub>
+            <range>$Range</range>
+            <ammo>$Ammo</ammo>
+            <head>Laksa. Tricorne +3</head>
+            <body>Laksa. Frac +3</body>
+            <hands>Laksa. Gants +2</hands>
+            <feet>Skd. Jambeaux +1</feet>
+            <legs>Blood Cuisses</legs>
+            <neck>Loricate Torque +1</neck> <!-- Counter +40 -->
+            <waist>Goading Belt</waist> <!-- mEVA +40 -->
+            <ear1>Etiolation Earring</ear1> <!-- Counter +40 -->
+            <ear2>Cryptic Earring</ear2> <!-- mEVA +40 -->
+            <ring1>Defending Ring</ring1> <!-- STP 10, TA +9 -->
+            <ring2>Gelatinous Ring +1</ring2> <!-- STP 10, TA +9 -->
+            <back>Agema Cape</back> <!-- TA +12 -->
+        </set>
+        <set name="TP" baseset="Idle">
+            <head augment="S182109392262544240">Volte Tiara</head>
+            <body augment="S182109392262544240">Volte Harness</body>
+            <hands augment="S182109392262544240">Volte Mittens</hands>
+            <legs augment="S182109392262544240">Volte Tights</legs>
+            <feet augment="S182109392262544240">Volte Spats</feet>
+            <neck>Tlamiztli Collar</neck>
+            <waist>Windbuffet Belt +1</waist>
+            <ear1 augment="S353610053140898233">Telos Earring</ear1>
+            <ear2 augment="S14964323893455334841">Tati Earring</ear2>
+            <ring1>Regal Ring</ring1>
+            <ring2>Rajas Ring</ring2>
+            <back>Laic Mantle</back>
+        </set>
+        <set name="WS" baseset="TP">
+            <head>Laksa. Tricorne +3</head>
+            <body>Laksa. Frac +3</body>
+            <hands>Laksa. Gants +2</hands>
+            <legs>Laksa. Trews +2</legs>
+            <feet>Laksa. Boots +3</feet>
+            <neck augment="S14966041904961434845">Gaudryi Necklace</neck>
+            <waist augment="S14965182900021934843">Ponente Sash</waist>
+            <ear1 augment="S353610053140898233">Telos Earring</ear1>
+            <ear2 augment="S14965182900021934843">Enervating Earring</ear2>
+            <ring2 augment="S14966041906588534845">Longshot Ring</ring2>
+            <back augment="S14965182900021934843">Terebellum Mantle</back>
+        </set>
+        <set name="MagWS" baseset="TP">
+            <neck augment="S7973728454464518565">Baetyl Pendant</neck> <!-- MAB +40 -->
+            <waist augment="S7973728454464518565">Eschan Stone</waist> <!-- MAB +40 -->
+            <ear1 augment="S7973728454464518565">Choleric Earring</ear1> <!-- MAB +40 -->
+            <ear2 augment="S7973728454464518565">Tranquility Earring</ear2> <!-- MAB +40 -->
+            <ring1 augment="S7973728454464518565">Stikini Ring +1</ring1> <!-- MAB +40 -->
+            <ring2 augment="S7973728454464518565">Stikini Ring +1</ring2> <!-- MAB +40 -->
+            <back augment="S7973728454464518565">Izdubar Mantle</back> <!-- MAB +40 -->
+            <head>Volte Cap</head> <!-- MAB +40 -->
+            <body>Volte Jupon</body> <!-- MAB +40 -->
+            <hands>Volte Bracers</hands> <!-- MAB +40 -->
+            <legs>Volte Hose</legs> <!-- MAB +40 -->
+            <feet>Volte Boots</feet> <!-- MAB +40 -->
+            <!--waist>Chaac Belt</waist> <!-- MAB +40 -->
+        </set>
+        <set name="MACC" baseset="MagWS">
+            <ammo augment="S14968618926288334851">Sinking Minnow</ammo> <!-- MACC +72 -->
+            <neck augment="S14968618926288334851">Voltsurge Torque</neck> <!-- MACC +72 -->
+            <waist augment="S14968618926288334851">Virtuoso Belt</waist> <!-- MACC +72 -->
+            <ear1 augment="S14968618926288334851">Andoaa Earring</ear1> <!-- MACC +72 -->
+            <ear2 augment="S14968618926288334851">Moldavite Earring</ear2> <!-- MACC +72 -->
+            <ring1 augment="S14968618926288334851">Stikini Ring</ring1> <!-- MACC +72 -->
+            <ring2 augment="S14968618926288334851">Stikini Ring</ring2> <!-- MACC +72 -->
+            <back augment="S14968618926288334851">Immortal's Cape</back> <!-- MACC +72 -->
+        </set>
+        <set name="TH" baseset="Idle">
+            <head>Volte Cap</head>
+            <body>Volte Jupon</body>
+            <hands>Volte Bracers</hands>
+            <legs>Volte Hose</legs>
+            <feet>Volte Boots</feet>
+            <waist>Chaac Belt</waist>
+        </set>
+        <include>
+        </include>
+    </sets>
+    <init>
+        <command>/macro book 15</command>
+        <command delay="1000">/macro set 2</command>
+        <command>/echo [Switching to COR Macros]</command>
+        <command>/bind F9 /toggle</command>
+        <command>/bind F10 /status</command>
+        <command delay="2000">/lockstyleset 25</command>
+    </init>
+    <variables>
+        <var name="toggle">0</var>
+        <var name="Mainhand">Fettering Blade</var>
+        <var name="Offhand">Varlet's Targe</var>
+        <var name="Range">Armageddon</ranged>
+        <var name="Ammo">Living Bullet</var>
+    </variables>
+    <inputcommands>
+        <cmd input="/toggle">
+            <if advanced="$toggle=1">
+                <setvar name="Mainhand" value="Fettering Blade" />
+                <setvar name="Offhand" value="Varlet's Targe" />
+                <setvar name="Range" value="Armageddon" />
+                <setvar name="toggle" value="0" />
                 <doidlegear />
-            </cmd>
-	</inputcommands>
-	<idlegear>
-            <if eq_back="Nexus Cape">
+                <command>/echo [Archery Mode]</command>
+            </if>
+        </cmd>
+        <cmd input="/status">
+            <equip>
+                <back>Agema Cape</back>
+            </equip>
+            <doidlegear />
+            <if buffactive="4|566">
+                <command>/item "Panacea" me</command>
+            </if>
+            <elseif buffactive="6">
+                <command>/item "Echo Drops" me</command>
+            </elseif>
+            <elseif buffactive="9|15">
                 <equip lock="true">
-                    <back>Nexus Cape</back>
+                    <ring2>Purity Ring</ring2>
                 </equip>
-            </if>
-            <if p_status="engaged">
-                <equip set="TP" />
-            </if>
-            <else>
-                <equip set="Idle" />
-            </else>
-	</idlegear>
-	<preranged>
+                <command>/item "Hallowed Water" me</command>
+            </elseif>
+            <elseif buffactive="11|12|21|128|129|130|131|132|133|134|135|136|137|138|139|140|141|142|144|145|146|147|148|149|174|175|404|557|558|559|560|561|562|563|564|567">
+                <command>/item "Panacea" me</command>
+            </elseif>
+        </cmd>
+    </inputcommands>
+    <idlegear>
+        <if eq_back="Nexus Cape">
+            <equip lock="true">
+                <back>Nexus Cape</back>
+            </equip>
+        </if>
+        <if p_status="engaged">
             <equip set="TP" />
-	</preranged>
-	<midranged>
-            <equip set="PhysWS" />
-	</midranged>
-	<premagic>
-            <equip set="FastCast" />
-	</premagic>
-	<midmagic>
-            <if ad_skill="bluemagic|enfeeblingmagic|elementalmagic|darkmagic">
-                <equip set="MACC" />
+        </if>
+        <else>
+            <equip set="Idle" />
+        </else>
+    </idlegear>
+    <preranged>
+        <equip set="TP" />
+    </preranged>
+    <midranged>
+        <equip set="PhysWS" />
+    </midranged>
+    <premagic>
+        <equip set="FastCast" />
+    </premagic>
+    <midmagic>
+        <if ad_skill="bluemagic|enfeeblingmagic|elementalmagic|darkmagic">
+            <equip set="MACC" />
+        </if>
+        <if ad_name="Stoneskin|Metallic*|Diamondhide">
+            <if buffactive="37">
+                <command>/cancel 37</command>
             </if>
-	</midmagic>
-	<jobability>
-            <if ad_name="Camouflage">
-                <equip body="Orion Jerkin +3" />
+        </if>
+        <if ad_name="Shock Spikes">
+            <if buffactive="38">
+                <command>/cancel 38</command>
             </if>
-            <if ad_name="Shadowbind">
-                <equip hands="Orion Bracers +3" />
-            </if>
-            <if ad_name="Scavenge">
-                <equip feet="Orion Socks +3" />
-            </if>
-	</jobability>
-	<weaponskill>
-            <if ad_name="Wildfire|Trueflight|Leaden Salute">
-                <equip set="MagicWS" />
-            </if>
-            <else>
-                <equip set="PhysWS" />
-            </else>
-	</weaponskill>
+        </if>
+    </midmagic>
+    <jobability>
+    </jobability>
+    <weaponskill>
+        <if ad_name="Wildfire|Trueflight|Leaden Salute">
+            <equip set="MagWS" />
+        </if>
+        <else>
+            <equip set="WS" />
+        </else>
+    </weaponskill>
 </ashitacast>

@@ -1,326 +1,346 @@
 <ashitacast>
-	<settings>
-            <buffupdate>true</buffupdate>
-            <statusupdate>true</statusupdate>
-            <hpupdate>false</hpupdate>
-            <autoupdate>false</autoupdate>
-	</settings>
-	<sets>
-            <set name="Idle">
-                <main>$Mainhand</main>
-                <sub>Genmei Shield</sub>
-                <range>Daurdabla</range>
-                <head augment="S14964323880347918574">Hike Khat +1</head>
-                <body augment="S14963464885262234839">Bihu Jstcorps +1</body>
-                <hands augment="S14963464885262234839">Buremte Gloves</hands>
-                <legs augment="S1496432388034794240">Miasmic Pants</legs>
-                <feet>Fili Cothurnes +1</feet>
-                <neck>Loricate Torque +1</neck>
-                <waist augment="S14964323890395218574">Chaac Belt</waist>
-                <ear1>Etiolation Earring</ear1>
-                <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
-                <ring1>Defending Ring</ring1>
-                <ring2>Gelatinous Ring +1</ring2>
-                <back augment="S14963464886888734841">Charger Mantle</back>
-            </set>
-            <set name="TP" baseset="Idle">
-                <head augment="S14964323880347918574">Hike Khat +1</head>
-                <body augment="S14963464885262234839">Bihu Jstcorps +1</body>
-                <hands augment="S14963464885262234839">Buremte Gloves</hands>
-                <legs augment="S1496432388034794240">Miasmic Pants</legs>
-                <feet>Espial Socks</feet>
-                <neck>Asperity Necklace</neck>
-                <waist augment="S1496432389182864240">Windbuffet Belt +1</waist>
-                <ear1 augment="S1496432389345534240">Mache Earring +1</ear1>
-                <ear2 augment="S6176686717137314381">Mache Earring +1</ear2>
-                <ring1 augment="S1821187863554334839">Petrov Ring</ring1>
-                <ring2 augment="S1821294457858518574">Rajas Ring</ring2>
-                <back>Laic Mantle</back>
-            </set>
-            <set name="FastCast">
-                <body augment="S6217489529050814476">Pilgrim Tunica</body>
-                <ear1>Etiolation Earring</ear1>
-                <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
-                <ring1 augment="S6217489529050814476">Prolix Ring</ring1>
-                <ring2 augment="S6217489529050814476">Ascetic's Ring</ring2>
-            </set>
-            <set name="MACC" baseset="Idle">
-                <neck augment="S14968618926288334851">Voltsurge Torque</neck>
-                <waist augment="S14968618926288334851">Virtuoso Belt</waist>
-                <ear1 augment="S14968618926288334851">Andoaa Earring</ear1>
-                <ear2 augment="S14968618926288334851">Moldavite Earring</ear2>
-                <ring1 augment="S14968618926288334851">Stikini Ring</ring1>
-                <ring2 augment="S14968618926288334851">Stikini Ring</ring2>
-                <back augment="S14968618926288334851">Immortal's Cape</back>
-            </set>
-            <set name="Songs">
-                <head>Fili Calot</head>
-                <body>Fili Hongreline</body>
-                <hands>Fili Manchettes</hands>
-                <legs>Fili Rhingrave</legs>
-                <feet>Brioso Slippers +2</feet>
-                <neck augment="S14968618926288334851">Mnbw. Whistle +1</neck>
-                <waist>Witful Belt</waist>
-                <ear1>Musical Earring</ear1>
-            </set>
-            <include>
-            </include>
-	</sets>
-        <init>
-            <command>/macro book 2</command>
-            <command delay="1000">/macro set 2</command>
-            <command>/echo [Switching to BRD Macros]</command>
-            <command>/bind F9 /swap</command>
-            <command>/bind F10 /status</command>
-            <command delay="2000">/lockstyleset 23</command>
-        </init>
-	<variables>
-            <var name="swap">0</var>
-            <var name="minuet">5</var>
-            <var name="minne">5</var>
-            <var name="paeon">6</var>
-            <var name="madrigal">2</var>
-            <var name="march">2</var>
-            <var name="ballad">3</var>
-            <var name="prelude">2</var>
-            <var name="mambo">2</var>
-            <var name="lullaby">2</var>
-            <var name="lullabyga">2</var>
-            <var name="elegy">2</var>
-            <var name="Mainhand">Twashtar</var>
-	</variables>
-	<inputcommands>
-            <cmd input="/swap">
-                <if advanced="$swap=0">
-                    <setvar name="Mainhand" value="Carnwenhan" />
-                    <setvar name="swap" value="1" />
-                    <doidlegear />
-                    <command>/echo [Carnwenhan]</command>
-                </if>
-                <else>
-                    <setvar name="Mainhand" value="Twashtar" />
-                    <setvar name="swap" value="0" />
-                    <doidlegear />
-                    <command>/echo [Twashtar]</command>
-                </else>
-            </cmd>
-            <cmd input="/resetsongs">
-                <setvar name="minuet" value="5" />
-                <setvar name="minne" value="5" />
-                <setvar name="paeon" value="6" />
-                <setvar name="madrigal" value="2" />
-                <setvar name="march" value="2" />
-                <setvar name="ballad" value="3" />
-                <setvar name="prelude" value="2" />
-                <setvar name="mambo" value="2" />
-                <setvar name="lullaby" value="2" />
-                <setvar name="lullabyga" value="2" />
-                <setvar name="elegy" value="2" />
-            </cmd>
-            <cmd input="/status">
-                <if advanced="$swap=0">
-                    <equip>
-                        <back augment="S14968618926288334851">Immortal's Cape</back>
-                    </equip>
-                    <command>/echo [Twashtar]</command>
-                    <command>/resetsongs</command>
-                    <doidlegear />
-                </if>
-                <else>
-                    <equip>
-                        <back augment="S14968618926288334851">Immortal's Cape</back>
-                    </equip>
-                    <command>/echo [Carnwenhan]</command>
-                    <command>/resetsongs</command>
-                    <doidlegear />
-                </else>
-            </cmd>
-            <cmd input="/minuet">
-                <if advanced="$minuet=5">
-                    <command>//valorminuet5</command>
-                    <setvar name="minuet" value="4" />
-                </if>
-                <elseif advanced="$minuet=4">
-                    <command>//valorminuet4</command>
-                    <setvar name="minuet" value="3" />
-                </elseif>
-                <elseif advanced="$minuet=3">
-                    <command>//valorminuet3</command>
-                    <setvar name="minuet" value="2" />
-                </elseif>
-                <else>
-                    <command>//valorminuet2</command>
-                    <setvar name="minuet" value="5" />
-                </else>
-            </cmd>
-            <cmd input="/minne">
-                <if advanced="$minne=5">
-                    <command>//knightsminne5</command>
-                    <setvar name="minne" value="4" />
-                </if>
-                <elseif advanced="$minne=4">
-                    <command>//knightsminne4</command>
-                    <setvar name="minne" value="3" />
-                </elseif>
-                <elseif advanced="$minne=3">
-                    <command>//knightsminne3</command>
-                    <setvar name="minne" value="2" />
-                </elseif>
-                <else>
-                    <command>//knightsminne2</command>
-                    <setvar name="minne" value="5" />
-                </else>
-            </cmd>
-            <cmd input="/paeon">
-                <if advanced="$paeon=6">
-                    <command>//armyspaeon6</command>
-                    <setvar name="paeon" value="5" />
-                </if>
-                <elseif advanced="$paeon=5">
-                    <command>//armyspaeon5</command>
-                    <setvar name="paeon" value="4" />
-                </elseif>
-                <elseif advanced="$paeon=4">
-                    <command>//armyspaeon4</command>
-                    <setvar name="paeon" value="3" />
-                </elseif>
-                <else>
-                    <command>//armyspaeon3</command>
-                    <setvar name="paeon" value="6" />
-                </else>
-            </cmd>
-            <cmd input="/madrigal">
-                <if advanced="$madrigal=2">
-                    <command>//blademadrigal</command>
-                    <setvar name="madrigal" value="1" />
-                </if>
-                <else>
-                    <command>//swordmadrigal</command>
-                    <setvar name="madrigal" value="2" />
-                </else>
-            </cmd>
-            <cmd input="/march">
-                <if advanced="$march=2">
-                    <command>//victorymarch</command>
-                    <setvar name="march" value="1" />
-                </if>
-                <else>
-                    <command>//advancingmarch</command>
-                    <setvar name="march" value="2" />
-                </else>
-            </cmd>
-            <cmd input="/ballad">
-                <if advanced="$ballad=3">
-                    <command>//magesballad3</command>
-                    <setvar name="ballad" value="2" />
-                </if>
-                <elseif advanced="$ballad=2">
-                    <command>//magesballad2</command>
-                    <setvar name="ballad" value="1" />
-                </elseif>
-                <else>
-                    <command>//magesballad</command>
-                    <setvar name="ballad" value="3" />
-                </else>
-            </cmd>
-            <cmd input="/prelude">
-                <if advanced="$prelude=2">
-                    <command>//archersprelude</command>
-                    <setvar name="prelude" value="1" />
-                </if>
-                <else>
-                    <command>//huntersprelude</command>
-                    <setvar name="prelude" value="2" />
-                </else>
-            </cmd>
-            <cmd input="/mambo">
-                <if advanced="$mambo=2">
-                    <command>//dragonfoemambo</command>
-                    <setvar name="mambo" value="1" />
-                </if>
-                <else>
-                    <command>//sheepfoemambo</command>
-                    <setvar name="mambo" value="2" />
-                </else>
-            </cmd>
-            <cmd input="/lullaby">
-                <if advanced="$lullaby=2">
-                    <command>//foelullaby2</command>
-                    <setvar name="lullaby" value="1" />
-                </if>
-                <else>
-                    <command>//foelullaby</command>
-                    <setvar name="foelullaby" value="2" />
-                </else>
-            </cmd>
-            <cmd input="/lullabyga">
-                <if advanced="$lullabyga=2">
-                    <command>//hordelullaby2</command>
-                    <setvar name="lullabyga" value="1" />
-                </if>
-                <else>
-                    <command>//hordelullaby</command>
-                    <setvar name="hordelullaby" value="2" />
-                </else>
-            </cmd>
-            <cmd input="/elegy">
-                <if advanced="$elegy=2">
-                    <command>//carnageelegy</command>
-                    <setvar name="elegy" value="1" />
-                </if>
-                <else>
-                    <command>//battlefieldelegy</command>
-                    <setvar name="elegy" value="2" />
-                </else>
-            </cmd>
-	</inputcommands>
-	<idlegear>
-            <if eq_back="Nexus Cape">
+    <settings>
+        <buffupdate>true</buffupdate>
+        <statusupdate>true</statusupdate>
+        <hpupdate>false</hpupdate>
+        <autoupdate>false</autoupdate>
+    </settings>
+    <sets>
+        <set name="Idle">
+            <main>$Mainhand</main>
+            <sub>Genmei Shield</sub>
+            <range>Daurdabla</range>
+            <head augment="S14964323880347918574">Hike Khat +1</head>
+            <body augment="S14963464885262234839">Bihu Jstcorps +1</body>
+            <hands augment="S14963464885262234839">Buremte Gloves</hands>
+            <legs augment="S1496432388034794240">Miasmic Pants</legs>
+            <feet>Fili Cothurnes +1</feet>
+            <neck>Loricate Torque +1</neck>
+            <waist augment="S14964323890395218574">Chaac Belt</waist>
+            <ear1>Etiolation Earring</ear1>
+            <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
+            <ring1>Defending Ring</ring1>
+            <ring2>Gelatinous Ring +1</ring2>
+            <back augment="S14963464886888734841">Charger Mantle</back>
+        </set>
+        <set name="TP" baseset="Idle">
+            <head augment="S14964323880347918574">Hike Khat +1</head>
+            <body augment="S14963464885262234839">Bihu Jstcorps +1</body>
+            <hands augment="S14963464885262234839">Buremte Gloves</hands>
+            <legs augment="S1496432388034794240">Miasmic Pants</legs>
+            <feet>Espial Socks</feet>
+            <neck>Tlamiztli Collar</neck>
+            <waist augment="S1496432389182864240">Windbuffet Belt +1</waist>
+            <ear1 augment="S1496432389345534240">Mache Earring +1</ear1>
+            <ear2 augment="S6176686717137314381">Mache Earring +1</ear2>
+            <ring1 augment="S1821187863554334839">Petrov Ring</ring1>
+            <ring2 augment="S1821294457858518574">Rajas Ring</ring2>
+            <back>Laic Mantle</back>
+        </set>
+        <set name="FastCast">
+            <body augment="S6217489529050814476">Pilgrim Tunica</body>
+            <ear1>Etiolation Earring</ear1>
+            <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
+            <ring1 augment="S6217489529050814476">Prolix Ring</ring1>
+            <ring2 augment="S6217489529050814476">Ascetic's Ring</ring2>
+        </set>
+        <set name="MACC" baseset="Idle">
+            <neck augment="S14968618926288334851">Voltsurge Torque</neck>
+            <waist augment="S14968618926288334851">Virtuoso Belt</waist>
+            <ear1 augment="S14968618926288334851">Andoaa Earring</ear1>
+            <ear2 augment="S14968618926288334851">Moldavite Earring</ear2>
+            <ring1 augment="S14968618926288334851">Stikini Ring</ring1>
+            <ring2 augment="S14968618926288334851">Stikini Ring</ring2>
+            <back augment="S14968618926288334851">Immortal's Cape</back>
+        </set>
+        <set name="Songs">
+            <head>Fili Calot</head>
+            <body>Fili Hongreline</body>
+            <hands>Fili Manchettes</hands>
+            <legs>Fili Rhingrave</legs>
+            <feet>Brioso Slippers +2</feet>
+            <neck augment="S14968618926288334851">Mnbw. Whistle +1</neck>
+            <waist>Witful Belt</waist>
+            <ear1>Musical Earring</ear1>
+        </set>
+        <set name="TH" baseset="Idle">
+            <head>Volte Cap</head>
+            <body>Volte Jupon</body>
+            <hands>Volte Bracers</hands>
+            <legs>Volte Hose</legs>
+            <feet>Volte Boots</feet>
+            <waist>Chaac Belt</waist>
+        </set>
+        <include>
+        </include>
+    </sets>
+    <init>
+        <command>/macro book 2</command>
+        <command delay="1000">/macro set 2</command>
+        <command>/echo [Switching to BRD Macros]</command>
+        <command>/bind F9 /swap</command>
+        <command>/bind F10 /status</command>
+        <command delay="2000">/lockstyleset 23</command>
+    </init>
+    <variables>
+        <var name="swap">0</var>
+        <var name="minuet">5</var>
+        <var name="minne">5</var>
+        <var name="paeon">6</var>
+        <var name="madrigal">2</var>
+        <var name="march">2</var>
+        <var name="ballad">3</var>
+        <var name="prelude">2</var>
+        <var name="mambo">2</var>
+        <var name="lullaby">2</var>
+        <var name="lullabyga">2</var>
+        <var name="elegy">2</var>
+        <var name="Mainhand">Twashtar</var>
+    </variables>
+    <inputcommands>
+        <cmd input="/swap">
+            <if advanced="$swap=0">
+                <setvar name="Mainhand" value="Carnwenhan" />
+                <setvar name="swap" value="1" />
+                <doidlegear />
+                <command>/echo [Carnwenhan]</command>
+            </if>
+            <else>
+                <setvar name="Mainhand" value="Twashtar" />
+                <setvar name="swap" value="0" />
+                <doidlegear />
+                <command>/echo [Twashtar]</command>
+            </else>
+        </cmd>
+        <cmd input="/resetsongs">
+            <setvar name="minuet" value="5" />
+            <setvar name="minne" value="5" />
+            <setvar name="paeon" value="6" />
+            <setvar name="madrigal" value="2" />
+            <setvar name="march" value="2" />
+            <setvar name="ballad" value="3" />
+            <setvar name="prelude" value="2" />
+            <setvar name="mambo" value="2" />
+            <setvar name="lullaby" value="2" />
+            <setvar name="lullabyga" value="2" />
+            <setvar name="elegy" value="2" />
+        </cmd>
+        <cmd input="/status">
+            <command>/echo [$Mainhand]</command>
+            <command>/resetsongs</command>
+            <doidlegear />
+            <if buffactive="4|566">
+                <command>/item "Panacea" me</command>
+            </if>
+            <elseif buffactive="6">
+                <command>/item "Echo Drops" me</command>
+            </elseif>
+            <elseif buffactive="9|15">
                 <equip lock="true">
-                    <back>Nexus Cape</back>
+                    <ring2>Purity Ring</ring2>
+                </equip>
+                <command>/item "Hallowed Water" me</command>
+            </elseif>
+            <elseif buffactive="11|12|21|128|129|130|131|132|133|134|135|136|137|138|139|140|141|142|144|145|146|147|148|149|174|175|404|557|558|559|560|561|562|563|564|567">
+                <command>/item "Panacea" me</command>
+            </elseif>
+        </cmd>
+        <cmd input="/minuet">
+            <if advanced="$minuet=5">
+                <command>//valorminuet5</command>
+                <setvar name="minuet" value="4" />
+            </if>
+            <elseif advanced="$minuet=4">
+                <command>//valorminuet4</command>
+                <setvar name="minuet" value="3" />
+            </elseif>
+            <elseif advanced="$minuet=3">
+                <command>//valorminuet3</command>
+                <setvar name="minuet" value="2" />
+            </elseif>
+            <else>
+                <command>//valorminuet2</command>
+                <setvar name="minuet" value="5" />
+            </else>
+        </cmd>
+        <cmd input="/minne">
+            <if advanced="$minne=5">
+                <command>//knightsminne5</command>
+                <setvar name="minne" value="4" />
+            </if>
+            <elseif advanced="$minne=4">
+                <command>//knightsminne4</command>
+                <setvar name="minne" value="3" />
+            </elseif>
+            <elseif advanced="$minne=3">
+                <command>//knightsminne3</command>
+                <setvar name="minne" value="2" />
+            </elseif>
+            <else>
+                <command>//knightsminne2</command>
+                <setvar name="minne" value="5" />
+            </else>
+        </cmd>
+        <cmd input="/paeon">
+            <if advanced="$paeon=6">
+                <command>//armyspaeon6</command>
+                <setvar name="paeon" value="5" />
+            </if>
+            <elseif advanced="$paeon=5">
+                <command>//armyspaeon5</command>
+                <setvar name="paeon" value="4" />
+            </elseif>
+            <elseif advanced="$paeon=4">
+                <command>//armyspaeon4</command>
+                <setvar name="paeon" value="3" />
+            </elseif>
+            <else>
+                <command>//armyspaeon3</command>
+                <setvar name="paeon" value="6" />
+            </else>
+        </cmd>
+        <cmd input="/madrigal">
+            <if advanced="$madrigal=2">
+                <command>//blademadrigal</command>
+                <setvar name="madrigal" value="1" />
+            </if>
+            <else>
+                <command>//swordmadrigal</command>
+                <setvar name="madrigal" value="2" />
+            </else>
+        </cmd>
+        <cmd input="/march">
+            <if advanced="$march=2">
+                <command>//victorymarch</command>
+                <setvar name="march" value="1" />
+            </if>
+            <else>
+                <command>//advancingmarch</command>
+                <setvar name="march" value="2" />
+            </else>
+        </cmd>
+        <cmd input="/ballad">
+            <if advanced="$ballad=3">
+                <command>//magesballad3</command>
+                <setvar name="ballad" value="2" />
+            </if>
+            <elseif advanced="$ballad=2">
+                <command>//magesballad2</command>
+                <setvar name="ballad" value="1" />
+            </elseif>
+            <else>
+                <command>//magesballad</command>
+                <setvar name="ballad" value="3" />
+            </else>
+        </cmd>
+        <cmd input="/prelude">
+            <if advanced="$prelude=2">
+                <command>//archersprelude</command>
+                <setvar name="prelude" value="1" />
+            </if>
+            <else>
+                <command>//huntersprelude</command>
+                <setvar name="prelude" value="2" />
+            </else>
+        </cmd>
+        <cmd input="/mambo">
+            <if advanced="$mambo=2">
+                <command>//dragonfoemambo</command>
+                <setvar name="mambo" value="1" />
+            </if>
+            <else>
+                <command>//sheepfoemambo</command>
+                <setvar name="mambo" value="2" />
+            </else>
+        </cmd>
+        <cmd input="/lullaby">
+            <if advanced="$lullaby=2">
+                <command>//foelullaby2</command>
+                <setvar name="lullaby" value="1" />
+            </if>
+            <else>
+                <command>//foelullaby</command>
+                <setvar name="foelullaby" value="2" />
+            </else>
+        </cmd>
+        <cmd input="/lullabyga">
+            <if advanced="$lullabyga=2">
+                <command>//hordelullaby2</command>
+                <setvar name="lullabyga" value="1" />
+            </if>
+            <else>
+                <command>//hordelullaby</command>
+                <setvar name="hordelullaby" value="2" />
+            </else>
+        </cmd>
+        <cmd input="/elegy">
+            <if advanced="$elegy=2">
+                <command>//carnageelegy</command>
+                <setvar name="elegy" value="1" />
+            </if>
+            <else>
+                <command>//battlefieldelegy</command>
+                <setvar name="elegy" value="2" />
+            </else>
+        </cmd>
+    </inputcommands>
+    <idlegear>
+        <if eq_back="Nexus Cape">
+            <equip lock="true">
+                <back>Nexus Cape</back>
+            </equip>
+        </if>
+        <if p_status="engaged">
+            <equip set="TP" />
+        </if>
+        <else>
+            <equip set="Idle" />
+        </else>
+    </idlegear>
+    <preranged>
+    </preranged>
+    <midranged>
+    </midranged>
+    <premagic>
+        <equip set="FastCast" />
+    </premagic>
+    <midmagic>
+        <if ad_skill="bluemagic|enfeeblingmagic|elementalmagic|darkmagic">
+            <equip set="MACC" />
+        </if>
+        <if ad_type="bardsong">
+            <if ad_name="*Scherzo*">
+                <equip set="Songs">
+                    <feet>Fili Cothurnes +1</feet>
                 </equip>
             </if>
-            <if p_status="engaged">
-                <equip set="TP" />
-            </if>
             <else>
-                <equip set="Idle" />
+                <equip set="Songs" />    
             </else>
-	</idlegear>
-	<preranged>
-	</preranged>
-	<midranged>
-	</midranged>
-	<premagic>
-            <equip set="FastCast" />
-	</premagic>
-	<midmagic>
-            <if ad_skill="bluemagic|enfeeblingmagic|elementalmagic|darkmagic">
-                <equip set="MACC" />
+        </if>
+        <if ad_name="Stoneskin|Metallic*|Diamondhide">
+            <if buffactive="37">
+                <command>/cancel 37</command>
             </if>
-            <else>
-                <if ad_name="*Scherzo*">
-                    <equip set="Songs">
-                        <feet>Fili Cothurnes +1</feet>
-                    </equip>
-                </if>
-                <else>
-                    <equip set="Songs" />    
-                </else>
-            </else>
-	</midmagic>
-	<jobability>
-	</jobability>
-	<weaponskill>
-            <if ad_name="Gust*|Cyclone|Aeolian*">
-                <equip set="MagWS" />
+        </if>
+        <if ad_name="Shock Spikes">
+            <if buffactive="38">
+                <command>/cancel 38</command>
             </if>
-            <else>
-                <equip set="TP">
-                    <ear1>Telos Earring</ear1>
-                    <neck>Fotia Gorget</neck>
-                    <waist>Fotia Belt</waist>
-                </equip>
-            </else>
-	</weaponskill>
+        </if>
+    </midmagic>
+    <jobability>
+    </jobability>
+    <weaponskill>
+        <if ad_name="Gust*|Cyclone|Aeolian*">
+            <equip set="MagWS" />
+        </if>
+        <else>
+            <equip set="TP">
+                <ear1>Telos Earring</ear1>
+                <neck>Fotia Gorget</neck>
+                <waist>Fotia Belt</waist>
+            </equip>
+        </else>
+    </weaponskill>
 </ashitacast>

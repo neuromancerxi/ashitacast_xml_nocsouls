@@ -1,172 +1,220 @@
 <ashitacast>
-	<settings>
-		<buffupdate>true</buffupdate>
-		<statusupdate>true</statusupdate>
-		<hpupdate>false</hpupdate>
-		<autoupdate>false</autoupdate>
-	</settings>
-	<sets>
-            <set name="Idle">
-                <main>$Weapon</main>
-                <sub augment="S7973728454464518565">Clerisy Strap</sub>
-                <range augment="S7973728454464518565">Tarutaru F. Rod</range>
-                <ammo augment="S7973728454464518565">Sabiki Rig</ammo>
-                <head>Acad. Mortar. +3</head>
-                <body>Acad. Gown +3</body>
-                <hands>Acad. Bracers +3</hands>
-                <legs>Acad. Pants +3</legs>
-                <feet>Herald's Gaiters</feet>
-                <neck>Loricate Torque +1</neck>
-                <waist>Chaac Belt</waist>
-                <ear1>Etiolation Earring</ear1>
-                <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
-                <ring1>Defending Ring</ring1>
-                <ring2>Patricius Ring</ring2>
-                <back>Kumbira Cape</back>
-            </set>
-            <set name="FastCast" basetset="Idle">
-                <body augment="S6217489529050814476">Pilgrim Tunica</body>
-                <hands>Arbatel Bracers +1</hands>
-                <feet>Acad. Loafers +3</feet>
-                <waist>Witful Belt</waist>
-                <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
-                <ear1>Etiolation Earring</ear1>
-                <ring2 augment="S6217489529050814476">Ascetic's Ring</ring2>
-            </set>
-            <set name="Nuke" baseset="Idle">
-                <ammo augment="S14968618926288334851">Sinking Minnow</ammo>
-                <head>Acad. Mortar. +3</head>
-                <body>Acad. Gown +3</body>
-                <hands>Acad. Bracers +3</hands>
-                <legs>Gyve Trousers</legs>
-                <feet>Acad. Loafers +3</feet>
-                <ring1 augment="S7973728454464518565">Stikini Ring +1</ring1>
-                <ring2 augment="S7973728454464518565">Stikini Ring +1</ring2>
-                <ear1 augment="S7973728454464518565">Choleric Earring</ear1>
-                <ear2 augment="S7973728454464518565">Regal Earring</ear2>
-                <waist augment="S7973728454464518565">Yamabuki-no-Obi</waist>
-                <neck augment="S7973728454464518565">Baetyl Pendant</neck>
-                <back augment="S7973728454464518565">Izdubar Mantle</back>
-            </set>
-            <set name="Nuke71" baseset="Nuke" >
-                <main>Ark Scythe</main>
-                <sub augment="S7973728454464518565">Tenax Strap</sub>
-                <range augment="S7973728454464518565">Tarutaru F. Rod</range>
-                <ammo augment="S7973728454464518565">Sabiki Rig</ammo>
-                <head>Pumpkin head</head>
-                <body>Field tunica</body>
-                <hands>Field gloves</hands>
-                <legs>Field hose</legs>
-                <feet>Field boots</feet>
-                <neck augment="S7973728454464518565">Justice Badge</neck>
-                <ear1 augment="S7973728454464518565">Tranquility Earring</ear1>
-                <ear2 augment="S7973728454464518565">Tranquility Earring</ear2>
-                <waist augment="S7973728454464518565">Blood Stone +1</waist>
-                <ring1 augment="S7973728454464518565">Hermit's Ring</ring1>
-                <ring2 augment="S7973728454464518565">Hermit's Ring</ring2>
-                <back>Shaper's Shawl</back>
-            </set>
-            <set name="Nuke51" baseset="Nuke71" />
-            <set name="Nuke50" baseset="Nuke51" />
-            <set name="Enfeeble" baseset="Nuke" >
-                <ammo augment="S14968618926288334851">Sinking Minnow</ammo>
-                <neck augment="S14968618926288334851">Voltsurge Torque</neck>
-                <waist augment="S14968618926288334851">Virtuoso Belt</waist>
-                <ear1 augment="S14968618926288334851">Andoaa Earring</ear1>
-                <ear2 augment="S14968618926288334851">Gifted Earring</ear2>
-                <ring1 augment="S14968618926288334851">Stikini Ring</ring1>
-                <ring2 augment="S14968618926288334851">Stikini Ring</ring2>
+    <settings>
+        <buffupdate>true</buffupdate>
+        <statusupdate>true</statusupdate>
+        <hpupdate>false</hpupdate>
+        <autoupdate>false</autoupdate>
+    </settings>
+    <sets>
+        <set name="Idle">
+            <main>$Weapon</main>
+            <sub augment="S7973728454464518565">Clerisy Strap</sub>
+            <range augment="S7973728454464518565">Tarutaru F. Rod</range>
+            <ammo augment="S7973728454464518565">Sabiki Rig</ammo>
+            <head>Volte Beret</head>
+            <body>Volte Doublet</body>
+            <hands>Volte Gloves</hands> <!-- MAB 40 -->
+            <legs>Volte Brais</legs> <!-- MAB 40 -->
+            <feet>Herald's Gaiters</feet>
+            <neck>Loricate Torque +1</neck>
+            <waist>Chaac Belt</waist>
+            <ear1>Etiolation Earring</ear1>
+            <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
+            <ring1>Defending Ring</ring1>
+            <ring2>Patricius Ring</ring2>
+            <back>Kumbira Cape</back>
+        </set>
+        <set name="FastCast" basetset="Idle">
+            <head>Acad. Mortar. +3</head>
+            <body augment="S6217489529050814476">Pilgrim Tunica</body>
+            <hands>Arbatel Bracers +1</hands>
+            <feet>Acad. Loafers +3</feet>
+            <waist>Witful Belt</waist>
+            <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
+            <ear1>Etiolation Earring</ear1>
+            <ring2 augment="S6217489529050814476">Ascetic's Ring</ring2>
+        </set>
+        <set name="Nuke" baseset="Idle">
+            <ammo augment="S14968618926288334851">Sinking Minnow</ammo>
+            <head>Acad. Mortar. +3</head>
+            <hands>Acad. Bracers +3</hands>
+            <!--body>Acad. Gown +3</body>
+            <legs>Acad. Pants +3</legs-->
+            <feet>Acad. Loafers +3</feet>
+            <ring1 augment="S7973728454464518565">Stikini Ring +1</ring1>
+            <ring2 augment="S7973728454464518565">Stikini Ring +1</ring2>
+            <ear1 augment="S7973728454464518565">Choleric Earring</ear1>
+            <ear2 augment="S7973728454464518565">Regal Earring</ear2>
+            <waist augment="S7973728454464518565">Yamabuki-no-Obi</waist>
+            <neck augment="S7973728454464518565">Baetyl Pendant</neck>
+            <back augment="S7973728454464518565">Izdubar Mantle</back>
+        </set>
+        <set name="Nuke71" baseset="Nuke" >
+            <main>Ark Scythe</main>
+            <sub augment="S7973728454464518565">Tenax Strap</sub>
+            <range augment="S7973728454464518565">Tarutaru F. Rod</range>
+            <ammo augment="S7973728454464518565">Sabiki Rig</ammo>
+            <head>Pumpkin head</head>
+            <body>Field tunica</body>
+            <hands>Field gloves</hands>
+            <legs>Field hose</legs>
+            <feet>Field boots</feet>
+            <neck augment="S7973728454464518565">Justice Badge</neck>
+            <ear1 augment="S7973728454464518565">Tranquility Earring</ear1>
+            <ear2 augment="S7973728454464518565">Tranquility Earring</ear2>
+            <waist augment="S7973728454464518565">Blood Stone +1</waist>
+            <ring1 augment="S7973728454464518565">Hermit's Ring</ring1>
+            <ring2 augment="S7973728454464518565">Hermit's Ring</ring2>
+            <back>Shaper's Shawl</back>
+        </set>
+        <set name="Nuke51" baseset="Nuke71" />
+        <set name="Nuke50" baseset="Nuke51" />
+        <set name="Enfeeble" baseset="Nuke" >
+            <ammo augment="S14968618926288334851">Sinking Minnow</ammo>
+            <neck augment="S14968618926288334851">Voltsurge Torque</neck>
+            <waist augment="S14968618926288334851">Virtuoso Belt</waist>
+            <ear1 augment="S14968618926288334851">Andoaa Earring</ear1>
+            <ear2 augment="S14968618926288334851">Gifted Earring</ear2>
+            <ring1 augment="S14968618926288334851">Stikini Ring</ring1>
+            <ring2 augment="S14968618926288334851">Stikini Ring</ring2>
+            <back augment="S14968618926288334851">Warlock's Mantle</back>
+            <legs>Acad. Pants +2</legs>
+        </set>
+        <set name="TH" baseset="Nuke">
+            <ammo augment="S7973728454464518565">Sabiki Rig</ammo>
+            <head>Volte Cap</head>
+            <body>Volte Jupon</body>
+            <hands>Volte Bracers</hands>
+            <legs>Volte Hose</legs>
+            <feet>Volte Boots</feet>
+            <waist>Chaac Belt</waist>
+            <ring1 augment="S14968618926288334851">Stikini Ring</ring1>
+            <ring2 augment="S14968618926288334851">Stikini Ring</ring2>
+        </set>
+        <set name="TP" baseset="Idle">
+            <head>Volte Cap</head>
+            <body>Volte Jupon</body>
+            <hands>Volte Bracers</hands>
+            <legs>Volte Hose</legs>
+            <feet>Volte Boots</feet>
+            <waist>Chaac Belt</waist>
+        </set>
+        <include>
+        </include>
+    </sets>
+    <init>
+        <command>/macro book 8</command>
+        <command delay="1000">/macro set 4</command>
+        <command delay="1100">/echo [Switching to SCH Macros]</command>
+        <command>/bind F9 /togglenuke</command>
+        <command>/bind F10 /status</command>
+        <command>/bind F12 /toggleweap</command>
+        <command delay="2000">/lockstyleset 2</command>
+    </init>
+    <variables>
+        <var name="toggleweap">0</var>
+        <var name="togglenuke">0</var>
+        <var name="Weapon">Tupsimati</var>
+        <var name="status">Standard</var>
+    </variables>
+    <inputcommands>
+        <!--
+        0 Tupsimati
+        1 Hvergelmir
+        -->
+        <cmd input="/toggleweap">
+            <if advanced="$toggleweap=1">
+                <setvar name="Weapon" value="Tupsimati" />
+                <setvar name="toggleweap" value="0" />
+            </if>
+            <else>
+                <setvar name="Weapon" value="Hvergelmir" />
+                <setvar name="toggleweap" value="1" />
+            </else>
+            <doidlegear />
+            <command>/echo [$Weapon] [$status Nuke]</command>
+        </cmd>
+        <!--
+        0 Nuke in standard gear
+        1 Nuke in TH gear
+        -->
+        <cmd input="/togglenuke">
+            <if advanced="$togglenuke=1">
+                <setvar name="togglenuke" value="0" />
+                <setvar name="status" value="Standard" />
+            </if>
+            <else>
+                <setvar name="togglenuke" value="1" />
+                <setvar name="status" value="TH" />
+            </else>
+            <doidlegear />
+            <command>/echo [$Weapon] [$status Nuke]</command>
+        </cmd>
+        <cmd input="/status">
+            <equip>
                 <back augment="S14968618926288334851">Warlock's Mantle</back>
-                <legs>Acad. Pants +2</legs>
-            </set>
-            <include>
-            </include>
-	</sets>
-        <init>
-            <command>/macro book 8</command>
-            <command delay="1000">/macro set 4</command>
-            <command delay="1100">/echo [Switching to SCH Macros]</command>
-            <command>/bind F9 /toggle</command>
-            <command>/bind F10 /status</command>
-            <command delay="2000">/lockstyle on</command>
-        </init>
-	<variables>
-            <var name="toggle">0</var>     
-            <var name="Weapon">Tupsimati</var>
-	</variables>
-	<inputcommands>
-            <cmd input="/toggle">
-                <if advanced="$toggle=1">
-                    <setvar name="Weapon" value="Tupsimati" />
-                    <setvar name="toggle" value="0" />
-                    <doidlegear />
-                    <command>/echo [Tupsimatai]</command>
-                </if>
-                <else>
-                    <setvar name="Weapon" value="Hvergelmir" />
-                    <setvar name="toggle" value="1" />
-                    <doidlegear />
-                    <command>/echo [Hvergelmir]</command>
-                </else>
-            </cmd>
-            <cmd input="/status">
-                <if advanced="$toggle=0">
-                    <equip>
-                        <back>Kumbira Cape</back>
-                    </equip>
-                    <command>/echo [Tupsimati]</command>
-                    <doidlegear />
-                </if>
-                <else>
-                    <equip>
-                        <back>Kumbira Cape</back>
-                    </equip>
-                    <command>/echo [Hvergelmir]</command>
-                    <doidlegear />
-                </else>
-            </cmd>
-	</inputcommands>
-	<idlegear>
-            <if eq_back="Nexus Cape">
+            </equip>
+            <doidlegear />
+            <command>/echo [$Weapon] [$status Nuke]</command>
+            <if buffactive="4|566">
+                <command>/item "Panacea" me</command>
+            </if>
+            <elseif buffactive="6">
+                <command>/item "Echo Drops" me</command>
+            </elseif>
+            <elseif buffactive="9|15">
                 <equip lock="true">
-                    <back>Nexus Cape</back>
+                    <ring2>Purity Ring</ring2>
                 </equip>
-            </if>
-            <if p_status="idle">    
-                <if p_joblevel="<99">
-                    <equip set="Idle">
-                        <main>Ark Scythe</main>
-                    </equip>
-                </if>
-                <else>
-                    <if advanced="$empy=1">
-                        <equip set="Idle">
-                            <main>Hvergelmir</main>
-                        </equip>
-                    </if>
-                    <else>
-                        <equip set="Idle" />
-                    </else>
-                </else>
-            </if>
-	</idlegear>
-	<preranged>
-	</preranged>
-	<midranged>
-	</midranged>
-	<premagic>
-            <if ad_skill="elementalmagic|enfeeblingmagic">
-                <equip set="FastCast" >
-                    <waist />
+                <command>/item "Hallowed Water" me</command>
+            </elseif>
+            <elseif buffactive="11|12|21|128|129|130|131|132|133|134|135|136|137|138|139|140|141|142|144|145|146|147|148|149|174|175|404|557|558|559|560|561|562|563|564|567">
+                <command>/item "Panacea" me</command>
+            </elseif>
+        </cmd>
+    </inputcommands>
+    <idlegear>
+        <if eq_back="Nexus Cape">
+            <equip lock="true">
+                <back>Nexus Cape</back>
+            </equip>
+        </if>
+        <if p_status="idle">    
+            <if p_joblevel="<99">
+                <equip set="Idle">
+                    <main>Ark Scythe</main>
+                    <sub augment="S7973728454464518565">Tenax Strap</sub>
                 </equip>
             </if>
             <else>
-                <equip set="FastCast" />
+                <equip set="Idle" />
             </else>
-	</premagic>
-	<midmagic>
-            <if ad_skill="elementalmagic">
-                <if p_joblevel="99">
+        </if>
+        <elseif p_status="engaged"> <!-- swaps your TP gear -->
+            <equip set="TP" />
+        </elseif>
+        <else> <!-- otherwise if you aren't fighting, put on your idle set -->
+            <equip set="Idle" />
+        </else>
+    </idlegear>
+    <preranged>
+    </preranged>
+    <midranged>
+    </midranged>
+    <premagic>
+        <if ad_skill="elementalmagic|enfeeblingmagic">
+            <equip set="FastCast" >
+                <waist />
+            </equip>
+        </if>
+        <else>
+            <equip set="FastCast" />
+        </else>
+    </premagic>
+    <midmagic>
+        <if ad_skill="elementalmagic">
+            <if p_joblevel="99">
+                <if advanced="$togglenuke=0">
                     <if advanced="(%ad_element=%e_dayelement)|(%ad_element=%e_weatherelement)">
                         <equip set="Nuke">
                             <waist augment="S7973728454464518565">Hachirin-no-Obi</waist>
@@ -176,34 +224,48 @@
                         <equip set="Nuke" />
                     </else>
                 </if>
-                <elseif p_joblevel=">70&<99">
-                    <if advanced="(%ad_element=%e_dayelement)|(%ad_element=%e_weatherelement)">
-                        <equip set="Nuke71">
-                            <waist augment="S7973728454464518565">Hachirin-no-Obi</waist>
-                        </equip>
-                    </if>
-                    <else>
-                        <equip set="Nuke71" />
-                    </else>
-                </elseif>
-                <elseif p_joblevel=">50&<71">
-                    <equip set="Nuke51" />
-                </elseif>
                 <else>
-                    <equip set="Nuke50" />
+                    <equip set="TH" />
                 </else>
             </if>
-            <if ad_skill="enfeeblingmagic|bluemagic">
-                <equip set="Enfeeble" />
+            <elseif p_joblevel=">70&<99">
+                <if advanced="(%ad_element=%e_dayelement)|(%ad_element=%e_weatherelement)">
+                    <equip set="Nuke71">
+                        <waist augment="S7973728454464518565">Hachirin-no-Obi</waist>
+                    </equip>
+                </if>
+                <else>
+                    <equip set="Nuke71" />
+                </else>
+            </elseif>
+            <elseif p_joblevel=">50&<71">
+                <equip set="Nuke51" />
+            </elseif>
+            <else>
+                <equip set="Nuke50" />
+            </else>
+        </if>
+        <if ad_skill="enfeeblingmagic|bluemagic">
+            <equip set="Enfeeble" />
+        </if>
+        <if ad_skill="darkmagic">
+            <equip set="Nuke">
+                <head>Appetence Crown</head>
+            </equip>
+        </if>
+        <if ad_name="Stoneskin|Metallic*|Diamondhide">
+            <if buffactive="37">
+                <command>/cancel 37</command>
             </if>
-            <if ad_skill="darkmagic">
-                <equip set="Nuke">
-                    <head>Appetence Crown</head>
-                </equip>
+        </if>
+        <if ad_name="Shock Spikes">
+            <if buffactive="38">
+                <command>/cancel 38</command>
             </if>
-	</midmagic>
-	<jobability>
-	</jobability>
-	<weaponskill>
-	</weaponskill>
+        </if>
+    </midmagic>
+    <jobability>
+    </jobability>
+    <weaponskill>
+    </weaponskill>
 </ashitacast>

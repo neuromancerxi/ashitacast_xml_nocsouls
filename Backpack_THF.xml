@@ -39,6 +39,11 @@
             <hands>Plun. armlets +1</hands>
             <feet>Skulk. Poulaines +1</feet>
         </set>
+        <set name="THMAX" baseset="TH">
+            <head>Volte Cap</head>
+            <body>Volte Jupon</body>
+            <legs>Volte Hose</legs>
+        </set>
         <set name="DEFTP" baseset="TP">
             <neck>Loricate Torque +1</neck> <!-- Augmented with Counter +40 -->
             <ear1>Etiolation Earring</ear1> <!-- Augmented with Counter +40 -->
@@ -49,10 +54,12 @@
         </set>        
         <set name="WS" baseset="TP">
             <ear2>Cessance earring</ear2>
-            <neck>Fotia Gorget</neck>
-            <waist>Fotia Belt</waist>
         </set>
-        <set name="MagWS" baseset="TP">
+        <set name="WSFTP" baseset="WS">
+            <neck>Fotia Gorget</neck> <!-- TA +12 -->
+            <waist>Fotia Belt</waist> <!-- TA +12 -->
+        </set>
+        <set name="MagWS" baseset="MAXTH">
             <ammo augment="S7973728454464518565">Sabiki Rig</ammo>
             <ring1 augment="S7973728454464518565">Stikini Ring +1</ring1>
             <ring2 augment="S7973728454464518565">Stikini Ring +1</ring2>
@@ -60,7 +67,7 @@
             <ear2 augment="S7973728454464518565">Tranquility Earring</ear2>
             <neck augment="S7973728454464518565">Baetyl Pendant</neck>
             <back augment="S7973728454464518565">Izdubar Mantle</back>
-            <waist augment="S7973728454464518565">Blood Stone +1</waist>
+            <!--waist augment="S7973728454464518565">Blood Stone +1</waist-->
         </set>
         <set name="FastCast">
             <body augment="S6217489529050814476">Pilgrim Tunica</body> <!-- Fastcast +32 -->
@@ -90,8 +97,9 @@
         <command delay="2000">/lockstyleset 10</command>
     </init>
     <variables>
-        <var name="switch">0</var>
-        <var name="sub">Sandung</var>
+        <var name="switch">1</var>
+        <var name="tptype">Standard</var>
+        <var name="sub">Mandau</var>
     </variables>
     <inputcommands>
         <cmd input="/switch">
@@ -99,43 +107,44 @@
                 <setvar name="switch" value="0" />
                 <setvar name="sub" value="Sandung" />
                 <doidlegear />
-                <command>/echo [TP Mode: TH]</command>
+                <setvar name="tptype" value="THMAX" />
             </if>
             <elseif advanced="$switch=1">
                 <setvar name="switch" value="2" />
                 <setvar name="sub" value="Mandau" />
                 <doidlegear />
-                <command>/echo [TP Mode: Defensive]</command>
+                <setvar name="tptype" value="Defensive" />
             </elseif>
             <else>
                 <setvar name="switch" value="1" />
                 <setvar name="sub" value="Mandau" />
                 <doidlegear />
-                <command>/echo [TP Mode: Standard]</command>
+                <setvar name="tptype" value="Standard" />
             </else>
+            <command>/echo [$sub] [$tptype]</command>
         </cmd>
+        
         <cmd input="/status">
-            <if advanced="$switch=0">
-                <equip>
-                    <back>Agema Cape</back> <!-- swaps into Agema manually to get out of Nexus Cape -->
-                </equip>
-                <command>/echo [TP Mode: TH]</command>
-                <doidlegear />
+            <equip>
+                <back>Agema Cape</back>
+            </equip>
+            <doidlegear />
+            <command>/echo [$sub] [$tptype]</command>
+            <if buffactive="4|566">
+                <command>/item "Panacea" me</command>
             </if>
-            <elseif advanced="$switch=1">
-                <equip>
-                    <back>Agema Cape</back> <!-- swaps into Agema manually to get out of Nexus Cape -->
-                </equip>
-                <command>/echo [TP Mode: Standard]</command>
-                <doidlegear />
+            <elseif buffactive="6">
+                <command>/item "Echo Drops" me</command>
             </elseif>
-            <else>
-                <equip>
-                    <back>Agema Cape</back> <!-- swaps into Agema manually to get out of Nexus Cape -->
+            <elseif buffactive="9|15">
+                <equip lock="true">
+                    <ring2>Purity Ring</ring2>
                 </equip>
-                <command>/echo [TP Mode: Defensive]</command>
-                <doidlegear />
-            </else>
+                <command>/item "Hallowed Water" me</command>
+            </elseif>
+            <elseif buffactive="11|12|21|128|129|130|131|132|133|134|135|136|137|138|139|140|141|142|144|145|146|147|148|149|174|175|404|557|558|559|560|561|562|563|564|567">
+                <command>/item "Panacea" me</command>
+            </elseif>
         </cmd>
     </inputcommands>
     <idlegear>
@@ -146,7 +155,7 @@
         </if>
         <if p_status="engaged"> <!-- swaps your TP gear depending on what "mode" you're in -->
             <if advanced="$switch=0">
-                <equip set="TH" />
+                <equip set="THMAX" />
             </if>
             <elseif advanced="$switch=2">
                 <equip set="DEFTP" />
@@ -170,6 +179,16 @@
         <if ad_skill="bluemagic|enfeeblingmagic|elementalmagic|darkmagic">
             <equip set="MACC" />
         </if>
+        <if ad_name="Stoneskin|Metallic*|Diamondhide">
+            <if buffactive="37">
+                <command>/cancel 37</command>
+            </if>
+        </if>
+        <if ad_name="Shock Spikes">
+            <if buffactive="38">
+                <command>/cancel 38</command>
+            </if>
+        </if>
     </midmagic>
     <jobability>
         <if eq_back="Nexus Cape"> <!-- locks your back slot while Nexus Cape is equipped -->
@@ -192,9 +211,12 @@
                 <equip set="MagWS" />
         </if>
         <elseif ad_name="Evisceration"> <!-- Swap in Crit+ Gear for Evis -->
-            <equip set="WS">
-                <!--ear1>Telos Earring</ear1> <!-- Augmented Crit +20% -->
+            <equip set="WSFTP">
+                <ear1>Telos Earring</ear1> <!-- +20% -->
             </equip>
+        </elseif>
+        <elseif ad_name="Dancing Edge|Exenterator|Pyrrhic Kleos">
+            <equip set="WSFTP" />
         </elseif>
         <else>
             <equip set="WS" /> <!-- Standard WS Gear -->
