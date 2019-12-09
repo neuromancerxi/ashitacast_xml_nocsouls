@@ -13,7 +13,7 @@
             <ammo>$Ammo</ammo>
             <head>Laksa. Tricorne +3</head>
             <body>Laksa. Frac +3</body>
-            <hands>Laksa. Gants +2</hands>
+            <hands>Laksa. Gants +3</hands>
             <feet>Skd. Jambeaux +1</feet>
             <legs>Blood Cuisses</legs>
             <neck>Loricate Torque +1</neck> <!-- Counter +40 -->
@@ -27,7 +27,7 @@
         <set name="TP" baseset="Idle">
             <head augment="S182109392262544240">Volte Tiara</head>
             <body augment="S182109392262544240">Volte Harness</body>
-            <hands augment="S182109392262544240">Volte Mittens</hands>
+            <hands>Laksa. Gants +3</hands>
             <legs augment="S182109392262544240">Volte Tights</legs>
             <feet augment="S182109392262544240">Volte Spats</feet>
             <neck>Tlamiztli Collar</neck>
@@ -42,7 +42,7 @@
             <head>Laksa. Tricorne +3</head>
             <body>Laksa. Frac +3</body>
             <hands>Laksa. Gants +2</hands>
-            <legs>Laksa. Trews +2</legs>
+            <legs>Laksa. Trews +3</legs>
             <feet>Laksa. Boots +3</feet>
             <neck augment="S14966041904961434845">Gaudryi Necklace</neck>
             <waist augment="S14965182900021934843">Ponente Sash</waist>
@@ -62,7 +62,7 @@
             <head>Volte Cap</head> <!-- MAB +40 -->
             <body>Volte Jupon</body> <!-- MAB +40 -->
             <hands>Volte Bracers</hands> <!-- MAB +40 -->
-            <legs>Volte Hose</legs> <!-- MAB +40 -->
+            <legs>Laksa. Trews +3</legs> <!-- MAB +40 -->
             <feet>Volte Boots</feet> <!-- MAB +40 -->
             <!--waist>Chaac Belt</waist> <!-- MAB +40 -->
         </set>
@@ -178,6 +178,12 @@
         <if ad_name="Wildfire|Trueflight|Leaden Salute">
             <equip set="MagWS" />
         </if>
+        <elseif ad_name="Savage*|Requies*|Death*">
+            <equip set="TP">
+                <neck>Fotia Gorget</neck> <!-- TA +12 -->
+                <waist>Fotia Belt</waist> <!-- TA +12 -->
+            </equip>
+        </elseif>
         <else>
             <equip set="WS" />
         </else>

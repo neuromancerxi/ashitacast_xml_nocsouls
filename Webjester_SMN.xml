@@ -10,7 +10,7 @@
             <main>$Weapon</main>
             <sub>Elan Strap +1</sub>
             <ammo>Sancus Sachet +1</ammo>
-            <head>Convoker's Horn +2</head>
+            <head>Convoker's Horn +3</head>
             <body>Shomonjijoe +1</body>
             <hands>Glyphic Bracers +1</hands>
             <legs>Beckoner's Spats</legs>
@@ -53,7 +53,7 @@
             <head>Glyphic Horn +1</head>
             <body>Beckoner's Doublet</body>
             <hands>Glyphic Bracers +1</hands>
-            <legs>Convo. Spats +2</legs>
+            <legs>Convo. Spats +3</legs>
             <feet>Beck. Pigaches</feet>
             <ring1>Evoker's Ring</ring1>
         </set>
@@ -69,10 +69,10 @@
         <set name="BPPlus">
             <ammo>Sancus Sachet +1</ammo>
             <head>Glyphic Horn +1</head>
-            <body>Con. Doublet +2</body>
-            <hands>Convo. Bracers +2</hands>
+            <body>Con. Doublet +3</body>
+            <hands>Convo. Bracers +3</hands>
             <legs>Beckoner's Spats</legs>
-            <feet>Convo. Pigaches +2</feet>
+            <feet>Convo. Pigaches +3</feet>
             <neck>Caller's Pendant</neck>
             <ear1>Esper Earring</ear1>
             <ear2>Andoaa Earring</ear2>
@@ -80,7 +80,7 @@
             <ring2>Varar Ring</ring2>
         </set>
         <set name="SummonSkill">
-            <head augment="S182129445785856189">Convoker's Horn +2</head>
+            <head>Convoker's Horn +3</head>
             <body>Beckoner's Doublet</body>
             <hands>Glyphic Bracers +1</hands>
             <legs>Beckoner's Spats</legs>

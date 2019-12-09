@@ -11,10 +11,10 @@
             <sub>Varlet's Targe</sub>
             <range augment="S7973728454464518565">Tarutaru F. Rod</range>
             <ammo augment="S6176686717137314381">Minnow</ammo>
-            <head>Totemic Helm +2</head>
-            <body>Kubira Meikogai</body>
-            <hands>Totemic Gloves +2</hands>
-            <legs>Tot. Trousers +2</legs>
+            <head>Totemic Helm +3</head> <!-- STP 10, TA +9 -->
+            <body>Kubira Meikogai</body> <!-- STP 10, TA +9 -->
+            <hands>Totemic Gloves +3</hands> <!-- STP 10, TA +9 -->
+            <legs>Tot. Trousers +3</legs> <!-- STP 10, TA +9 -->
             <feet>Skd. Jambeaux +1</feet>
             <neck>Loricate Torque +1</neck> <!-- Counter +40 -->
             <waist>Goading Belt</waist> <!-- mEVA +40 -->
@@ -25,12 +25,14 @@
             <back>Agema Cape</back> <!-- TA +12 -->
         </set>
         <set name="TP" baseset="idle">
+            <body>Tot. Jackcoat +3</body> <!-- STP 10, TA +9 -->
+            <feet>Tot. Gaiters +3</feet> <!-- STP 10, TA +9 -->
             <ammo augment="S14964323893455334841">Lufaise Fly</ammo>
-            <head augment="S182109392262544240">Volte Tiara</head>
+            <!--head augment="S182109392262544240">Volte Tiara</head>
             <body augment="S182109392262544240">Volte Harness</body>
             <hands augment="S182109392262544240">Volte Mittens</hands>
             <legs augment="S182109392262544240">Volte Tights</legs>
-            <feet augment="S182109392262544240">Volte Spats</feet>
+            <feet augment="S182109392262544240">Volte Spats</feet-->
             <neck>Tlamiztli Collar</neck> <!-- TA +12 -->
             <waist>Windbuffet Belt +1</waist> <!-- STP 10, TA +9 -->
             <ear1 augment="S353610053140898233">Telos Earring</ear1>
@@ -156,7 +158,7 @@
             <command>/echo [$main] [$tptype]</command>
         </cmd>
         <cmd input="/status">
-            <command>/echo [$Mainhand]</command>
+            <command>/echo [$main] [$tptype]</command>
             <doidlegear />
             <if buffactive="4|566">
                 <command>/item "Panacea" me</command>

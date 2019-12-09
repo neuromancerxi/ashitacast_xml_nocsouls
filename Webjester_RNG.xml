@@ -6,59 +6,64 @@
         <autoupdate>false</autoupdate>
     </settings>
     <sets>
-        <set name="Idle" baseset="PhysWS">
-            <neck>Loricate Torque +1</neck>
-            <ring1>Defending Ring</ring1>
-            <ring2>Gelatinous Ring +1</ring2>
-            <waist>Chaac Belt</waist>
-            <back>Agema Cape</back>
+        <set name="Idle">
+            <main>$Mainhand</main>
+            <sub>$Offhand</sub>
+            <range>$Range</range>
+            <ammo>$Ammo</ammo>
+            <head>Orion Beret +3</head>
+            <body>Orion Jerkin +3</body>
+            <hands>Orion Bracers +3</hands>
             <legs>Blood Cuisses</legs>
+            <feet>Orion Socks +3</feet>
+            <neck>Loricate Torque +1</neck> <!-- Counter +40 -->
+            <waist>Goading Belt</waist> <!-- mEVA +40 -->
+            <ear1>Etiolation Earring</ear1> <!-- Counter +40 -->
+            <ear2>Cryptic Earring</ear2> <!-- mEVA +40 -->
+            <ring1>Defending Ring</ring1> <!-- STP 10, TA +9 -->
+            <ring2>Gelatinous Ring +1</ring2> <!-- STP 10, TA +9 -->
+            <back>Agema Cape</back> <!-- TA +12 -->
         </set>
-        <set name="TP" baseset="PhysWS">
-            <head augment="S14963464885262234839">Whirlpool Mask</head>
-            <body augment="S14963464885262234839">Agony Jerkin +1</body>
-            <hands augment="S14963464885262234839">Buremte Gloves</hands>
-            <legs augment="S14963464885262234839">Nahtirah Trousers</legs>
-            <feet augment="S14963464885262234839">Qaaxo Leggings</feet>
-            <neck augment="S14963464885262234839">Ej Necklace</neck>
-            <waist augment="S1496346488688894240">Velocious Belt</waist>
-            <ear1 augment="S14963358292584734839">Mache Earring +1</ear1>
-            <ear2 augment="S14963464885262234839">Mache Earring +1</ear2>
-            <ring1 augment="S14963464886888734839">Supershear Ring</ring1>
-            <ring2 augment="S14963464886888734839">Patricius Ring</ring2>
-            <back augment="S14963464886888734841">Charger Mantle</back>
-        </set>
-        <set name="PhysWS">
-            <main>$Mainhand</main>
-            <sub>$Offhand</sub>
-            <range>$Range</range>
-            <ammo>$Ammo</ammo>
-            <head augment="S14966041904961434845">Orion Beret +3</head>
-            <body augment="S14966041904961434845">Orion Jerkin +3</body>
-            <hands augment="S14966041904961434845">Orion Bracers +3</hands>
-            <legs augment="S14966041904961434845">Orion Braccae +2</legs>
-            <feet augment="S14966041904961434845">Orion Socks +3</feet>
-            <neck augment="S14966041904961434845">Gaudryi Necklace</neck>
-            <waist augment="S14965182900021934843">Ponente Sash</waist>
+        <set name="TP" baseset="Idle">
+            <head augment="S182109392262544240">Volte Tiara</head>
+            <body augment="S182109392262544240">Volte Harness</body>
+            <hands augment="S182109392262544240">Volte Mittens</hands>
+            <legs augment="S182109392262544240">Volte Tights</legs>
+            <feet augment="S182109392262544240">Volte Spats</feet>
+            <neck>Tlamiztli Collar</neck>
+            <waist>Windbuffet Belt +1</waist>
             <ear1 augment="S353610053140898233">Telos Earring</ear1>
-            <ear2 augment="S14965182900021934843">Enervating Earring</ear2>
+            <ear2 augment="S14964323893455334841">Tati Earring</ear2>
             <ring1>Regal Ring</ring1>
-            <ring2 augment="S14966041906588534845">Longshot Ring</ring2>
-            <back augment="S14965182900021934843">Terebellum Mantle</back>
+            <ring2>Rajas Ring</ring2>
+            <back>Laic Mantle</back>
         </set>
-        <set name="MagicWS">
-            <main>$Mainhand</main>
-            <sub>$Offhand</sub>
-            <range>$Range</range>
-            <ammo>$Ammo</ammo>
-            <head augment="S14968618926288334851">Orion Beret +2</head>
+        <set name="RangeWS" baseset="Idle">
+            <legs>Orion Braccae +3</legs>
+            <neck>Gaudryi Necklace</neck>
+            <waist>Ponente Sash</waist>
+            <ear1 augment="S353610053140898233">Telos Earring</ear1>
+            <ear2>Enervating Earring</ear2>
+            <ring1>Regal Ring</ring1>
+            <ring2>Longshot Ring</ring2>
+            <back>Terebellum Mantle</back>
+        </set>
+        <set name="WSFTP" baseset="RangeWS">
+            <neck>Fotia Gorget</neck> <!-- TA +12 -->
+            <waist>Fotia Belt</waist> <!-- TA +12 -->
+        </set>
+        <set name="MagicWS" baseset="Idle">
             <body augment="S7973728454464518565">Gyve Doublet</body>
-            <hands augment="S14968618926288334851">Orion Bracers +2</hands>
             <legs augment="S7973728454464518565">Gyve Trousers</legs>
-            <feet>Orion Socks +2</feet>
-            <!--neck augment="S14968618926288334851">Voltsurge Torque</neck-->
+            <head>Volte Cap</head>
+            <hands>Volte Bracers</hands>
+            <feet>Volte Boots</feet>
             <neck>Baetyl Pendant</neck>
-            <waist augment="S7973728454464518565">Hachirin-no-Obi</waist>
+            <!--head augment="S14968618926288334851">Orion Beret +2</head>
+            <hands augment="S14968618926288334851">Orion Bracers +2</hands>
+            <feet>Orion Socks +2</feet>
+            <neck augment="S14968618926288334851">Voltsurge Torque</neck-->
+            <waist augment="S7973728454464518565">Eschan Stone</waist>
             <ear1 augment="S7973728454464518565">Choleric Earring</ear1>
             <ear2 augment="S7973728454464518565">Tranquility Earring</ear2>
             <ring1 augment="S7973728454464518565">Stikini Ring +1</ring1>
@@ -69,7 +74,6 @@
             <body augment="S6217489529050814476">Pilgrim Tunica</body>
             <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
             <ear1>Etiolation Earring</ear1>
-            <ring1 augment="S6217489529050814476">Prolix Ring</ring1>
             <ring2 augment="S6217489529050814476">Ascetic's Ring</ring2>
         </set>
         <set name="MACC" baseset="Idle">
@@ -117,7 +121,6 @@
                 <setvar name="toggle" value="0" />
                 <doidlegear />
                 <command delay="2000">/lockstyleset 21</command>
-                <command>/echo [Archery Mode]</command>
             </if>
             <else>
                 <setvar name="Mainhand" value="Blurred Axe" />
@@ -127,8 +130,8 @@
                 <setvar name="toggle" value="1" />
                 <doidlegear />
                 <command delay="2000">/lockstyleset 21</command>
-                <command>/echo [Marksman Mode]</command>
             </else>
+            <command>/echo [$Range]</command>
         </cmd>
         <cmd input="/status">
             <doidlegear />
@@ -202,8 +205,11 @@
         <if ad_name="Wildfire|Trueflight|Leaden Salute">
             <equip set="MagicWS" />
         </if>
+        <elseif ad_name="Jishnu*">
+            <equip set="WSFTP" />
+        </elseif>
         <else>
-            <equip set="PhysWS" />
+            <equip set="RangeWS" />
         </else>
     </weaponskill>
 </ashitacast>

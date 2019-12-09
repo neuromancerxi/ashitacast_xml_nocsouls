@@ -11,13 +11,13 @@
             <sub>Utu Grip</sub>
             <range augment="S6176686717137314381">Fastwater F. Rod</range>
             <ammo augment="S6176686717137314381">Minnow</ammo>
-            <head>Vishap Armet +2</head>
-            <body>Vishap Mail +2</body>
-            <hands>Vis. Fng. Gaunt. +2</hands>
+            <head>Vishap Armet +3</head> <!-- STP 10, TA +9 -->
+            <body>Kubira Meikogai</body> <!-- STP 10, TA +9 -->
+            <hands>Vis. Fng. Gaunt. +3</hands> <!-- STP 10, TA +9 -->
             <legs>Blood Cuisses</legs>
-            <feet>Vishap Greaves +2</feet>
+            <feet>Vishap Greaves +3</feet> <!-- STP 10, TA +9 -->
             <neck>Loricate Torque +1</neck>
-            <waist augment="S14964323890395218574">Chaac Belt</waist>
+            <waist>Goading Belt</waist>
             <ear1>Etiolation Earring</ear1>
             <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
             <ring1>Defending Ring</ring1>
@@ -25,14 +25,15 @@
             <back>Agema Cape</back>
         </set>
         <set name="TP" baseset="idle">
-            <legs>Vishap Brais +2</legs>
-            <neck>Tlamiztli Collar</neck>
-            <waist augment="S1496432389182864240">Windbuffet Belt +1</waist>
-            <ear1 augment="S1496432389345534240">Mache Earring +1</ear1>
-            <ear2 augment="S6176686717137314381">Mache Earring +1</ear2>
-            <ring1>Regal Ring</ring1>
-            <ring2>Petrov Ring</ring2>
-            <back>Laic Mantle</back>
+            <body>Vishap Mail +3</body>
+            <legs>Vishap Brais +3</legs>
+            <neck>Tlamiztli Collar</neck> <!-- TA +12 -->
+            <waist>Windbuffet Belt +1</waist> <!-- STP 10, TA +9 -->
+            <ear1 augment="S353610053140898233">Telos Earring</ear1>
+            <ear2 augment="S6176686717137314381">Tati Earring</ear2> <!-- DMG +32 -->
+            <ring1>Regal Ring</ring1> <!-- STP 10, TA +9 -->
+            <ring2>Rajas Ring</ring2> <!-- STP 10, TA +9 -->
+            <back>Laic Mantle</back> <!-- STP 10, TA +9 -->
         </set>
         <set name="TP50" baseset="TP"> <!-- STP 110 TA 112 ATK 54 DMG 64 -->
             <range augment="S6176686717137314381">Fastwater F. Rod</range> <!-- DMG +32 -->
@@ -51,6 +52,7 @@
             <back augment="S182109392262544240">Rabbit Mantle +1</back> <!-- STP 10 TA 9 -->
         </set>
         <set name="DEFTP" baseset="TP">
+            <body>Kubira Meikogai</body> <!-- STP 10, TA +9 -->
             <waist>Windbuffet Belt +1</waist> <!-- STP 10, TA +9 -->
             <ammo augment="S7932496139267718469">Minnow</ammo> <!-- mEVA +40 -->
             <ear2 augment="S182109392119204240">Mache Earring +1</ear2> <!-- TA +12% -->
@@ -111,7 +113,7 @@
         <command>/bind F9 /tpmode</command>
         <command>/bind F10 /status</command>
         <command>/bind F12 /main</command>
-        <command delay="2000">/lockstyle on</command>
+        <command delay="2000">/lockstyleset 28</command>
     </init>
     <variables>
         <var name="weapon">1</var> <!-- Start in mode 1 (Ryunohige) -->
