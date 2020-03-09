@@ -91,6 +91,19 @@
         </include>
     </sets>
     <init>
+        <!--if p_joblevel="99">
+            <command>/macro book 4</command>
+            <command delay="1000">/macro set 4</command>
+            <command>/echo [Switching to PUP Macros]</command>
+            <command>/bind F9 /switch</command>
+            <command>/bind F10 /status</command>
+            <command>/bind F12 /main</command>
+            <doidlegear />
+            <command delay="4000">/lockstyle on</command>
+        </if>
+        <else>
+            <command>/ac load webjester_noob</command>
+        </else-->
         <command>/macro book 4</command>
         <command delay="1000">/macro set 4</command>
         <command>/echo [Switching to PUP Macros]</command>
@@ -98,7 +111,35 @@
         <command>/bind F10 /status</command>
         <command>/bind F12 /main</command>
         <doidlegear />
-        <command delay="2000">/lockstyle on</command>
+        <command delay="4000">/lockstyle on</command>
+        <!-- Valoredge
+            Atutuner
+            Flameholder
+            Magniplug
+            Magniplug II
+            Inhibitor
+            Armor Plate IV
+            Shock Absorber II
+            Coiler II
+            Optic Fiber
+            Optic Fiber II
+            Flashbulb
+            Manna Jammer II
+        -->
+        <!-- Soulsoother
+            Stealth Screen II
+            Optic Fiber II
+            Vivi-valve II
+            Damage Gauge
+            Heatsink
+            Mana Jammer II
+            Mana Converter
+            Mana Conserver
+            Armor Plate IV
+            Accelerator III
+            Tactical Processor
+            Mana Booster
+        -->
     </init>
     <variables>
         <var name="switch">0</var>
@@ -122,13 +163,13 @@
         </cmd>
         <cmd input="/main">
             <if advanced="$weapon=1">
-                <setvar name="ranged" value="Verethragna" />
-                <setvar name="switch" value="0" />
+                <setvar name="main" value="Verethragna" />
+                <setvar name="weapon" value="0" />
                 <doidlegear />
             </if>
             <else>
-                <setvar name="ranged" value="Kenkonken" />
-                <setvar name="switch" value="1" />
+                <setvar name="main" value="Kenkonken" />
+                <setvar name="weapon" value="1" />
                 <doidlegear />
             </else>
             <command>/echo [$main] [$ranged]</command>
@@ -207,6 +248,7 @@
     <jobability>
         <if ad_name="Activate|Deus*">
             <equip>
+                <range>$ranged</range>
                 <back>Visucius's Mantle</back>
             </equip>
         </if>

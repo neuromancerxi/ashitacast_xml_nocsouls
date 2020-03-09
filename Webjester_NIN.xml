@@ -111,6 +111,19 @@
         </include>
     </sets>
     <init>
+        <!--if p_joblevel="99">
+            <command>/macro book 13</command>
+            <command delay="1000">/macro set 2</command>
+            <command>/echo [Switching to NIN Macros]</command>
+            <command>/bind F9 /tpmode</command>
+            <command>/bind F10 /status</command>
+            <command>/bind F12 /main</command>
+            <doidlegear />
+            <command delay="4000">/lockstyle on</command>
+        </if>
+        <else>
+            <command>/ac load webjester_noob</command>
+        </else-->
         <command>/macro book 13</command>
         <command delay="1000">/macro set 2</command>
         <command>/echo [Switching to NIN Macros]</command>
@@ -118,7 +131,7 @@
         <command>/bind F10 /status</command>
         <command>/bind F12 /main</command>
         <doidlegear />
-        <command delay="2000">/lockstyle on</command>
+        <command delay="4000">/lockstyle on</command>
     </init>
     <variables>
         <var name="weapon">0</var> <!-- Start in mode 0 (Kannagi) -->

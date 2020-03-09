@@ -1,0 +1,300 @@
+<ashitacast>
+    <settings>
+        <buffupdate>true</buffupdate>
+        <statusupdate>true</statusupdate>
+        <hpupdate>false</hpupdate>
+        <autoupdate>false</autoupdate>
+    </settings>
+    <sets>
+        <set name="Idle"> <!-- STP 110 TA 102 ATK 54 DMG 64 -->
+            <main>$main</main>
+            <sub>$sub</sub>
+            <range>$range</range>
+            <ammo>$ammo</ammo>
+            <head augment="S182109392262544240">Eyepatch</head> <!-- STP 10 TA 9 -->
+            <body augment="S14964123346741734841">Vgd. Tunica</body> <!-- ATK 54 TA 3 -->
+            <hands augment="S182109392262544240">Vgd. Gloves</hands> <!-- STP 10 TA 9 -->
+            <legs augment="S182109392262544240">Vagabond's Hose</legs> <!-- STP 10 TA 9 -->
+            <feet augment="S182109392262544240">Vagabond's Boots</feet> <!-- STP 10 TA 9 -->
+            <neck augment="S182109392262544240">Pile Chain</neck> <!-- STP 10 TA 9 -->
+            <waist augment="S182109392262544240">Gold Mog. Belt</waist> <!-- STP 10 TA 9 -->
+            <ear1 augment="S182109392262544240">Tranquility Earring</ear1> <!-- STP 10 TA 9 -->
+            <ear2 augment="S182109392262544240">Tranquility Earring</ear2> <!-- STP 10 TA 9 -->
+            <ring1 augment="S182109392262544240">San d'Orian Ring</ring1> <!-- STP 10 TA 9 -->
+            <ring2 augment="S182109392262544240">Ascetic's Ring</ring2> <!-- STP 10 TA 9 -->
+            <back>$back</back> <!-- STP 10 TA 9 -->
+        </set>
+        <set name="TP50" baseset="Idle" /> 
+        <set name="FastCast">
+            <body augment="S6217489529050814476">Pilgrim Tunica</body>
+            <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
+            <ring2 augment="S6217489529050814476">Ascetic's Ring</ring2>
+        </set>
+        <set name="MagWS50">
+            <ammo>$ammo</ammo> <!-- MAB 40 -->
+            <neck augment="S7973728454464518565">Justice Badge</neck> <!-- MAB 40 -->
+            <waist augment="S7973728454464518565">Bronze Mog. Belt</waist>
+            <ear1 augment="S7973728454464518565">Tranquility Earring</ear1> <!-- MAB 40 -->
+            <ear2 augment="S7973728454464518565">Tranquility Earring</ear2> <!-- MAB 40 -->
+            <ring1 augment="S7973728454464518565">Hermit's Ring</ring1> <!-- MAB 40 -->
+            <ring2 augment="S7973728454464518565">Hermit's Ring</ring2> <!-- MAB 40 -->
+            <back augment="S7973728454464518565">Shaper's Shawl</back> <!-- MAB 40 -->
+            <head>Charity Cap</head> <!-- MAB 40 -->
+            <body>Field tunica</body> <!-- MAB 40 -->
+            <hands>Field gloves</hands> <!-- MAB 40 -->
+            <legs>Field hose</legs> <!-- MAB 40 -->
+            <feet>Field boots</feet> <!-- MAB 40 -->
+        </set>
+        <set name="MagWS51" baseset="MagWS50">
+            <main>Chatoyant Staff</main>
+        </set>
+        <include>
+        </include>
+    </sets>
+    <init>
+        <if p_mainjob="PUP">
+            <if p_subjob="BLM|RDM">
+                <setvar name="main" value="Malice Masher +1" />
+                <setvar name="sub" value="Tenax Strap" />
+                <setvar name="range" value="Tarutaru F. Rod" />
+                <setvar name="ammo" value="Sabiki Rig" />
+                <command>/macro book 5</command>
+                <command delay="1000">/macro set 8</command>
+            </if>
+            <else>
+                <setvar name="main" value="Aphelion knuckles" />
+                <setvar name="range" value="Animator" />
+                <setvar name="ammo" value="Automat. Oil +1" />
+                <command>/macro book 17</command>
+                <command delay="1000">/macro set 6</command>
+            </else>
+            <setvar name="back" value="Cape +1" />
+        </if>
+        <if p_mainjob="WHM|BRD|SMN|BLU|BLM|RDM|SCH">
+            <if p_subjob="BLM|RDM">
+                <setvar name="main" value="Malice Masher +1" />
+                <setvar name="sub" value="Tenax Strap" />
+                <setvar name="range" value="Tarutaru F. Rod" />
+                <setvar name="ammo" value="Sabiki Rig" />
+                <command>/macro book 5</command>
+                <command delay="1000">/macro set 8</command>
+            </if>
+            <elseif p_subjob="PUP">
+                <setvar name="main" value="Aphelion knuckles" />
+                <setvar name="range" value="Animator" />
+                <command>/macro book 17</command>
+                <command delay="1000">/macro set 6</command>
+            </elseif>
+            <else>
+                <setvar name="main" value="Aphelion knuckles" />
+                <setvar name="range" value="Fastwater F. Rod" />
+                <setvar name="ammo" value="Minnow" />
+                <command>/macro book 17</command>
+                <command delay="1000">/macro set 5</command>
+            </else>
+            <setvar name="back" value="Cape +1" />
+        </if>
+        <if p_mainjob="WAR|MNK|THF|PLD|DRK|BST|RNG|SAM|NIN|DRG|COR|DNC">
+            <if p_subjob="BLM|RDM">
+                <setvar name="main" value="Malice Masher +1" />
+                <setvar name="sub" value="Tenax Strap" />
+                <setvar name="range" value="Tarutaru F. Rod" />
+                <setvar name="ammo" value="Sabiki Rig" />
+                <command>/macro book 5</command>
+                <command delay="1000">/macro set 8</command>
+            </if>
+            <elseif p_subjob="PUP">
+                <setvar name="main" value="Aphelion knuckles" />
+                <setvar name="range" value="Animator" />
+                <command>/macro book 17</command>
+                <command delay="1000">/macro set 6</command>
+            </elseif>
+            <else>
+                <setvar name="main" value="Aphelion knuckles" />
+                <setvar name="range" value="Fastwater F. Rod" />
+                <setvar name="ammo" value="Minnow" />
+                <command>/macro book 17</command>
+                <command delay="1000">/macro set 5</command>
+            </else>
+            <setvar name="back" value="Rabbit Mantle +1" />
+        </if>
+        <command delay="100">/echo [Switching to EXP Macros]</command>
+        <command>/bind F10 /status</command>
+        <command delay="4000">/lockstyleset 3</command-->
+    </init>
+    <variables>
+    </variables>
+    <inputcommands>
+        <cmd input="/status">
+            <if p_joblevel="99">
+                <command>/ac load %p_name_%p_mainjob</command>
+            </if>
+            <doidlegear />
+            <if buffactive="4|566">
+                <command>/item "Panacea" me</command>
+            </if>
+            <elseif buffactive="6">
+                <command>/item "Echo Drops" me</command>
+            </elseif>
+            <elseif buffactive="9|15">
+                <equip lock="true">
+                    <ring2>Purity Ring</ring2>
+                </equip>
+                <command>/item "Hallowed Water" me</command>
+            </elseif>
+            <elseif buffactive="11|12|21|128|129|130|131|132|133|134|135|136|137|138|139|140|141|142|144|145|146|147|148|149|174|175|404|557|558|559|560|561|562|563|564|567">
+                <command>/item "Panacea" me</command>
+            </elseif>
+        </cmd>
+    </inputcommands>
+    <idlegear>
+        <if eq_back="Nexus Cape">
+            <equip lock="true">
+                <back>Nexus Cape</back>
+            </equip>
+        </if>
+        <if eq_ring1="Chariot Band">
+            <equip lock="true">
+                <ring1>Chariot Band</ring1>
+            </equip>
+        </if>
+        <if eq_ring1="Empress Band">
+            <equip lock="true">
+                <ring1>Empress Band</ring1>
+            </equip>
+        </if>
+        <if eq_ring1="Emperor Band">
+            <equip lock="true">
+                <ring1>Emperor Band</ring1>
+            </equip>
+        </if>
+        <if p_status="engaged">
+            <if p_joblevel=">29">
+                <equip set="TP50">
+                    <ring2>Rajas Ring</ring2>
+                </equip>
+            </if>
+            <else>
+                <equip set="TP50" />
+            </else>
+        </if>
+        <else>
+            <equip set="Idle" />
+        </else>
+    </idlegear>
+    <preranged>
+    </preranged>
+    <midranged>
+    </midranged>
+    <premagic>
+        <equip set="FastCast" />
+        <if ad_name="Stoneskin|Metallic*|Diamondhide">
+            <if buffactive="37">
+                <command>/cancel 37</command>
+            </if>
+        </if>
+        <if ad_name="Shock Spikes">
+            <if buffactive="38">
+                <command>/cancel 38</command>
+            </if>
+        </if>
+        <if eq_ring1="Chariot Band">
+            <equip lock="true">
+                <ring1>Chariot Band</ring1>
+            </equip>
+        </if>
+        <if eq_ring1="Empress Band">
+            <equip lock="true">
+                <ring1>Empress Band</ring1>
+            </equip>
+        </if>
+        <if eq_ring1="Emperor Band">
+            <equip lock="true">
+                <ring1>Emperor Band</ring1>
+            </equip>
+        </if>
+    </premagic>
+    <midmagic>
+        <if eq_ring1="Chariot Band">
+            <equip lock="true">
+                <ring1>Chariot Band</ring1>
+            </equip>
+        </if>
+        <if eq_ring1="Empress Band">
+            <equip lock="true">
+                <ring1>Empress Band</ring1>
+            </equip>
+        </if>
+        <if eq_ring1="Emperor Band">
+            <equip lock="true">
+                <ring1>Emperor Band</ring1>
+            </equip>
+        </if>
+        <if ad_skill="elementalmagic">
+            <if p_joblevel=">89">
+                <if advanced="(%ad_element=%e_dayelement)|(%ad_element=%e_weatherelement)">
+                    <if p_mainjob="WHM|BLM|RDM|BRD|SMN|BLU|PUP|SCH">
+                        <equip set="MagWS51">
+                            <waist augment="S7973728454464518565">Hachirin-no-Obi</waist>
+                            <back>Twilight Cape</back>
+                        </equip>
+                    </if>
+                    <else>
+                        <equip set="MagWS51">
+                            <waist augment="S7973728454464518565">Hachirin-no-Obi</waist>
+                        </equip>
+                    </else>
+                </if>
+            </if>
+            <elseif p_joblevel=">70&<90">
+                <if advanced="(%ad_element=%e_dayelement)|(%ad_element=%e_weatherelement)">
+                    <equip set="MagWS51">
+                        <waist augment="S7973728454464518565">Hachirin-no-Obi</waist>
+                    </equip>
+                </if>
+                <else>
+                    <equip set="MagWS50" />
+                </else>
+            </elseif>
+            <elseif p_joblevel=">50&<71">
+                <equip set="MagWS51" />
+            </elseif>
+            <else>
+                <equip set="MagWS50" />
+            </else>
+        </if>
+        <equip set="MagWS50" />
+    </midmagic>
+    <jobability>
+    </jobability>
+    <weaponskill>
+        <if eq_ring1="Chariot Band">
+            <equip lock="true">
+                <ring1>Chariot Band</ring1>
+            </equip>
+        </if>
+        <if eq_ring1="Empress Band">
+            <equip lock="true">
+                <ring1>Empress Band</ring1>
+            </equip>
+        </if>
+        <if eq_ring1="Emperor Band">
+            <equip lock="true">
+                <ring1>Emperor Band</ring1>
+            </equip>
+        </if>
+        <if ad_name="Uriel*|Seraph*|Shining*|Burning*|Red Lotus*|Sanguine*">
+            <equip set="MagWS50" />
+        </if>
+        <else>
+            <if p_joblevel=">29">
+                <equip set="TP50">
+                    <ring2>Rajas Ring</ring2>
+                </equip>
+            </if>
+            <else>
+                <equip set="TP50" />
+            </else>
+        </else>
+    </weaponskill>
+</ashitacast>

@@ -97,12 +97,23 @@
         </include>
     </sets>
     <init>
+        <!--if p_joblevel="99">
+            <command>/macro book 10</command>
+            <command delay="1000">/macro set 2</command>
+            <command>/echo [Switching to RNG Macros]</command>
+            <command>/bind F9 /toggle</command>
+            <command>/bind F10 /status</command>
+            <command delay="4000">/lockstyleset 21</command>
+        </if>
+        <else>
+            <command>/ac load webjester_noob</command>
+        </else-->
         <command>/macro book 10</command>
         <command delay="1000">/macro set 2</command>
         <command>/echo [Switching to RNG Macros]</command>
         <command>/bind F9 /toggle</command>
         <command>/bind F10 /status</command>
-        <command delay="2000">/lockstyleset 21</command>
+        <command delay="4000">/lockstyleset 21</command>
     </init>
     <variables>
         <var name="toggle">0</var>
@@ -120,7 +131,7 @@
                 <setvar name="Ammo" value="Artemis's Arrow" />
                 <setvar name="toggle" value="0" />
                 <doidlegear />
-                <command delay="2000">/lockstyleset 21</command>
+                <command delay="4000">/lockstyleset 21</command>
             </if>
             <else>
                 <setvar name="Mainhand" value="Blurred Axe" />
@@ -129,7 +140,7 @@
                 <setvar name="Ammo" value="Devastating Bullet" />
                 <setvar name="toggle" value="1" />
                 <doidlegear />
-                <command delay="2000">/lockstyleset 21</command>
+                <command delay="4000">/lockstyleset 21</command>
             </else>
             <command>/echo [$Range]</command>
         </cmd>

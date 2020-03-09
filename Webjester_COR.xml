@@ -88,12 +88,23 @@
         </include>
     </sets>
     <init>
+        <!--if p_joblevel="99">
+            <command>/macro book 15</command>
+            <command delay="1000">/macro set 2</command>
+            <command>/echo [Switching to COR Macros]</command>
+            <command>/bind F9 /toggle</command>
+            <command>/bind F10 /status</command>
+            <command delay="4000">/lockstyleset 25</command>
+        </if>
+        <else>
+            <command>/ac load webjester_noob</command>
+        </else-->
         <command>/macro book 15</command>
         <command delay="1000">/macro set 2</command>
         <command>/echo [Switching to COR Macros]</command>
         <command>/bind F9 /toggle</command>
         <command>/bind F10 /status</command>
-        <command delay="2000">/lockstyleset 25</command>
+        <command delay="4000">/lockstyleset 25</command>
     </init>
     <variables>
         <var name="toggle">0</var>

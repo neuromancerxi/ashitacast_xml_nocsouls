@@ -7,7 +7,7 @@
     </settings>
     <sets>
         <set name="Idle">
-            <main>Tizona</main>
+            <main>Almace</main>
             <sub>$Offhand</sub>
             <range augment="S182109392119204240">Bamboo Fish. Rod</range>
             <ammo augment="S182109392119204240">Lufaise Fly</ammo>
@@ -22,7 +22,7 @@
             <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
             <ring1>Defending Ring</ring1>
             <ring2>Patricius Ring</ring2>
-            <back>Agema Cape</back>
+            <back>Mubvum. Mantle</back>
         </set>
         <set name="TP" baseset="Idle">
             <legs>Assim. Shalwar +3</legs>

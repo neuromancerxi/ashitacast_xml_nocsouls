@@ -11,10 +11,10 @@
             <sub>Genmei Shield</sub>
             <range augment="S7973728454464518565">Tarutaru F. Rod</range>
             <ammo augment="S7932496139267718469">Minnow</ammo> <!-- mEVA +40 -->
-            <head>Theophany Cap +2</head>
-            <body>Theo. Briault +2</body>
-            <hands>Theophany Mitts +2</hands>
-            <legs>Th. Pantaloons +2</legs>
+            <head>Theophany Cap +3</head>
+            <body>Theo. Briault +3</body>
+            <hands>Theophany Mitts +3</hands>
+            <legs>Th. Pant. +3</legs>
             <feet>Iaso Boots</feet>
             <neck>Loricate Torque +1</neck>
             <waist>Goading Belt</waist>
@@ -27,7 +27,7 @@
         <set name="TP" baseset="idle">
             <range augment="S7973728454464518565">Tarutaru F. Rod</range>
             <ammo augment="S182109392119204240">Sabiki Rig</ammo> <!-- TA +12 -->
-            <feet>Theo. Duckbills +2</feet>
+            <feet>Theo. Duckbills +3</feet>
             <neck>Tlamiztli Collar</neck>
             <waist>Windbuffet Belt +1</waist>
             <ear1 augment="S182109392119204240">Mache Earring +1</ear1>
@@ -87,13 +87,25 @@
         </include>
     </sets>
     <init>
+        <!--if p_joblevel="99">
+            <command>/macro book 3</command>
+            <command delay="1000">/macro set 2</command>
+            <command>/echo [Switching to WHM Macros]</command>
+            <command>/bind F9 /tpmode</command>
+            <command>/bind F10 /status</command>
+            <command>/bind F12 /main</command>
+            <command delay="4000">/lockstyle on</command>
+        </if>
+        <else>
+            <command>/ac load webjester_noob</command>
+        </else-->
         <command>/macro book 3</command>
         <command delay="1000">/macro set 2</command>
         <command>/echo [Switching to WHM Macros]</command>
         <command>/bind F9 /tpmode</command>
         <command>/bind F10 /status</command>
         <command>/bind F12 /main</command>
-        <command delay="2000">/lockstyle on</command>
+        <command delay="4000">/lockstyle on</command>
     </init>
     <variables>
         <var name="weapon">1</var> <!-- Start with Yagrush -->

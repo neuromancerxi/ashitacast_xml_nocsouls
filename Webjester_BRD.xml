@@ -75,12 +75,17 @@
         </include>
     </sets>
     <init>
-        <command>/macro book 2</command>
-        <command delay="1000">/macro set 2</command>
-        <command>/echo [Switching to BRD Macros]</command>
-        <command>/bind F9 /swap</command>
-        <command>/bind F10 /status</command>
-        <command delay="2000">/lockstyleset 23</command>
+        <if p_joblevel="99">
+            <command>/macro book 2</command>
+            <command delay="1000">/macro set 2</command>
+            <command>/echo [Switching to BRD Macros]</command>
+            <command>/bind F9 /swap</command>
+            <command>/bind F10 /status</command>
+            <command delay="4000">/lockstyleset 23</command>
+        </if>
+        <else>
+            <command>/ac load webjester_noob</command>
+        </else>
     </init>
     <variables>
         <var name="swap">0</var>

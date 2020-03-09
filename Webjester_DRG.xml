@@ -16,13 +16,13 @@
             <hands>Vis. Fng. Gaunt. +3</hands> <!-- STP 10, TA +9 -->
             <legs>Blood Cuisses</legs>
             <feet>Vishap Greaves +3</feet> <!-- STP 10, TA +9 -->
-            <neck>Loricate Torque +1</neck>
-            <waist>Goading Belt</waist>
-            <ear1>Etiolation Earring</ear1>
-            <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
-            <ring1>Defending Ring</ring1>
-            <ring2>Gelatinous Ring +1</ring2>
-            <back>Agema Cape</back>
+            <neck>Loricate Torque +1</neck> <!-- Counter +40 -->
+            <waist>Goading Belt</waist> <!-- mEVA +40 -->
+            <ear1>Etiolation Earring</ear1> <!-- Counter +40 -->
+            <ear2>Cryptic Earring</ear2> <!-- mEVA +40 -->
+            <ring1>Defending Ring</ring1> <!-- STP 10, TA +9 -->
+            <ring2>Gelatinous Ring +1</ring2> <!-- STP 10, TA +9 -->
+            <back>Agema Cape</back> <!-- TA +12 -->
         </set>
         <set name="TP" baseset="idle">
             <body>Vishap Mail +3</body>
@@ -107,24 +107,36 @@
         </include>
     </sets>
     <init>
+        <!--if p_joblevel="99">
+            <command>/macro book 12</command>
+            <command delay="1000">/macro set 6</command>
+            <command>/echo [Switching to DRG Macros]</command>
+            <command>/bind F9 /tpmode</command>
+            <command>/bind F10 /status</command>
+            <command>/bind F12 /main</command>
+            <command delay="4000">/lockstyleset 28</command>
+        </if>
+        <else>
+            <command>/ac load webjester_noob</command>
+        </else-->
         <command>/macro book 12</command>
         <command delay="1000">/macro set 6</command>
         <command>/echo [Switching to DRG Macros]</command>
         <command>/bind F9 /tpmode</command>
         <command>/bind F10 /status</command>
         <command>/bind F12 /main</command>
-        <command delay="2000">/lockstyleset 28</command>
+        <command delay="4000">/lockstyleset 28</command>
     </init>
     <variables>
-        <var name="weapon">1</var> <!-- Start in mode 1 (Ryunohige) -->
+        <var name="weapon">0</var> <!-- Start in mode 1 (Rhongomiant) -->
         <var name="tpmode">0</var> <!-- Start in Standard TP Mode -->
         <var name="tptype">Standard</var>
-        <var name="main">Ryunohige</var> <!-- Default to Ryunohige before any mode switch -->
+        <var name="main">Rhongomiant</var> <!-- Default to Rhongomiant before any mode switch -->
     </variables>
     <inputcommands>
         <cmd input="/main">
             <if advanced="$weapon=1">
-                <setvar name="main" value="Blurred Lance" />
+                <setvar name="main" value="Rhongomiant" />
                 <setvar name="weapon" value="0" />
             </if>
             <else>

@@ -33,8 +33,8 @@
         </set>
         <set name="Nuke" baseset="Idle">
             <head>Spae. Petasos +3</head>
-            <!--body>Spaekona's Coat +3</body-->
-            <body>Volte Doublet</body>
+            <body>Spaekona's Coat +3</body>
+            <!-- body>Volte Doublet</body> -->
             <hands>Spae. Gloves +3</hands>
             <legs>Spae. Tonban +3</legs>
             <feet>Spae. Sabots +3</feet>

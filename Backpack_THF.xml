@@ -22,7 +22,7 @@
             <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
             <ring1>Defending Ring</ring1>
             <ring2>Patricius Ring</ring2>
-            <back>Agema Cape</back>
+            <back>Mubvum. Mantle</back>
         </set>
         <set name="TP" baseset="Idle">
             <neck>Tlamiztli collar</neck>
@@ -50,7 +50,7 @@
             <ear2 augment="S182152343102764236">Stm. Earring +1</ear2> <!-- NocSouls Starter Earring -->
             <ring1>Defending Ring</ring1>
             <ring2>Patricius Ring</ring2>
-            <back>Agema Cape</back>
+            <back>Mubvum. Mantle</back>
         </set>        
         <set name="WS" baseset="TP">
             <ear2>Cessance earring</ear2>
@@ -126,7 +126,7 @@
         
         <cmd input="/status">
             <equip>
-                <back>Agema Cape</back>
+                <back>Mubvum. Mantle</back>
             </equip>
             <doidlegear />
             <command>/echo [$sub] [$tptype]</command>

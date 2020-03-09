@@ -68,7 +68,7 @@
             <neck augment="S7973728454464518565">Baetyl Pendant</neck> <!-- MAB +40 -->
             <!--waist augment="S7973728454464518565">Eschan Stone</waist> <!-- MAB +40 -->
             <ear1 augment="S7973728454464518565">Choleric Earring</ear1> <!-- MAB +40 -->
-            <ear2 augment="S7973728454464518565">Regal Earring</ear2> <!-- MAB +40 -->
+            <ear2 augment="S7973728454464518565">Tranquility Earring</ear2> <!-- MAB +40 -->
             <ring1 augment="S7973728454464518565">Stikini Ring +1</ring1> <!-- MAB +40 -->
             <ring2 augment="S7973728454464518565">Stikini Ring +1</ring2> <!-- MAB +40 -->
             <back augment="S7973728454464518565">Izdubar Mantle</back> <!-- MAB +40 -->
@@ -106,13 +106,25 @@
         </include>
     </sets>
     <init>
+        <!--if p_joblevel="99">
+            <command>/macro book 12</command>
+            <command delay="1000">/macro set 2</command>
+            <command>/echo [Switching to WAR Macros]</command>
+            <command>/bind F9 /tpmode</command>
+            <command>/bind F10 /status</command>
+            <command>/bind F12 /main</command>
+            <command delay="4000">/lockstyleset 13</command>
+        </if>
+        <else>
+            <command>/ac load webjester_noob</command>
+        </else-->
         <command>/macro book 12</command>
         <command delay="1000">/macro set 2</command>
         <command>/echo [Switching to WAR Macros]</command>
         <command>/bind F9 /tpmode</command>
         <command>/bind F10 /status</command>
         <command>/bind F12 /main</command>
-        <command delay="2000">/lockstyleset 13</command>
+        <command delay="4000">/lockstyleset 13</command>
     </init>
     <variables>
         <var name="weapon">0</var> <!-- Start in mode 0 (Great Axe) -->
@@ -142,7 +154,7 @@
                 <command delay="1000">/macro set 3</command>
             </elseif>
             <elseif advanced="$weapon=0">
-                <setvar name="main" value="Blurred Axe" />
+                <setvar name="main" value="Farsha" />
                 <setvar name="sub" value="Blurred Shield +1" />
                 <setvar name="weapon" value="1" />
                 <command delay="1000">/macro set 1</command>
@@ -263,6 +275,7 @@
             <elseif ad_name="Ukko*|Raging*|Rampage|Power Slash|Vorpal*">
                 <equip set="WS">
                     <ear1>Telos Earring</ear1> <!-- Crit +20% -->
+                    <ear2 augment="S353610053140898233">Tati Earring</ear2> <!-- Crit +20% -->
                 </equip>
             </elseif>
             <else>

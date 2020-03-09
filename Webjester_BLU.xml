@@ -37,7 +37,7 @@
             <ring2>Petrov Ring</ring2>
             <back>Laic Mantle</back>
         </set>
-        <set name="TP50" baseset="TP"> <!-- STP 110 TA 112 ATK 54 DMG 64 -->
+        <set name="TP50"> <!-- STP 110 TA 112 ATK 54 DMG 64 -->
             <range augment="S6176686717137314381">Fastwater F. Rod</range> <!-- DMG +32 -->
             <ammo augment="S6176686717137314381">Minnow</ammo> <!-- DMG +32 -->
             <head augment="S182109392262544240">Eyepatch</head> <!-- STP 10 TA 9 -->
@@ -96,6 +96,20 @@
             <feet>Volte Boots</feet>
             <waist>Chaac Belt</waist>
         </set>
+        <set name="MagWS50">
+            <neck augment="S7973728454464518565">Justice Badge</neck> <!-- MAB 40 -->
+            <waist augment="S7973728454464518565">Bronze Mog. Belt</waist>
+            <ear1 augment="S7973728454464518565">Tranquility Earring</ear1> <!-- MAB 40 -->
+            <ear2 augment="S7973728454464518565">Tranquility Earring</ear2> <!-- MAB 40 -->
+            <ring1 augment="S7973728454464518565">Hermit's Ring</ring1> <!-- MAB 40 -->
+            <ring2 augment="S7973728454464518565">Hermit's Ring</ring2> <!-- MAB 40 -->
+            <back augment="S7973728454464518565">Shaper's Shawl</back> <!-- MAB 40 -->
+            <head>Charity Cap</head> <!-- MAB 40 -->
+            <body>Field tunica</body> <!-- MAB 40 -->
+            <hands>Field gloves</hands> <!-- MAB 40 -->
+            <legs>Field hose</legs> <!-- MAB 40 -->
+            <feet>Field boots</feet> <!-- MAB 40 -->
+        </set>
         <set name="WS" baseset="TP">
             <ammo augment="S6176686717137314381">Minnow</ammo>
             <ear1 augment="S14964323893455334841">Tati Earring</ear1>
@@ -115,13 +129,25 @@
         </include>
     </sets>
     <init>
+        <!--if p_joblevel="99">
+            <command>/macro book 14</command>
+            <command delay="1000">/macro set 2</command>
+            <command>/echo [Switching to BLU Macros]</command>
+            <command>/bind F9 /tpmode</command>
+            <command>/bind F10 /status</command>
+            <command>/bind F12 /empy</command>
+            <command delay="4000">/lockstyleset 11</command>
+        </if>
+        <else>
+            <command>/ac load webjester_noob</command>
+        </else-->
         <command>/macro book 14</command>
         <command delay="1000">/macro set 2</command>
         <command>/echo [Switching to BLU Macros]</command>
         <command>/bind F9 /tpmode</command>
         <command>/bind F10 /status</command>
         <command>/bind F12 /empy</command>
-        <command delay="2000">/lockstyleset 11</command>
+        <command delay="4000">/lockstyleset 11</command>
     </init>
     <variables>
         <var name="empy">0</var>
@@ -225,7 +251,7 @@
     </premagic>
     <midmagic>
         <if ad_skill="bluemagic">
-            <if ad_name="Uproot|Crashing Thunder|Thunderbolt|Tearing Gust|Droning Whirlwind|Cesspool|Polar Roar|Gates of Hades|Evryone. Grudge|Water Bomb|Charged Whisker">
+            <if ad_name="Uproot|Crashing Thunder|Thunderbolt|Tearing Gust|Droning Whirlwind|Cesspool|Polar Roar|Gates of Hades|Evryone. Grudge|Water Bomb|Charged Whisker|Magnetite Cloud">
                 <equip set="MagWS" />
             </if>
             <else>
@@ -259,7 +285,12 @@
             </else>
         </if>
         <else>
-            <equip set="TP50" />
+            <if ad_name="Uriel*|Seraph*|Shining*|Burning*|Red Lotus*|Sanguine*">
+                <equip set="MagWS50" />
+            </if>
+            <else>
+                <equip set="TP50" />
+            </else>
         </else>
     </weaponskill>
 </ashitacast>

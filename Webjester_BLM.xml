@@ -6,8 +6,16 @@
         <autoupdate>false</autoupdate>
     </settings>
     <sets>
-        <set name="Idle">
-            <main>$Weapon</main>
+        <set name="Laevateinn">
+            <main>Laevateinn</main>
+        </set>
+        <set name="Hvergelmir">
+            <main augment="S7973728454464518565">Hvergelmir</main>
+        </set>
+        <set name="Farm">
+            <main augment="S6213623999501114467">Hvergelmir</main>
+        </set>
+        <set name="Idle" baseset="$Weapon">
             <sub augment="S7973728454464518565">Clerisy Strap +1</sub> <!-- MAB 40 -->
             <range augment="S7973728454464518565">Tarutaru F. Rod</range> <!-- MAB 40 -->
             <ammo augment="S7932496139267718469">Minnow</ammo> <!-- mEVA +40 -->
@@ -97,19 +105,29 @@
             <feet>Volte Boots</feet>
             <waist>Chaac Belt</waist>
         </set>
-		<set name="tmp">
-		</set>
         <include>
         </include>
     </sets>
     <init>
+        <!--if p_joblevel=">0&<99">
+            <command>/ac load webjester_noob</command>
+        </if>
+        <else>
+            <command>/macro book 5</command>
+            <command delay="1000">/macro set 5</command>
+            <command delay="1100">/echo [Switching to BLM Macros]</command>
+            <command>/bind F9 /togglenuke</command>
+            <command>/bind F10 /status</command>
+            <command>/bind F12 /toggleweap</command>
+            <command delay="4000">/lockstyleset 1</command>
+        </else-->
         <command>/macro book 5</command>
         <command delay="1000">/macro set 5</command>
         <command delay="1100">/echo [Switching to BLM Macros]</command>
         <command>/bind F9 /togglenuke</command>
         <command>/bind F10 /status</command>
         <command>/bind F12 /toggleweap</command>
-        <command delay="2000">/lockstyleset 1</command>
+        <command delay="4000">/lockstyleset 1</command>
     </init>
     <variables>
         <var name="toggleweap">0</var>
@@ -121,15 +139,20 @@
         <!--
         0 Laevateinn
         1 Hvergelmir
+        2 Hvergelmir (Empy Farm)
         -->
         <cmd input="/toggleweap">
-            <if advanced="$toggleweap=1">
+            <if advanced="$toggleweap=2">
                 <setvar name="Weapon" value="Laevateinn" />
                 <setvar name="toggleweap" value="0" />
             </if>
-            <else>
+            <elseif advanced="$toggleweap=0">
                 <setvar name="Weapon" value="Hvergelmir" />
                 <setvar name="toggleweap" value="1" />
+            </elseif>
+            <else>
+                <setvar name="Weapon" value="Farm" />
+                <setvar name="toggleweap" value="2" />
             </else>
             <doidlegear />
             <command>/echo [$Weapon] [$status Nuke]</command>
@@ -180,11 +203,17 @@
             </equip>
         </if>
         <if p_status="idle">    
-            <if p_joblevel=">50&<99">
+            <if p_joblevel=">75&<99">
+                <equip set="Idle">
+                    <main>Chatoyant Staff</main>
+                    <sub augment="S7973728454464518565">Vivid Strap +1</sub> <!-- MAB 40 -->
+                </equip>
+            </if>
+            <elseif p_joblevel=">50&<75">
                 <equip set="Idle">
                     <main>Chatoyant Staff</main>
                 </equip>
-            </if>
+            </elseif>
             <elseif p_joblevel="<51">
                 <equip set="Idle">
                     <main augment="S7973728454464518565">Malice Masher +1</main>

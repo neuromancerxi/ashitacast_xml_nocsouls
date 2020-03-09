@@ -118,24 +118,29 @@
         </include>
     </sets>
     <init>
-        <command>/macro book 9</command>
-        <command delay="1000">/macro set 2</command>
-        <command>/echo [Switching to BST Macros]</command>
-        <command>/bind F9 /tpmode</command>
-        <command>/bind F10 /status</command>
-        <command>/bind F12 /main</command>
-        <command delay="2000">/lockstyleset 27</command>
+        <if p_joblevel="99">
+            <command>/macro book 9</command>
+            <command delay="1000">/macro set 2</command>
+            <command>/echo [Switching to BST Macros]</command>
+            <command>/bind F9 /tpmode</command>
+            <command>/bind F10 /status</command>
+            <command>/bind F12 /main</command>
+            <command delay="4000">/lockstyleset 27</command>
+        </if>
+        <else>
+            <command>/ac load webjester_noob</command>
+        </else>
     </init>
     <variables>
-        <var name="weapon">1</var> <!-- Start in mode 0 (Aymur) -->
+        <var name="weapon">0</var> <!-- Start in mode 0 (Farsha) -->
         <var name="tpmode">0</var> <!-- Start in Standard TP Mode -->
         <var name="tptype">Standard</var>
-        <var name="main">Aymur</var> <!-- Default to Aymur before any mode switch -->
+        <var name="main">Farsha</var> <!-- Default to Farsha before any mode switch -->
     </variables>
     <inputcommands>
         <cmd input="/main">
             <if advanced="$weapon=1">
-                <setvar name="main" value="Blurred Axe" />
+                <setvar name="main" value="Farsha" />
                 <setvar name="weapon" value="0" />
             </if>
             <else>

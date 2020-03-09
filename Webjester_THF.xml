@@ -145,12 +145,23 @@
         </include>
     </sets>
     <init>
+        <!--if p_joblevel="99">
+            <command>/macro book 11</command>
+            <command delay="1000">/macro set 2</command>
+            <command>/echo [Switching to THF Macros]</command>
+            <command>/bind F9 /switch</command>
+            <command>/bind F10 /status</command>
+            <command delay="4000">/lockstyleset 10</command>
+        </if>
+        <else>
+            <command>/ac load webjester_noob</command>
+        </else-->
         <command>/macro book 11</command>
         <command delay="1000">/macro set 2</command>
         <command>/echo [Switching to THF Macros]</command>
         <command>/bind F9 /switch</command>
         <command>/bind F10 /status</command>
-        <command delay="2000">/lockstyleset 10</command>
+        <command delay="4000">/lockstyleset 10</command>
     </init>
     <variables>
         <var name="switch">1</var>
@@ -270,7 +281,12 @@
     <weaponskill>
         <if p_joblevel="99">
             <if ad_name="Aeolian*|Cyclone|Gust*"> <!-- Magic Weaponskills -->
+                <if advanced="$switch=0">
+                    <equip set="THMAX" />
+                </if>
+                <else>
                     <equip set="MagWS" />
+                </else>
             </if>
             <elseif ad_name="Evisceration"> <!-- Swap in Crit+ Gear for Evis -->
                 <equip set="WSFTP">

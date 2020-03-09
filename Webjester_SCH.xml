@@ -6,20 +6,28 @@
         <autoupdate>false</autoupdate>
     </settings>
     <sets>
-        <set name="Idle">
-            <main>$Weapon</main>
+        <set name="Tupsimati">
+            <main>Tupsimati</main>
+        </set>
+        <set name="Hvergelmir">
+            <main augment="S7973728454464518565">Hvergelmir</main>
+        </set>
+        <set name="Farm">
+            <main augment="S6213623999501114467">Hvergelmir</main>
+        </set>
+        <set name="Idle" baseset="$Weapon">
             <sub augment="S7973728454464518565">Clerisy Strap +1</sub>
             <range augment="S7973728454464518565">Tarutaru F. Rod</range>
-            <ammo augment="S7973728454464518565">Sabiki Rig</ammo>
+            <ammo augment="S7932496139267718469">Minnow</ammo> <!-- mEVA +40 -->
             <head>Acad. Mortar. +3</head>
             <body>Acad. Gown +3</body>
             <hands>Acad. Bracers +3</hands>
             <legs>Acad. Pants +3</legs>
-            <feet>Crier's Gaiters</feet>
+            <feet>Iaso Boots</feet>
             <neck>Loricate Torque +1</neck>
-            <waist>Chaac Belt</waist>
-            <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
+            <waist>Goading Belt</waist> <!-- mEVA +40 -->
             <ear1>Etiolation Earring</ear1>
+            <ear2>Cryptic Earring</ear2> <!-- mEVA +40 -->
             <ring1>Defending Ring</ring1>
             <ring2>Gelatinous Ring +1</ring2>
             <back>Kumbira Cape</back>
@@ -38,10 +46,9 @@
         </set>
         <set name="Nuke" baseset="Idle">
             <ammo augment="S14968618926288334851">Sinking Minnow</ammo>
-            <!--body>Acad. Gown +3</body-->
-            <body>Gyve Doublet</body>
+            <body>Volte Doublet</body>
             <hands>Acad. Bracers +3</hands>
-            <feet>Acad. Loafers +3</feet>
+            <feet>Volte Gaiters</feet>
             <neck augment="S7973728454464518565">Baetyl Pendant</neck>
             <waist augment="S7973728454464518565">Maniacus Sash</waist>
             <ear1 augment="S7973728454464518565">Choleric Earring</ear1>
@@ -95,12 +102,23 @@
         </include>
     </sets>
     <init>
+        <!--if p_joblevel="99">
+            <command>/macro book 8</command>
+            <command delay="1000">/macro set 4</command>
+            <command delay="1100">/echo [Switching to SCH Macros]</command>
+            <command>/bind F9 /toggle</command>
+            <command>/bind F10 /status</command>
+            <command delay="4000">/lockstyle on</command>
+        </if>
+        <else>
+            <command>/ac load webjester_noob</command>
+        </else-->
         <command>/macro book 8</command>
         <command delay="1000">/macro set 4</command>
         <command delay="1100">/echo [Switching to SCH Macros]</command>
         <command>/bind F9 /toggle</command>
         <command>/bind F10 /status</command>
-        <command delay="2000">/lockstyle on</command>
+        <command delay="4000">/lockstyle on</command>
     </init>
     <variables>
         <var name="toggle">0</var>     
@@ -108,18 +126,20 @@
     </variables>
     <inputcommands>
         <cmd input="/toggle">
-            <if advanced="$toggle=1">
+            <if advanced="$toggle=2">
                 <setvar name="Weapon" value="Tupsimati" />
                 <setvar name="toggle" value="0" />
-                <doidlegear />
-                <command>/echo [Tupsimatai]</command>
             </if>
-            <else>
+            <elseif advanced="$toggle=0">
                 <setvar name="Weapon" value="Hvergelmir" />
                 <setvar name="toggle" value="1" />
-                <doidlegear />
-                <command>/echo [Hvergelmir]</command>
+            </elseif>
+            <else>
+                <setvar name="Weapon" value="Farm" />
+                <setvar name="toggle" value="2" />
             </else>
+            <doidlegear />
+            <command>/echo [$Weapon]</command>
         </cmd>
         <cmd input="/status">
             <equip>
@@ -164,7 +184,6 @@
             <else>
                 <equip set="Idle" />
             </else>
-        </if>
         </if>
     </idlegear>
     <preranged>

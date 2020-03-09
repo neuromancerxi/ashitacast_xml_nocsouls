@@ -106,17 +106,29 @@
         </include>
     </sets>
     <init>
+        <!--if p_joblevel="99">
+            <command>/macro book 12</command>
+            <command delay="1000">/macro set 5</command>
+            <command>/echo [Switching to DRK Macros]</command>
+            <command>/bind F9 /tpmode</command>
+            <command>/bind F10 /status</command>
+            <command>/bind F12 /main</command>
+            <command delay="4000">/lockstyleset 26</command>
+        </if>
+        <else>
+            <command>/ac load webjester_noob</command>
+        </else-->
         <command>/macro book 12</command>
         <command delay="1000">/macro set 5</command>
         <command>/echo [Switching to DRK Macros]</command>
         <command>/bind F9 /tpmode</command>
         <command>/bind F10 /status</command>
         <command>/bind F12 /main</command>
-        <command delay="2000">/lockstyleset 26</command>
+        <command delay="4000">/lockstyleset 26</command>
     </init>
     <variables>
-        <var name="weapon">0</var>
-        <var name="main">Caladbolg</var>
+        <var name="weapon">1</var>
+        <var name="main">Redemption</var>
         <var name="tpmode">0</var> <!-- Start in Standard TP Mode -->
         <var name="tptype">Standard</var>
     </variables>
@@ -128,7 +140,7 @@
                 <command delay="1000">/macro set 4</command>
             </if>
             <else>
-                <setvar name="main" value="Liberator" />
+                <setvar name="main" value="Redemption" />
                 <setvar name="weapon" value="1" />
                 <command delay="1000">/macro set 5</command>
             </else>

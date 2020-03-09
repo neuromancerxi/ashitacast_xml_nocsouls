@@ -6,8 +6,16 @@
         <autoupdate>false</autoupdate>
     </settings>
     <sets>
-        <set name="Idle">
-            <main>$Weapon</main>
+        <set name="Nirvana">
+            <main>Nirvana</main>
+        </set>
+        <set name="Hvergelmir">
+            <main augment="S7973728454464518565">Hvergelmir</main>
+        </set>
+        <set name="Farm">
+            <main augment="S6213623999501114467">Hvergelmir</main>
+        </set>
+        <set name="Idle" baseset="$Weapon">
             <sub>Elan Strap +1</sub>
             <ammo>Sancus Sachet +1</ammo>
             <head>Convoker's Horn +3</head>
@@ -101,11 +109,16 @@
         </include>
     </sets>
     <init>
-        <command>/macro book 7</command>
-        <command delay="1000">/macro set 3</command>
-        <command delay="1100">/echo [Switching to SMN Macros]</command>
-        <command>/bind F9 /toggle</command>
-        <command>/bind F10 /status</command>
+        <if p_joblevel="99">
+            <command>/macro book 7</command>
+            <command delay="1000">/macro set 3</command>
+            <command delay="1100">/echo [Switching to SMN Macros]</command>
+            <command>/bind F9 /toggle</command>
+            <command>/bind F10 /status</command>
+        </if>
+        <else>
+            <command>/ac load webjester_noob</command>
+        </else>
     </init>
     <variables>
         <var name="toggle">0</var>
@@ -114,18 +127,20 @@
     </variables>
     <inputcommands>
         <cmd input="/toggle">
-            <if advanced="$toggle=1">
+            <if advanced="$toggle=2">
                 <setvar name="Weapon" value="Nirvana" />
                 <setvar name="toggle" value="0" />
-                <doidlegear />
-                <command>/echo [Nirvana]</command>
             </if>
-            <else>
+            <elseif advanced="$toggle=0">
                 <setvar name="Weapon" value="Hvergelmir" />
                 <setvar name="toggle" value="1" />
-                <doidlegear />
-                <command>/echo [Hvergelmir]</command>
+            </elseif>
+            <else>
+                <setvar name="Weapon" value="Farm" />
+                <setvar name="toggle" value="2" />
             </else>
+            <doidlegear />
+            <command>/echo [$Weapon]</command>
         </cmd>
         <cmd input="/status">
             <equip>
