@@ -151,14 +151,14 @@
             <if buffactive="4|566">
                 <command>/item "Panacea" me</command>
             </if>
-            <elseif buffactive="6">
-                <command>/item "Echo Drops" me</command>
-            </elseif>
             <elseif buffactive="9|15">
                 <equip lock="true">
                     <ring2>Purity Ring</ring2>
                 </equip>
                 <command>/item "Hallowed Water" me</command>
+            </elseif>
+            <elseif buffactive="6">
+                <command>/item "Echo Drops" me</command>
             </elseif>
             <elseif buffactive="11|12|21|128|129|130|131|132|133|134|135|136|137|138|139|140|141|142|144|145|146|147|148|149|174|175|404|557|558|559|560|561|562|563|564|567">
                 <command>/item "Panacea" me</command>

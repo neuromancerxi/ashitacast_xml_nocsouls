@@ -36,7 +36,7 @@
             <ring2>Rajas Ring</ring2> <!-- STP 10, TA +9 -->
             <back>Laic Mantle</back> <!-- STP 10, TA +9 -->
         </set>
-        <set name="TP50" baseset="TP"> <!-- STP 110 TA 112 ATK 54 DMG 64 -->
+        <set name="TP50" baseset="TP"> <!-- STP 110 TA 102 ATK 54 DMG 64 -->
             <range augment="S6176686717137314381">Fastwater F. Rod</range> <!-- DMG +32 -->
             <ammo augment="S6176686717137314381">Minnow</ammo> <!-- DMG +32 -->
             <head augment="S182109392262544240">Eyepatch</head> <!-- STP 10 TA 9 -->
@@ -193,14 +193,14 @@
             <if buffactive="4|566">
                 <command>/item "Panacea" me</command>
             </if>
-            <elseif buffactive="6">
-                <command>/item "Echo Drops" me</command>
-            </elseif>
             <elseif buffactive="9|15">
                 <equip lock="true">
                     <ring2>Purity Ring</ring2>
                 </equip>
                 <command>/item "Hallowed Water" me</command>
+            </elseif>
+            <elseif buffactive="6">
+                <command>/item "Echo Drops" me</command>
             </elseif>
             <elseif buffactive="11|12|21|128|129|130|131|132|133|134|135|136|137|138|139|140|141|142|144|145|146|147|148|149|174|175|404|557|558|559|560|561|562|563|564|567">
                 <command>/item "Panacea" me</command>

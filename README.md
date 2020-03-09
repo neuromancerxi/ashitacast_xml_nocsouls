@@ -3,7 +3,7 @@ A Collection of Ashitacast XML used on Nocturnal Souls FFXI
 
 In this repository you will find a collection of AshitaCast XMLs that I use on [Nocturnal Souls](https://nocturnalsouls.net). Most of these .xml are very straight forward. Most come with rebinds for F9 to toggle your weapon (e.g. RNG between Archery and Marksmanship, PLD between Almace and Burtgang).
 
-Some jobs have special logic included (BRD is heavily customized to allow for one button song casting), but most are just simple templates to give you a starting point (TP Set, WS Set, MACC Set, etc).
+Some jobs have special logic included (BRD is heavily customized to allow for one button song casting), but most are just simple templates to give you a starting point (TP Set, WS Set, MACC Set, etc). There is also an examples folder with basic ashitacast examples to help beginners with basic usage.
 
 Some examples of special use:
 

@@ -46,7 +46,7 @@
             <feet>Field boots</feet> <!-- MAB 40 -->
         </set>
         <set name="MagWS51" baseset="MagWS50">
-            <main>Chatoyant Staff</main>
+            <main>$MagWS51</main>
         </set>
         <include>
         </include>
@@ -58,6 +58,7 @@
                 <setvar name="sub" value="Tenax Strap" />
                 <setvar name="range" value="Tarutaru F. Rod" />
                 <setvar name="ammo" value="Sabiki Rig" />
+                <setvar name="MagWS51" value="Chatoyant Staff" />
                 <command>/macro book 5</command>
                 <command delay="1000">/macro set 8</command>
             </if>
@@ -65,6 +66,7 @@
                 <setvar name="main" value="Aphelion knuckles" />
                 <setvar name="range" value="Animator" />
                 <setvar name="ammo" value="Automat. Oil +1" />
+                <setvar name="MagWS51" value="Aphelion knuckles" />
                 <command>/macro book 17</command>
                 <command delay="1000">/macro set 6</command>
             </else>
@@ -76,12 +78,14 @@
                 <setvar name="sub" value="Tenax Strap" />
                 <setvar name="range" value="Tarutaru F. Rod" />
                 <setvar name="ammo" value="Sabiki Rig" />
+                <setvar name="MagWS51" value="Chatoyant Staff" />
                 <command>/macro book 5</command>
                 <command delay="1000">/macro set 8</command>
             </if>
             <elseif p_subjob="PUP">
                 <setvar name="main" value="Aphelion knuckles" />
                 <setvar name="range" value="Animator" />
+                <setvar name="MagWS51" value="Aphelion knuckles" />
                 <command>/macro book 17</command>
                 <command delay="1000">/macro set 6</command>
             </elseif>
@@ -89,6 +93,7 @@
                 <setvar name="main" value="Aphelion knuckles" />
                 <setvar name="range" value="Fastwater F. Rod" />
                 <setvar name="ammo" value="Minnow" />
+                <setvar name="MagWS51" value="Aphelion knuckles" />
                 <command>/macro book 17</command>
                 <command delay="1000">/macro set 5</command>
             </else>
@@ -100,12 +105,14 @@
                 <setvar name="sub" value="Tenax Strap" />
                 <setvar name="range" value="Tarutaru F. Rod" />
                 <setvar name="ammo" value="Sabiki Rig" />
+                <setvar name="MagWS51" value="Chatoyant Staff" />
                 <command>/macro book 5</command>
                 <command delay="1000">/macro set 8</command>
             </if>
             <elseif p_subjob="PUP">
                 <setvar name="main" value="Aphelion knuckles" />
                 <setvar name="range" value="Animator" />
+                <setvar name="MagWS51" value="Aphelion knuckles" />
                 <command>/macro book 17</command>
                 <command delay="1000">/macro set 6</command>
             </elseif>
@@ -113,6 +120,7 @@
                 <setvar name="main" value="Aphelion knuckles" />
                 <setvar name="range" value="Fastwater F. Rod" />
                 <setvar name="ammo" value="Minnow" />
+                <setvar name="MagWS51" value="Aphelion knuckles" />
                 <command>/macro book 17</command>
                 <command delay="1000">/macro set 5</command>
             </else>
@@ -120,7 +128,7 @@
         </if>
         <command delay="100">/echo [Switching to EXP Macros]</command>
         <command>/bind F10 /status</command>
-        <command delay="4000">/lockstyleset 3</command-->
+        <command delay="4000">/lockstyleset 3</command>
     </init>
     <variables>
     </variables>
@@ -133,14 +141,14 @@
             <if buffactive="4|566">
                 <command>/item "Panacea" me</command>
             </if>
-            <elseif buffactive="6">
-                <command>/item "Echo Drops" me</command>
-            </elseif>
             <elseif buffactive="9|15">
                 <equip lock="true">
                     <ring2>Purity Ring</ring2>
                 </equip>
                 <command>/item "Hallowed Water" me</command>
+            </elseif>
+            <elseif buffactive="6">
+                <command>/item "Echo Drops" me</command>
             </elseif>
             <elseif buffactive="11|12|21|128|129|130|131|132|133|134|135|136|137|138|139|140|141|142|144|145|146|147|148|149|174|175|404|557|558|559|560|561|562|563|564|567">
                 <command>/item "Panacea" me</command>

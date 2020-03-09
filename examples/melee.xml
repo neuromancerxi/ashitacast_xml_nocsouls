@@ -1,0 +1,89 @@
+<ashitacast>
+    <settings>
+        <buffupdate>true</buffupdate>
+        <statusupdate>true</statusupdate>
+        <hpupdate>false</hpupdate>
+        <autoupdate>false</autoupdate>
+    </settings>
+    <sets> <!-- The sets section is where you specify your gear and gear sets-->
+        <set name="Idle"> <!-- Your default gear set -->
+            <main>Kukri +1</main>
+            <sub>Kukri</sub>
+            <range>Crossbow</range>
+            <ammo>Acid Bolt</ammo>
+            <head>Eyepatch</head>
+            <body>Vgd. Tunica</body>
+            <hands>Vgd. Gloves</hands>
+            <legs>Vagabond's Hose</legs>
+            <feet>Trotter Boots</feet> <!-- Movement Speed Gear -->
+            <neck>Silver Name Tag</neck>
+            <waist>Leather Belt</waist>
+            <ear1>Tranquility Earring</ear1>
+            <ear2>Tranquility Earring</ear2>
+            <ring1>San d'Orian Ring</ring1> 
+            <ring2>Ascetic's Ring</ring2> 
+            <back>Rabbit Mantle</back> 
+        </set>
+        <set name="TP" baseset="Idle"> <!-- Uses everything you have in Idle and swaps in anything you list here -->
+            <feet>Vagabond's Boots</feet>
+        </set>
+        <set name="WS" baseset="TP"> <!-- Uses everything you have in TP and swaps in anything you list here -->
+            <ring1>Rajas Ring</ring1>
+        </set>
+        <set name="FastCast"> <!-- Fast cast gear to make spells cast faster -->
+            <ear1>Trq. Earring +1</ear1> <!-- NocSouls Starter Earring FastCast +3 -->
+            <ear2>Stm. Earring +1</ear2> <!-- NocSouls Starter Earring FastCast +3 -->
+        </set>
+        <include>
+        </include>
+    </sets>
+    <init>
+        <command>/macro book 5</command> <!-- Switches to Macro Book 5 -->
+        <command delay="1000">/macro set 1</command> <!-- Switches to Macro Page 5 -->
+        <command delay="1100">/echo [Switching to Job Macros]</command>
+        <command>/bind F10 /status</command> <!-- creates a bind to configure the F10 keyto remove debuffs with items when pressed -->
+        <command delay="4000">/lockstyleset 3</command>
+    </init>
+    <variables>
+    </variables>
+    <inputcommands>
+        <cmd input="/status"> <!-- Requires Shorthand Plugin -->
+            <doidlegear />
+            <if buffactive="4|566"> <!-- tries to remove paralyze first -->
+                <command>/item "Panacea" me</command> 
+            </if>
+            <elseif buffactive="9|15"> <!-- then tries to remove Curse/Doom -->
+                <command>/item "Hallowed Water" me</command>
+            </elseif>
+            <elseif buffactive="6"> <!-- then tries to remove silence -->
+                <command>/item "Echo Drops" me</command>
+            </elseif>
+            <!-- then tries to remove anything not listed above that a Panacea will remove -->
+            <elseif buffactive="11|12|21|128|129|130|131|132|133|134|135|136|137|138|139|140|141|142|144|145|146|147|148|149|174|175|404|557|558|559|560|561|562|563|564|567">
+                <command>/item "Panacea" me</command>
+            </elseif>
+        </cmd>
+    </inputcommands>
+    <idlegear>
+        <if p_status="engaged"> <!-- checks to see if you are engaged/fighting -->
+            <equip set="TP" />
+        </if>
+        <else> <!-- Puts on your Idle gear otherwise -->
+            <equip set="Idle" />
+        </else>
+    </idlegear>
+    <preranged>
+    </preranged>
+    <midranged>
+    </midranged>
+    <premagic>
+        <equip set="FastCast" /> <!-- puts on your fast cast gear before casting -->
+    </premagic>
+    <midmagic>
+    </midmagic>
+    <jobability>
+    </jobability>
+    <weaponskill>
+        <equip set="WS" /> <!-- puts on any Weaponskill specific gear -->
+    </weaponskill>
+</ashitacast>
