@@ -24,7 +24,7 @@
             <ring2>Gelatinous Ring +1</ring2> <!-- STP 10, TA +9 -->
             <back>Agema Cape</back> <!-- TA +12 -->
         </set>
-        <set name="TP" baseset="idle">
+        <set name="Standard" baseset="Idle">
             <ammo augment="S14964323893455334841">Lufaise Fly</ammo>
             <head augment="S182109392262544240">Volte Tiara</head>
             <body augment="S182109392262544240">Volte Harness</body>
@@ -39,7 +39,7 @@
             <ring2>Petrov Ring</ring2> <!-- STP 10, TA +9 -->
             <back>Laic Mantle</back> <!-- STP 10, TA +9 -->
         </set>
-        <set name="DEFTP" baseset="TP">
+        <set name="Defensive" baseset="Standard">
             <waist>Windbuffet Belt +1</waist> <!-- STP 10, TA +9 -->
             <ammo augment="S7932496139267718469">Minnow</ammo> <!-- mEVA +40 -->
             <ear2 augment="S182109392119204240">Mache Earring +1</ear2> <!-- TA +12% -->
@@ -51,15 +51,16 @@
             <ring2>Gelatinous Ring +1</ring2> <!-- STP 10, TA +9 -->
             <back>Agema Cape</back> <!-- TA +12 -->
         </set>
-        <set name="WS" baseset="TP">
+        <set name="WS" baseset="Standard">
             <neck>Fotia Gorget</neck>
             <waist>Fotia Belt</waist>
         </set>
         <set name="FastCast">
             <body augment="S6217489529050814476">Pilgrim Tunica</body> <!-- FC +32 -->
-            <ear2 augment="S182152343102764236">Stm. Earring +1</ear2> <!-- DA 3, Crit 3, FC 3, Counter 3, DW 3 -->
-            <ear1>Etiolation Earring</ear1> 
+            <neck augment="S7939368191800518485">Willpower Torque</neck> <!-- Interrupt -40% -->
+            <ring1 augment="S7939341918017218485">Ascetic's Ring</ring1> <!-- FC +16 Interrupt -20% -->
             <ring2 augment="S6217489529050814476">Ascetic's Ring</ring2> <!-- FC +32 -->
+            <waist augment="S7939368191800518485">Resolute Belt</waist> <!-- Interrupt -40% -->
         </set>
         <set name="Nuke" baseset="Idle">
             <ammo augment="S14968618926288334851">Sinking Minnow</ammo> <!-- MACC +72 -->
@@ -135,6 +136,23 @@
             <feet>Volte Boots</feet>
             <waist>Chaac Belt</waist>
         </set>
+        <set name="Enspell">
+            <main augment="S8301439459622419328">Lady Bell</main> <!-- Enspell +40 -->
+            <sub augment="S8301439459622419328">Kupo Shield</sub> <!-- Enspell +40 -->
+            <ammo augment="S8301439459622419328">Morion Tathlum</ammo> <!-- Enspell +40 -->
+            <head augment="S8301439459622419328">Copper Hairpin</head> <!-- Enspell +40 -->
+            <neck augment="S8301439459622419328">Silver Name Tag</neck> <!-- Enspell +40 -->
+            <ear1 augment="S8301439459622419328">Courage Earring</ear1> <!-- Enspell +40 -->
+            <ear2 augment="S8301439459622419328">Courage Earring</ear2> <!-- Enspell +40 -->
+            <body augment="S8301439459622419328">Fsh. Tunica</body> <!-- Enspell +40 -->
+            <hands augment="S8301439459622419328">Fsh. Gloves</hands> <!-- Enspell +40 -->
+            <ring1 augment="S8301439459622419328">Copper Ring</ring1> <!-- Enspell +40 -->
+            <ring2 augment="S8301439459622419328">Copper Ring</ring2> <!-- Enspell +40 -->
+            <back augment="S8301439459622419328">Warlock's Mantle</back> <!-- Enspell +40 -->
+            <waist augment="S8301439459622419328">Silver Mog. Belt</waist> <!-- Enspell +40 -->
+            <legs augment="S8301439459622419328">Fisherman's Hose</legs> <!-- Enspell +40 -->
+            <feet augment="S8301439459622419328">Fisherman's Boots</feet> <!-- Enspell +40 -->
+        </set>
         <include>
         </include>
     </sets>
@@ -160,9 +178,8 @@
         <command delay="4000">/lockstyle on</command>
     </init>
     <variables>
-        <var name="weapon">0</var>
-        <var name="tpmode">0</var>
         <var name="tptype">Standard</var>
+        <var name="weapon">0</var>
         <var name="main">Murgleis</var>
         <var name="sub">Genmei Shield</var>
     </variables>
@@ -172,34 +189,29 @@
                 <setvar name="main" value="Murgleis" />
                 <setvar name="sub" value="Genmei Shield" />
                 <setvar name="weapon" value="0" />
-                <doidlegear />
             </if>
             <elseif advanced="$weapon=1">
                 <setvar name="main" value="Almace" />
-                <setvar name="sub" value="Murgleis" />
+                <setvar name="sub" value="Acclimator" />
                 <setvar name="weapon" value="2" />
-                <doidlegear />
             </elseif>
             <else>
                 <setvar name="main" value="Almace" />
                 <setvar name="sub" value="Genmei Shield" />
                 <setvar name="weapon" value="1" />
-                <doidlegear />
             </else>
+            <doidlegear />
             <command>/echo [$main / $sub] [$tptype]</command>
         </cmd>
         <cmd input="/tpmode">
-            <if advanced="$tpmode=1">
-                <setvar name="tpmode" value="0" />
+            <if advanced="$tptype=Defensive">
                 <setvar name="tptype" value="Standard" />
-                <doidlegear />
             </if>
             <else>
-                <setvar name="tpmode" value="1" />
                 <setvar name="tptype" value="Defensive" />
-                <doidlegear />
             </else>
-            <command>/echo [$main] [$tptype]</command>
+            <doidlegear />
+            <command>/echo [$main / $sub] [$tptype]</command>
         </cmd>
         <cmd input="/status">
             <equip>
@@ -231,11 +243,11 @@
             </equip>
         </if>
         <if p_status="engaged">
-            <if advanced="$tpmode=1">
-                <equip set="DEFTP" />
+            <if p_joblevel="99">
+                <equip set="$tptype" />
             </if>
             <else>
-                <equip set="TP" />
+                <equip set="TP50" />
             </else>
         </if>
         <else>
@@ -293,6 +305,12 @@
             </if>
             <elseif ad_name="Phalanx*">
                 <equip set="EnhPot" />
+            </elseif>
+            <elseif ad_name="en*">
+            <!--
+                Enspell Augment Bonus applies when the spell is cast, not when it procs on melee strike.
+            -->
+            <equip set="Enspell" />
             </elseif>
             <else>
                 <equip set="Enh" />

@@ -32,9 +32,11 @@
             <back>Campestres's Cape</back>
         </set>
         <set name="FastCast">
-            <body augment="S6217489529050814476">Pilgrim Tunica</body>
-            <waist>Witful Belt</waist>
-            <ring2 augment="S6217489529050814476">Ascetic's Ring</ring2>
+            <body augment="S6217489529050814476">Pilgrim Tunica</body> <!-- FC +32 -->
+            <neck augment="S7939368191800518485">Willpower Torque</neck> <!-- Interrupt -40% -->
+            <ring1 augment="S7939341918017218485">Ascetic's Ring</ring1> <!-- FC +16 Interrupt -20% -->
+            <ring2 augment="S6217489529050814476">Ascetic's Ring</ring2> <!-- FC +32 -->
+            <waist augment="S7939368191800518485">Resolute Belt</waist> <!-- Interrupt -40% -->
         </set>
         <set name="Nuke">
             <main>$Weapon</main>
@@ -105,11 +107,28 @@
             <feet>Volte Boots</feet>
             <waist>Chaac Belt</waist>
         </set>
+        <set name="Enspell">
+            <main augment="S8301439459622419328">Lady Bell</main> <!-- Enspell +40 -->
+            <sub augment="S8301439459622419328">Kupo Shield</sub> <!-- Enspell +40 -->
+            <ammo augment="S8301439459622419328">Morion Tathlum</ammo> <!-- Enspell +40 -->
+            <head augment="S8301439459622419328">Copper Hairpin</head> <!-- Enspell +40 -->
+            <neck augment="S8301439459622419328">Silver Name Tag</neck> <!-- Enspell +40 -->
+            <ear1 augment="S8301439459622419328">Courage Earring</ear1> <!-- Enspell +40 -->
+            <ear2 augment="S8301439459622419328">Courage Earring</ear2> <!-- Enspell +40 -->
+            <body augment="S8301439459622419328">Fsh. Tunica</body> <!-- Enspell +40 -->
+            <hands augment="S8301439459622419328">Fsh. Gloves</hands> <!-- Enspell +40 -->
+            <ring1 augment="S8301439459622419328">Copper Ring</ring1> <!-- Enspell +40 -->
+            <ring2 augment="S8301439459622419328">Copper Ring</ring2> <!-- Enspell +40 -->
+            <back augment="S8301439459622419328">Warlock's Mantle</back> <!-- Enspell +40 -->
+            <waist augment="S8301439459622419328">Silver Mog. Belt</waist> <!-- Enspell +40 -->
+            <legs augment="S8301439459622419328">Fisherman's Hose</legs> <!-- Enspell +40 -->
+            <feet augment="S8301439459622419328">Fisherman's Boots</feet> <!-- Enspell +40 -->
+        </set>
         <include>
         </include>
     </sets>
     <init>
-        <if p_joblevel="99">
+        <!--if p_joblevel="99">
             <command>/macro book 7</command>
             <command delay="1000">/macro set 3</command>
             <command delay="1100">/echo [Switching to SMN Macros]</command>
@@ -118,7 +137,12 @@
         </if>
         <else>
             <command>/ac load webjester_noob</command>
-        </else>
+        </else-->
+        <command>/macro book 7</command>
+        <command delay="1000">/macro set 3</command>
+        <command delay="1100">/echo [Switching to SMN Macros]</command>
+        <command>/bind F9 /toggle</command>
+        <command>/bind F10 /status</command>
     </init>
     <variables>
         <var name="toggle">0</var>
@@ -177,7 +201,7 @@
         <if pet_active="true">
             <if advanced="($pet_element=%e_dayelement)|($pet_element=%e_weatherelement)">
                 <equip set="Perp">
-                    <head>Convoker's Horn +2</head>
+                    <head>Convoker's Horn +3</head>
                     <body>Shomonjijoe +1</body>
                     <hands>Beckoner's Bracers</hands>
                 </equip>
@@ -215,10 +239,16 @@
         <if ad_skill="enfeeblingmagic">
             <equip set="Enfeeble" />
         </if>
-        <if ad_name="Stoneskin|Metallic*|Diamondhide">
-        <if buffactive="37">
-            <command>/cancel 37</command>
+        <if ad_name="en*">
+            <!--
+                Enspell Augment Bonus applies when the spell is cast, not when it procs on melee strike.
+            -->
+            <equip set="Enspell" />
         </if>
+        <if ad_name="Stoneskin|Metallic*|Diamondhide">
+            <if buffactive="37">
+                <command>/cancel 37</command>
+            </if>
         </if>
         <if ad_name="Shock Spikes">
             <if buffactive="38">

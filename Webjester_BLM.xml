@@ -6,38 +6,39 @@
         <autoupdate>false</autoupdate>
     </settings>
     <sets>
-        <set name="Laevateinn">
-            <main>Laevateinn</main>
+        <set name="Laevateinn"><!--Put on Laevateinn for extra MACC-->
+            <main>Laevateinn</main> <!-- MAB 40 -->
         </set>
-        <set name="Hvergelmir">
-            <main augment="S7973728454464518565">Hvergelmir</main>
+        <set name="Hvergelmir"><!--Put on Hvergelmir for Damage-->
+            <main augment="S7973728454464518565">Hvergelmir</main> <!-- MAB 40 -->
         </set>
-        <set name="Farm">
-            <main augment="S6213623999501114467">Hvergelmir</main>
+        <set name="Farm"><!--Put on Hvergelmir i119 for Farming-->
+            <main augment="S6213623999501114467">Hvergelmir</main> <!-- MACC/MAB 32-->
         </set>
         <set name="Idle" baseset="$Weapon">
+            <!--Weapon is equipped based on which $Weapon is active using F12 /toggleweap -->
             <sub augment="S7973728454464518565">Clerisy Strap +1</sub> <!-- MAB 40 -->
             <range augment="S7973728454464518565">Tarutaru F. Rod</range> <!-- MAB 40 -->
             <ammo augment="S7932496139267718469">Minnow</ammo> <!-- mEVA +40 -->
             <head>Spae. Petasos +3</head> <!-- MAB 40 -->
-            <body>Wicce Coat</body>
+            <body>Wicce Coat</body> <!-- MDEF +32-->
             <hands>Volte Gloves</hands> <!-- MAB 40 -->
             <legs>Volte Brais</legs> <!-- MAB 40 -->
-            <feet>Crier's Gaiters</feet>
+            <feet>Crier's Gaiters</feet> <!-- MDEF +32-->
             <neck>Loricate Torque +1</neck> <!-- Counter +40 -->
             <waist>Goading Belt</waist> <!-- mEVA +40 -->
             <ear1>Etiolation Earring</ear1> <!-- Counter +40 -->
             <ear2>Cryptic Earring</ear2> <!-- mEVA +40 -->
             <ring1>Gelatinous Ring +1</ring1> <!-- STP 10, TA +9 -->
             <ring2>Defending Ring</ring2> <!-- STP 10, TA +9 -->
-            <back augment="S7973728454464518565">Bane Cape</back> <!-- MAB 40 -->
+            <back>Cheviot Cape</back> <!-- MDB +32 -->
         </set>
-        <set name="FastCast" baseset="Nuke">
+        <set name="FastCast" baseset="Nuke"><!-- Capped FC regardless of Sub or Weapon -->
             <body augment="S6217489529050814476">Pilgrim Tunica</body> <!-- FC +32 -->
-            <waist>Witful Belt</waist>
-            <ear1>Etiolation Earring</ear1>
-            <ear2 augment="S182152343102764236">Stm. Earring +1</ear2> <!-- DA 3, Crit 3, FC 3, Counter 3, DW 3 -->
+            <neck augment="S7939368191800518485">Willpower Torque</neck> <!-- Interrupt -40% -->
+            <ring1 augment="S7939341918017218485">Ascetic's Ring</ring1> <!-- FC +16 Interrupt -20% -->
             <ring2 augment="S6217489529050814476">Ascetic's Ring</ring2> <!-- FC +32 -->
+            <waist augment="S7939368191800518485">Resolute Belt</waist> <!-- Interrupt -40% -->
         </set>
         <set name="Nuke" baseset="Idle">
             <ammo augment="S7973728454464518565">Sabiki Rig</ammo> <!-- MAB 40 -->
@@ -88,22 +89,43 @@
             <back augment="S14968618926288334851">Immortal's Cape</back> <!-- MACC +72 -->
         </set>
         <set name="TH" baseset="Nuke">
-            <ear1 augment="S14968618926288334851">Moldavite Earring</ear1> <!-- MACC +72 -->
             <ammo augment="S14968618926288334851">Sinking Minnow</ammo> <!-- MACC +72 -->
-            <head>Volte Cap</head>
-            <body>Volte Jupon</body>
-            <hands>Volte Bracers</hands>
-            <legs>Volte Hose</legs>
-            <feet>Volte Boots</feet>
-            <waist>Chaac Belt</waist>
+            <ear1 augment="S14968618926288334851">Moldavite Earring</ear1> <!-- MACC +72 -->
+            <head>Volte Cap</head> <!-- MAB 40 -->
+            <body>Volte Jupon</body> <!-- MAB 40 -->
+            <hands>Volte Bracers</hands> <!-- MAB 40 -->
+            <legs>Volte Hose</legs> <!-- MAB 40 -->
+            <feet>Volte Boots</feet> <!-- MAB 40 -->
+            <waist>Chaac Belt</waist> <!-- MAB 40 -->
         </set>
         <set name="TP" baseset="Idle">
-            <head>Volte Cap</head>
-            <body>Volte Jupon</body>
-            <hands>Volte Bracers</hands>
-            <legs>Volte Hose</legs>
-            <feet>Volte Boots</feet>
-            <waist>Chaac Belt</waist>
+            <head>Volte Cap</head> <!-- MAB 40 -->
+            <body>Volte Jupon</body> <!-- MAB 40 -->
+            <hands>Volte Bracers</hands> <!-- MAB 40 -->
+            <legs>Volte Hose</legs> <!-- MAB 40 -->
+            <feet>Volte Boots</feet> <!-- MAB 40 -->
+            <waist>Chaac Belt</waist> <!-- MAB 40 -->
+        </set>
+        <set name="Manawall">
+            <back>Taranus's Cape</back>
+            <!--feet>Wicce Sabot +1</feet-->
+        </set>
+        <set name="Enspell">
+            <main augment="S8301439459622419328">Lady Bell</main> <!-- Enspell +40 -->
+            <sub augment="S8301439459622419328">Kupo Shield</sub> <!-- Enspell +40 -->
+            <ammo augment="S8301439459622419328">Morion Tathlum</ammo> <!-- Enspell +40 -->
+            <head augment="S8301439459622419328">Copper Hairpin</head> <!-- Enspell +40 -->
+            <neck augment="S8301439459622419328">Silver Name Tag</neck> <!-- Enspell +40 -->
+            <ear1 augment="S8301439459622419328">Courage Earring</ear1> <!-- Enspell +40 -->
+            <ear2 augment="S8301439459622419328">Courage Earring</ear2> <!-- Enspell +40 -->
+            <body augment="S8301439459622419328">Fsh. Tunica</body> <!-- Enspell +40 -->
+            <hands augment="S8301439459622419328">Fsh. Gloves</hands> <!-- Enspell +40 -->
+            <ring1 augment="S8301439459622419328">Copper Ring</ring1> <!-- Enspell +40 -->
+            <ring2 augment="S8301439459622419328">Copper Ring</ring2> <!-- Enspell +40 -->
+            <back augment="S8301439459622419328">Warlock's Mantle</back> <!-- Enspell +40 -->
+            <waist augment="S8301439459622419328">Silver Mog. Belt</waist> <!-- Enspell +40 -->
+            <legs augment="S8301439459622419328">Fisherman's Hose</legs> <!-- Enspell +40 -->
+            <feet augment="S8301439459622419328">Fisherman's Boots</feet> <!-- Enspell +40 -->
         </set>
         <include>
         </include>
@@ -130,55 +152,48 @@
         <command delay="4000">/lockstyleset 1</command>
     </init>
     <variables>
-        <var name="toggleweap">0</var>
-        <var name="togglenuke">0</var>
-        <var name="Weapon">Laevateinn</var>
-        <var name="status">Standard</var>
+        <var name="Weapon">Hvergelmir</var>
+        <var name="nuke">Standard</var>
     </variables>
     <inputcommands>
-        <!--
-        0 Laevateinn
-        1 Hvergelmir
-        2 Hvergelmir (Empy Farm)
+        <!-- Swaps which set (weapon) to base your sets on
+             1. Hvergelmir i119v3
+             2. Hvergelmir i119 (Empy Farm)
+             3. Laevateinn
         -->
         <cmd input="/toggleweap">
-            <if advanced="$toggleweap=2">
+            <if advanced="$Weapon=Farm">
                 <setvar name="Weapon" value="Laevateinn" />
-                <setvar name="toggleweap" value="0" />
             </if>
-            <elseif advanced="$toggleweap=0">
+            <elseif advanced="$Weapon=Laevateinn">
                 <setvar name="Weapon" value="Hvergelmir" />
-                <setvar name="toggleweap" value="1" />
             </elseif>
             <else>
                 <setvar name="Weapon" value="Farm" />
-                <setvar name="toggleweap" value="2" />
             </else>
             <doidlegear />
-            <command>/echo [$Weapon] [$status Nuke]</command>
+            <command>/echo [$Weapon] [$nuke Nuke]</command>
         </cmd>
-        <!--
-        0 Nuke in standard gear
-        1 Nuke in TH gear
+        <!-- Switch between Full Damage (standard) or TH (e.g. Dynamis AOE farming)
+             1. Nuke in standard gear
+             2. Nuke in TH gear
         -->
         <cmd input="/togglenuke">
-            <if advanced="$togglenuke=1">
-                <setvar name="togglenuke" value="0" />
-                <setvar name="status" value="Standard" />
+            <if advanced="$nuke=TH">
+                <setvar name="nuke" value="Standard" />
             </if>
             <else>
-                <setvar name="togglenuke" value="1" />
-                <setvar name="status" value="TH" />
+                <setvar name="nuke" value="TH" />
             </else>
             <doidlegear />
-            <command>/echo [$Weapon] [$status Nuke]</command>
+            <command>/echo [$Weapon] [$nuke Nuke]</command>
         </cmd>
         <cmd input="/status">
             <equip>
-                <back augment="S14968618926288334851">Immortal's Cape</back>
+                <back>Cheviot Cape</back>
             </equip>
             <doidlegear />
-            <command>/echo [$Weapon] [$status Nuke]</command>
+            <command>/echo [$Weapon] [$nuke Nuke]</command>
             <if buffactive="4|566">
                 <command>/item "Panacea" me</command>
             </if>
@@ -223,7 +238,7 @@
                 <equip set="Idle" />
             </else>
         </if>
-        <elseif p_status="engaged"> <!-- swaps your TP gear -->
+        <elseif p_status="engaged"> <!-- swaps into your TP gear -->
             <equip set="TP" />
         </elseif>
         <else> <!-- otherwise if you aren't fighting, put on your idle set -->
@@ -235,37 +250,30 @@
     <midranged>
     </midranged>
     <premagic>
-        <if ad_skill="elementalmagic|enfeeblingmagic">
-            <equip set="FastCast" >
-                <waist />
-            </equip>
-        </if>
-        <else>
-            <equip set="FastCast" />
-        </else>
+        <equip set="FastCast" />
     </premagic>
     <midmagic>
         <if ad_skill="elementalmagic">
             <if p_joblevel="99">
-                <if advanced="$togglenuke=0">
+                <if advanced="$nuke=TH">
+                    <equip set="TH" />
+                </if>
+                <else>
                     <if advanced="(%ad_element=%e_dayelement)|(%ad_element=%e_weatherelement)">
                         <equip set="Nuke">
-                            <waist augment="S7973728454464518565">Hachirin-no-Obi</waist>
-                            <back>Twilight Cape</back>
+                            <waist augment="S7973728454464518565">Hachirin-no-Obi</waist> <!-- MAB 40 -->
+                            <back>Twilight Cape</back> <!-- MAB 40 -->
                         </equip>
                     </if>
                     <else>
                         <equip set="Nuke" />
                     </else>
-                </if>
-                <else>
-                    <equip set="TH" />
                 </else>
             </if>
             <elseif p_joblevel=">70&<99">
                 <if advanced="(%ad_element=%e_dayelement)|(%ad_element=%e_weatherelement)">
                     <equip set="Nuke71">
-                        <waist augment="S7973728454464518565">Hachirin-no-Obi</waist>
+                        <waist augment="S7973728454464518565">Hachirin-no-Obi</waist> <!-- MAB 40 -->
                     </equip>
                 </if>
                 <else>
@@ -287,6 +295,9 @@
                 <head>Appetence Crown</head>
             </equip>
         </if>
+        <if ad_name="en*">
+            <equip set="Enspell" />
+        </if>
         <if ad_name="Stoneskin|Metallic*|Diamondhide">
             <if buffactive="37">
                 <command>/cancel 37</command>
@@ -299,6 +310,10 @@
         </if>
     </midmagic>
     <jobability>
+        <if ad_name="Mana Wall">
+            <equip set="Manawall" />
+            <gearlock length="3" />
+        </if>
     </jobability>
     <weaponskill>
     </weaponskill>

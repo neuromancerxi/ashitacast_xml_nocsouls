@@ -7,28 +7,28 @@
     </settings>
     <sets>
         <set name="Idle">
-            <main>$Mainhand</main>
+            <main>$Weapon</main>
             <sub>Genmei Shield</sub>
             <range>Daurdabla</range>
-            <head augment="S14964323880347918574">Hike Khat +1</head>
-            <body augment="S14963464885262234839">Bihu Jstcorps +1</body>
-            <hands augment="S14963464885262234839">Buremte Gloves</hands>
-            <legs augment="S1496432388034794240">Miasmic Pants</legs>
+            <head augment="S182109392262544240">Volte Tiara</head>
+            <body augment="S182109392262544240">Volte Harness</body>
+            <hands augment="S182109392262544240">Volte Mittens</hands>
+            <legs augment="S182109392262544240">Volte Tights</legs>
             <feet>Fili Cothurnes +1</feet>
             <neck>Loricate Torque +1</neck>
-            <waist augment="S14964323890395218574">Chaac Belt</waist>
-            <ear1>Etiolation Earring</ear1>
-            <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
+            <waist augment="S7932496139267718469">Goading Belt</waist>
+            <ear1 augment="S7978882493864118577">Etiolation Earring</ear1>
+            <ear2 augment="S7932496139267718469">Cryptic Earring</ear2>
             <ring1>Defending Ring</ring1>
             <ring2>Gelatinous Ring +1</ring2>
-            <back augment="S14963464886888734841">Charger Mantle</back>
+            <back augment="S7932496139267718469">Agema Cape</back>
         </set>
-        <set name="TP" baseset="Idle">
-            <head augment="S14964323880347918574">Hike Khat +1</head>
-            <body augment="S14963464885262234839">Bihu Jstcorps +1</body>
-            <hands augment="S14963464885262234839">Buremte Gloves</hands>
-            <legs augment="S1496432388034794240">Miasmic Pants</legs>
-            <feet>Espial Socks</feet>
+        <set name="Standard" baseset="Idle">
+            <head augment="S182109392262544240">Volte Tiara</head>
+            <body augment="S182109392262544240">Volte Harness</body>
+            <hands augment="S182109392262544240">Volte Mittens</hands>
+            <legs augment="S182109392262544240">Volte Tights</legs>
+            <feet augment="S182109392262544240">Volte Spats</feet>
             <neck>Tlamiztli Collar</neck>
             <waist augment="S1496432389182864240">Windbuffet Belt +1</waist>
             <ear1 augment="S1496432389345534240">Mache Earring +1</ear1>
@@ -37,12 +37,37 @@
             <ring2 augment="S1821294457858518574">Rajas Ring</ring2>
             <back>Laic Mantle</back>
         </set>
+        <set name="Defensive" baseset="Standard">
+            <neck augment="S7978882493864118577">Loricate Torque +1</neck>
+            <waist augment="S7932496139267718469">Goading Belt</waist>
+            <ear1 augment="S7978882493864118577">Etiolation Earring</ear1>
+            <ear2 augment="S7932496139267718469">Cryptic Earring</ear2>
+            <ring1 augment="S182109392262544240">Defending Ring</ring1>
+            <ring2 augment="S182109392262544240">Gelatinous Ring +1</ring2>
+            <back augment="S7932496139267718469">Agema Cape</back>
+        </set>
+        <set name="TP50"> <!-- STP 110 TA 102 ATK 54 DMG 64 -->
+            <range augment="S6176686717137314381">Fastwater F. Rod</range> <!-- DMG +32 -->
+            <ammo augment="S6176686717137314381">Minnow</ammo> <!-- DMG +32 -->
+            <head augment="S182109392262544240">Eyepatch</head> <!-- STP 10 TA 9 -->
+            <body augment="S14964123346741734841">Vgd. Tunica</body> <!-- ATK 54 TA 3 -->
+            <hands augment="S182109392262544240">Vgd. Gloves</hands> <!-- STP 10 TA 9 -->
+            <legs augment="S182109392262544240">Vagabond's Hose</legs> <!-- STP 10 TA 9 -->
+            <feet augment="S182109392262544240">Vagabond's Boots</feet> <!-- STP 10 TA 9 -->
+            <neck augment="S182109392262544240">Pile Chain</neck> <!-- STP 10 TA 9 -->
+            <waist augment="S182109392262544240">Gold Mog. Belt</waist> <!-- STP 10 TA 9 -->
+            <ear1 augment="S182109392262544240">Tranquility Earring</ear1> <!-- STP 10 TA 9 -->
+            <ear2 augment="S182109392262544240">Tranquility Earring</ear2> <!-- STP 10 TA 9 -->
+            <ring1 augment="S182109392262544240">San d'Orian Ring</ring1> <!-- STP 10 TA 9 -->
+            <ring2 augment="S182109392262544240">Ascetic's Ring</ring2> <!-- STP 10 TA 9 -->
+            <back augment="S182109392262544240">Rabbit Mantle +1</back> <!-- STP 10 TA 9 -->
+        </set>
         <set name="FastCast">
-            <body augment="S6217489529050814476">Pilgrim Tunica</body>
-            <ear1>Etiolation Earring</ear1>
-            <ear2 augment="S182152343102764236">Stm. Earring +1</ear2>
-            <ring1 augment="S6217489529050814476">Prolix Ring</ring1>
-            <ring2 augment="S6217489529050814476">Ascetic's Ring</ring2>
+            <body augment="S6217489529050814476">Pilgrim Tunica</body> <!-- FC +32 -->
+            <neck augment="S7939368191800518485">Willpower Torque</neck> <!-- Interrupt -40% -->
+            <ring1 augment="S7939341918017218485">Ascetic's Ring</ring1> <!-- FC +16 Interrupt -20% -->
+            <ring2 augment="S6217489529050814476">Ascetic's Ring</ring2> <!-- FC +32 -->
+            <waist augment="S7939368191800518485">Resolute Belt</waist> <!-- Interrupt -40% -->
         </set>
         <set name="MACC" baseset="Idle">
             <neck augment="S14968618926288334851">Voltsurge Torque</neck>
@@ -71,24 +96,48 @@
             <feet>Volte Boots</feet>
             <waist>Chaac Belt</waist>
         </set>
+        <set name="Enspell">
+            <main augment="S8301439459622419328">Lady Bell</main> <!-- Enspell +40 -->
+            <sub augment="S8301439459622419328">Kupo Shield</sub> <!-- Enspell +40 -->
+            <ammo augment="S8301439459622419328">Morion Tathlum</ammo> <!-- Enspell +40 -->
+            <head augment="S8301439459622419328">Copper Hairpin</head> <!-- Enspell +40 -->
+            <neck augment="S8301439459622419328">Silver Name Tag</neck> <!-- Enspell +40 -->
+            <ear1 augment="S8301439459622419328">Courage Earring</ear1> <!-- Enspell +40 -->
+            <ear2 augment="S8301439459622419328">Courage Earring</ear2> <!-- Enspell +40 -->
+            <body augment="S8301439459622419328">Fsh. Tunica</body> <!-- Enspell +40 -->
+            <hands augment="S8301439459622419328">Fsh. Gloves</hands> <!-- Enspell +40 -->
+            <ring1 augment="S8301439459622419328">Copper Ring</ring1> <!-- Enspell +40 -->
+            <ring2 augment="S8301439459622419328">Copper Ring</ring2> <!-- Enspell +40 -->
+            <back augment="S8301439459622419328">Warlock's Mantle</back> <!-- Enspell +40 -->
+            <waist augment="S8301439459622419328">Silver Mog. Belt</waist> <!-- Enspell +40 -->
+            <legs augment="S8301439459622419328">Fisherman's Hose</legs> <!-- Enspell +40 -->
+            <feet augment="S8301439459622419328">Fisherman's Boots</feet> <!-- Enspell +40 -->
+        </set>
         <include>
         </include>
     </sets>
     <init>
-        <if p_joblevel="99">
+        <!--if p_joblevel="99">
             <command>/macro book 2</command>
             <command delay="1000">/macro set 2</command>
             <command>/echo [Switching to BRD Macros]</command>
-            <command>/bind F9 /swap</command>
+            <command>/bind F9 /tpmode</command>
             <command>/bind F10 /status</command>
+            <command>/bind F12 /toggleweap</command>
             <command delay="4000">/lockstyleset 23</command>
         </if>
         <else>
             <command>/ac load webjester_noob</command>
-        </else>
+        </else-->
+        <command>/macro book 2</command>
+        <command delay="1000">/macro set 2</command>
+        <command>/echo [Switching to BRD Macros]</command>
+        <command>/bind F9 /tpmode</command>
+        <command>/bind F10 /status</command>
+        <command>/bind F12 /toggleweap</command>
+        <command delay="4000">/lockstyleset 23</command>
     </init>
     <variables>
-        <var name="swap">0</var>
         <var name="minuet">5</var>
         <var name="minne">5</var>
         <var name="paeon">6</var>
@@ -100,22 +149,29 @@
         <var name="lullaby">2</var>
         <var name="lullabyga">2</var>
         <var name="elegy">2</var>
-        <var name="Mainhand">Twashtar</var>
+        <var name="Weapon">Twashtar</var>
+        <var name="tptype">Standard</var>
     </variables>
     <inputcommands>
-        <cmd input="/swap">
-            <if advanced="$swap=0">
-                <setvar name="Mainhand" value="Carnwenhan" />
-                <setvar name="swap" value="1" />
-                <doidlegear />
-                <command>/echo [Carnwenhan]</command>
+        <cmd input="/toggleweap">
+            <if advanced="$Weapon=Twashtar">
+                <setvar name="Weapon" value="Carnwenhan" />
             </if>
             <else>
-                <setvar name="Mainhand" value="Twashtar" />
-                <setvar name="swap" value="0" />
-                <doidlegear />
-                <command>/echo [Twashtar]</command>
+                <setvar name="Weapon" value="Twashtar" />
             </else>
+            <doidlegear />
+            <command>/echo [$Weapon] [$tptype]</command>
+        </cmd>
+        <cmd input="/tpmode">
+            <if advanced="$tptype=Defensive">
+                <setvar name="tptype" value="Standard" />
+            </if>
+            <else>
+                <setvar name="tptype" value="Defensive" />
+            </else>
+            <doidlegear />
+            <command>/echo [$Weapon] [$tptype]</command>
         </cmd>
         <cmd input="/resetsongs">
             <setvar name="minuet" value="5" />
@@ -131,7 +187,7 @@
             <setvar name="elegy" value="2" />
         </cmd>
         <cmd input="/status">
-            <command>/echo [$Mainhand]</command>
+            <command>/echo [$Weapon] [$tptype] [Songs Reset]</command>
             <command>/resetsongs</command>
             <doidlegear />
             <if buffactive="4|566">
@@ -296,7 +352,12 @@
             </equip>
         </if>
         <if p_status="engaged">
-            <equip set="TP" />
+            <if p_joblevel="99">
+                <equip set="$tptype" />
+            </if>
+            <else>
+                <equip set="TP50" />
+            </else>
         </if>
         <else>
             <equip set="Idle" />
@@ -323,6 +384,12 @@
                 <equip set="Songs" />    
             </else>
         </if>
+        <if ad_name="en*">
+            <!--
+                Enspell Augment Bonus applies when the spell is cast, not when it procs on melee strike.
+            -->
+            <equip set="Enspell" />
+        </if>
         <if ad_name="Stoneskin|Metallic*|Diamondhide">
             <if buffactive="37">
                 <command>/cancel 37</command>
@@ -341,7 +408,7 @@
             <equip set="MagWS" />
         </if>
         <else>
-            <equip set="TP">
+            <equip set="Standard">
                 <ear1>Telos Earring</ear1>
                 <neck>Fotia Gorget</neck>
                 <waist>Fotia Belt</waist>
