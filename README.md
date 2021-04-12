@@ -21,6 +21,6 @@ PLD - Has some Blue Enmity generating spells in a one button /command.
 
 THF - F9 Will toggle between Standard, Defensive, TH, and THMAX Modes depending on your use case. THMAX will TP and WS in max TH Gear.
 
-General Questions can be directed to the [Nocturnal Souls Discord](https://discord.gg/swnTWUv) in #job_qa.
+General Questions can be directed to the [Nocturnal Souls Discord](https://discord.gg/swnTWUv) in #job_support.
 
 As always, .xml are provided as-is with no warranty expressed or implied. You're on your own from here. Good Luck!
